@@ -571,7 +571,7 @@ SET time_zone = "+00:00";
         (30, 'pontiac', 'Pontiac'),
         (31, 'porsche', 'Porsche'),
         (32, 'peugeot', 'Peugeot'),
-        (33, 'rangerover', 'Range Rover')
+        (33, 'rangerover', 'Range Rover'),
         (34, 'ram', 'Ram'),
         (35, 'rolls-royce', 'Rolls-Royce'),
         (36, 'subaru', 'Subaru'),
