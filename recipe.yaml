@@ -16,7 +16,7 @@ tasks:
   # Download and prepare server.cfg / database / default scripts
   - action: download_github
     src: https://github.com/JayPaulinCodes/OPRP-ESX-RECIPE
-    ref: main
+    ref: master
     dest: ./tmp/oprp_esx
 
   - action: move_path
