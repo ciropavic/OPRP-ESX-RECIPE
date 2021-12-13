@@ -80,6 +80,10 @@ Citizen.CreateThread(function()
             compass = getHeading(GetEntityHeading(ped))
             isTalking = NetworkIsPlayerTalking(PlayerId())
             postal = exports.nearest_postal:getPostal()
+
+            if postal == nil then
+                postal = 0
+            end
             
             if AreaDisplay == nil then
                 AreaDisplay = "San Andreas"
