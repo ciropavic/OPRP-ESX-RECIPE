@@ -1807,6 +1807,24 @@ SET time_zone = "+00:00";
     ('Zombie Luxuary', 'zombieb', 12000, 'motorcycles'),
     ('Z-Type', 'ztype', 220000, 'sportsclassics');
 
+    CREATE TABLE `vehicle_categories` (
+    `name` varchar(60) NOT NULL,
+    `label` varchar(60) NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+    INSERT INTO `vehicle_categories` (`name`, `label`) VALUES
+    ('compacts', 'Compacts'),
+    ('coupes', 'Coupés'),
+    ('motorcycles', 'Motos'),
+    ('muscle', 'Muscle'),
+    ('offroad', 'Off Road'),
+    ('sedans', 'Sedans'),
+    ('sports', 'Sports'),
+    ('sportsclassics', 'Sports Classics'),
+    ('super', 'Super'),
+    ('suvs', 'SUVs'),
+    ('vans', 'Vans');
+
 -- ----------------------------------------------------------------------------
 -- ----------------------------------------------------------------------------
 -- ----------------------------------------------------------------------------
