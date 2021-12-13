@@ -1543,20 +1543,20 @@ SET time_zone = "+00:00";
 -- Stuff im not sure about
 --
 
-    -- CREATE TABLE `shops` (
-    --   `id` int(11) NOT NULL,
-    --   `store` varchar(100) NOT NULL,
-    --   `item` varchar(100) NOT NULL,
-    --   `price` int(11) NOT NULL
-    -- ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    CREATE TABLE `shops` (
+      `id` int(11) NOT NULL,
+      `store` varchar(100) NOT NULL,
+      `item` varchar(100) NOT NULL,
+      `price` int(11) NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-    -- INSERT INTO `shops` (`id`, `store`, `item`, `price`) VALUES
-    -- (1, 'TwentyFourSeven', 'bread', 30),
-    -- (2, 'TwentyFourSeven', 'water', 15),
-    -- (3, 'RobsLiquor', 'bread', 30),
-    -- (4, 'RobsLiquor', 'water', 15),
-    -- (5, 'LTDgasoline', 'bread', 30),
-    -- (6, 'LTDgasoline', 'water', 15);
+    INSERT INTO `shops` (`id`, `store`, `item`, `price`) VALUES
+    (1, 'TwentyFourSeven', 'bread', 30),
+    (2, 'TwentyFourSeven', 'water', 15),
+    (3, 'RobsLiquor', 'bread', 30),
+    (4, 'RobsLiquor', 'water', 15),
+    (5, 'LTDgasoline', 'bread', 30),
+    (6, 'LTDgasoline', 'water', 15);
 
 -- ----------------------------------------------------------------------------
 -- ----------------------------------------------------------------------------
@@ -1684,8 +1684,8 @@ SET time_zone = "+00:00";
     --
     -- Indexes for table `shops`
     --
-    -- ALTER TABLE `shops`
-    --   ADD PRIMARY KEY (`id`);
+    ALTER TABLE `shops`
+      ADD PRIMARY KEY (`id`);
 
     --
     -- Indexes for table `society_moneywash`
@@ -1825,8 +1825,8 @@ SET time_zone = "+00:00";
     --
     -- AUTO_INCREMENT for table `shops`
     --
-    -- ALTER TABLE `shops`
-    -- MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+    ALTER TABLE `shops`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
     --
     -- AUTO_INCREMENT for table `society_moneywash`
