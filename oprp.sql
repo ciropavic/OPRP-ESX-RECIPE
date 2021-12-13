@@ -1825,8 +1825,8 @@ SET time_zone = "+00:00";
     --
     -- AUTO_INCREMENT for table `shops`
     --
-    ALTER TABLE `shops`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+    -- ALTER TABLE `shops`
+    -- MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
     --
     -- AUTO_INCREMENT for table `society_moneywash`
