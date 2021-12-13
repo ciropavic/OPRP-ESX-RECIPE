@@ -83,7 +83,7 @@ tasks:
     dest: ./resources/[hud]/cosmo_hud
 
   - action: replace_string
-    file: ./resources/[legacy]/[esx_addons]/esx_status/config.lua
+    file: ./resources/[hud]/cosmo_hud/config.lua
     search: "    Config.UseRadio         = true"
     replace: "    Config.UseRadio         = false"
 
