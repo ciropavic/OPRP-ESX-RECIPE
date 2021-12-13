@@ -1241,7 +1241,7 @@ SET time_zone = "+00:00";
 
     CREATE TABLE `licenses` (
     `type` varchar(60) NOT NULL,
-    `label` varchar(60) NOT NULL,
+    `label` varchar(60) NOT NULL
     ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
     CREATE TABLE `user_licenses` (
