@@ -48,8 +48,7 @@ SET time_zone = "+00:00";
         `label` VARCHAR(50) NOT NULL,
         `weight` INT NOT NULL DEFAULT 1,
         `rare` TINYINT NOT NULL DEFAULT 0,
-        `can_remove` TINYINT NOT NULL DEFAULT 1,
-        PRIMARY KEY (`name`)
+        `can_remove` TINYINT NOT NULL DEFAULT 1
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
     CREATE TABLE `jobs` (
@@ -1734,14 +1733,14 @@ SET time_zone = "+00:00";
     --
     -- Indexes for table `vehicles`
     --
-    ALTER TABLE `vehicles`
-    ADD PRIMARY KEY (`model`);
+    -- ALTER TABLE `vehicles`
+    -- ADD PRIMARY KEY (`model`);
 
     --
     -- Indexes for table `vehicle_categories`
     --
-    ALTER TABLE `vehicle_categories`
-    ADD PRIMARY KEY (`name`);
+    -- ALTER TABLE `vehicle_categories`
+    -- ADD PRIMARY KEY (`name`);
 
     --
     -- Indexes for table `weashops`
