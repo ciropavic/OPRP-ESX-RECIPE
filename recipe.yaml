@@ -82,21 +82,21 @@ tasks:
     subpath: cosmo_hud
     dest: ./resources/[hud]/cosmo_hud
 
-  - action: replace_string
-    file: ./resources/[legacy]/[esx_addons]/esx_status/config.lua
-    search: "    Config.Display        = true"
-    replace: "    Config.Display        = false"
+  # - action: replace_string
+  #   file: ./resources/[legacy]/[esx_addons]/esx_status/config.lua
+  #   search: "    Config.Display        = true"
+  #   replace: "    Config.Display        = false"
 
   - action: replace_string
     file: ./resources/[hud]/cosmo_hud/config.lua
     search: 'Config.AlwaysShowRadar = false'
     replace: 'Config.AlwaysShowRadar = true'
 
-  ## Patching configs: esx_basicneeds
-  - action: replace_string
-    file: ./resources/[legacy]/[esx_addons]/esx_basicneeds/config.lua
-    search: 'Config.Visible = true'
-    replace: 'Config.Visible = false'
+  # ## Patching configs: esx_basicneeds
+  # - action: replace_string
+  #   file: ./resources/[legacy]/[esx_addons]/esx_basicneeds/config.lua
+  #   search: 'Config.Visible = true'
+  #   replace: 'Config.Visible = false'
 
   ## Patching configs: multicharacter 
   - action: replace_string
