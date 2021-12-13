@@ -76,21 +76,21 @@ tasks:
     dest: ./resources/gcphone
 
   ## Downloading & Patching configs: cosmo hud
-  - action: download_github
-    src: https://github.com/nojdh/cosmo_hud
-    ref: eed8fd7b8cbe8a02ae7339d4dee05b5d56a8097c
-    subpath: cosmo_hud
-    dest: ./resources/[hud]/cosmo_hud
+  # - action: download_github
+  #   src: https://github.com/nojdh/cosmo_hud
+  #   ref: eed8fd7b8cbe8a02ae7339d4dee05b5d56a8097c
+  #   subpath: cosmo_hud
+  #   dest: ./resources/[hud]/cosmo_hud
 
-  - action: replace_string
-    file: ./resources/[hud]/cosmo_hud/config.lua
-    search: "    Config.UseRadio         = true"
-    replace: "    Config.UseRadio         = false"
+  # - action: replace_string
+  #   file: ./resources/[hud]/cosmo_hud/config.lua
+  #   search: "Config.UseRadio = true"
+  #   replace: "Config.UseRadio = false"
 
-  - action: replace_string
-    file: ./resources/[hud]/cosmo_hud/config.lua
-    search: 'Config.AlwaysShowRadar = false'
-    replace: 'Config.AlwaysShowRadar = true'
+  # - action: replace_string
+  #   file: ./resources/[hud]/cosmo_hud/config.lua
+  #   search: 'Config.AlwaysShowRadar = false'
+  #   replace: 'Config.AlwaysShowRadar = true'
 
   # ## Patching configs: esx_basicneeds
   # - action: replace_string
