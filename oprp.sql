@@ -234,8 +234,7 @@ SET time_zone = "+00:00";
         `name` varchar(60) NOT NULL DEFAULT 'Unknown',
         `fuel` int(11) NOT NULL DEFAULT '100',
         `stored` TINYINT(1) NOT NULL DEFAULT '0',
-        `image` longtext,
-        PRIMARY KEY (`plate`)
+        `image` longtext
     ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
     CREATE TABLE `vs_ambulance_categories` (
