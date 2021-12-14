@@ -1966,9 +1966,7 @@ SET time_zone = "+00:00";
         ('Illegally tinted windows',110,0),
         ('Possession of a stolen vehicle',2000,0),
         ('Failure to signal',110,0),
-        ('Failure to display license plate',85,0)--,
-
-        -- ('aa',0,1),
+        ('Failure to display license plate',85,0)
     ;
 
 -- ----------------------------------------------------------------------------
