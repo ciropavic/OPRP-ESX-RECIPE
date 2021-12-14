@@ -20,7 +20,7 @@ AddEventHandler('syncPrio', function()
 end)
 
 RegisterCommand("oprpstaffpriority", function()
-	if source == 0 or IsPlayerAceAllowed(source, "oprp.priocmds")
+	if source == 0 or IsPlayerAceAllowed(source, "oprp.priocmds") then
 		TriggerEvent("cooldownt")
 	else
 		TriggerClientEvent('NoPerms', source)
