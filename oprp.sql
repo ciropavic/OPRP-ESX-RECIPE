@@ -109,7 +109,6 @@ SET time_zone = "+00:00";
         ('redbull', 'RedBull', 1, 0, 1),
         ('rhum', 'Rhum', 1, 0, 1),
         ('vodka', 'Vodka', 1, 0, 1),
-        ('water', 'Water', 1, 0, 1),
         ('wine', 'Wine', 1, 0, 1),
 
         -- Food
