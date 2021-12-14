@@ -184,24 +184,21 @@ SET time_zone = "+00:00";
     ;
     
     INSERT INTO `job_grades` (`id`, `job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES
-        (1, 'unemployed', 0, 'unemployed', 'Unemployed', 85, '{}', '{}')
-    ;
+        (1, 'unemployed', 0, 'unemployed', 'Unemployed', 85, '{}', '{}'),
 
-    INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
-        ('TPS_Constable'  ,0,'tps_constable'  ,'TPS - Constable'  ,335,'{}','{}'),
-        ('PRP_Constable'  ,0,'prp_constable'  ,'PRP - Constable'  ,335,'{}','{}'),
-        ('OPP_Constable'  ,0,'opp_constable'  ,'OPP - Constable'  ,335,'{}','{}'),
-        ('RCMP_Constable' ,0,'rcmp_constable' ,'RCMP - Constable' ,335,'{}','{}'),
-
-        ('TPS_Supervisor' ,1,'tps_supervisor' ,'TPS - Supervisor' ,620,'{}','{}'),
-        ('PRP_Supervisor' ,1,'prp_supervisor' ,'PRP - Supervisor' ,620,'{}','{}'),
-        ('OPP_Supervisor' ,1,'opp_supervisor' ,'OPP - Supervisor' ,620,'{}','{}'),
-        ('RCMP_Supervisor',1,'rcmp_supervisor','RCMP - Supervisor',620,'{}','{}'),
-
-        ('TPS_COC'        ,2,'tps_coc'        ,'TPS - COC'        ,850,'{}','{}'),
-        ('PRP_COC'        ,2,'prp_coc'        ,'PRP - COC'        ,850,'{}','{}'),
-        ('OPP_COC'        ,2,'opp_coc'        ,'OPP - COC'        ,850,'{}','{}'),
-        ('RCMP_COC'       ,2,'rcmp_coc'       ,'RCMP - COC'       ,850,'{}','{}')
+        -- Police Job
+        (2, 'TPS_Constable'  ,0,'tps_constable'  ,'TPS - Constable'  ,335,'{}','{}'),
+        (3, 'PRP_Constable'  ,0,'prp_constable'  ,'PRP - Constable'  ,335,'{}','{}'),
+        (4, 'OPP_Constable'  ,0,'opp_constable'  ,'OPP - Constable'  ,335,'{}','{}'),
+        (5, 'RCMP_Constable' ,0,'rcmp_constable' ,'RCMP - Constable' ,335,'{}','{}'),
+        (6, 'TPS_Supervisor' ,1,'tps_supervisor' ,'TPS - Supervisor' ,620,'{}','{}'),
+        (7, 'PRP_Supervisor' ,1,'prp_supervisor' ,'PRP - Supervisor' ,620,'{}','{}'),
+        (8, 'OPP_Supervisor' ,1,'opp_supervisor' ,'OPP - Supervisor' ,620,'{}','{}'),
+        (9, 'RCMP_Supervisor',1,'rcmp_supervisor','RCMP - Supervisor',620,'{}','{}'),
+        (10, 'TPS_COC'        ,2,'tps_coc'        ,'TPS - COC'        ,850,'{}','{}'),
+        (11, 'PRP_COC'        ,2,'prp_coc'        ,'PRP - COC'        ,850,'{}','{}'),
+        (12, 'OPP_COC'        ,2,'opp_coc'        ,'OPP - COC'        ,850,'{}','{}'),
+        (13, 'RCMP_COC'       ,2,'rcmp_coc'       ,'RCMP - COC'       ,850,'{}','{}')
     ;
 
 -- ----------------------------------------------------------------------------
