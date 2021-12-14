@@ -148,7 +148,6 @@ SET time_zone = "+00:00";
         ('tortellini'  , 'Tortellini'  , 1, 0, 1),
         ('yogurt'  , 'Yogurt'  , 1, 0, 1),
 
-        ('packaged_chicken'   , 'Chicken fillet'     , 1, 0, 1),
         ('alive_chicken'      , 'Living chicken'     , 1, 0, 1),
         ('bandage'            , 'Bandage'            , 2, 0, 1),
         ('blowpipe'           , 'Blowtorch'          , 2, 0, 1),
