@@ -11,6 +11,11 @@ cachedplayers = {}
 reports = {}
 add_aces, add_principals = {}, {}
 
+local vehicleInfo = {
+	netId = nil,
+	seat = nil,
+}
+
 RegisterNetEvent("EasyAdmin:adminresponse", function(perms)
 	permissions = perms
 
@@ -68,6 +73,20 @@ RegisterNetEvent("EasyAdmin:NewReport", function(reportData)
 	reports[reportData.id] = reportData
 end)
 
+RegisterNetEvent("EasyAdmin:ClaimedReport", function(reportData)
+	reports[reportData.id] = reportData
+	if _menuPool and _menuPool:IsAnyMenuOpen() then
+		for i, menu in pairs(reportMenus) do
+			for o,item in pairs(menu.Items) do 
+				if item.Text._Text == GetLocalisedText("claimreport") then
+					item.Text._Text = GetLocalisedText("claimedby")
+					item:RightLabel(reportData.claimedName)
+				end
+			end
+		end
+	end
+end)
+
 RegisterNetEvent("EasyAdmin:RemoveReport", function(reportData)
 	reports[reportData.id] = nil 
 end)
@@ -90,6 +109,19 @@ end)
 
 RegisterNetEvent("EasyAdmin:requestSpectate", function(playerServerId, tgtCoords)
 	local localPlayerPed = PlayerPedId()
+
+	if IsPedInAnyVehicle(localPlayerPed) then
+		local vehicle = GetVehiclePedIsIn(localPlayerPed, false)
+		local numVehSeats = GetVehicleModelNumberOfSeats(GetEntityModel(vehicle))
+		vehicleInfo.netId = VehToNet(vehicle)
+		for i = -1, numVehSeats do
+			if GetPedInVehicleSeat(vehicle, i) == localPlayerPed then
+				vehicleInfo.seat = i
+				break
+			end
+		end
+	end
+
 	if ((not tgtCoords) or (tgtCoords.z == 0.0)) then tgtCoords = GetEntityCoords(GetPlayerPed(GetPlayerFromServerId(playerServerId))) end
 	if playerServerId == GetPlayerServerId(PlayerId()) then 
 		if oldCoords then
@@ -98,12 +130,12 @@ RegisterNetEvent("EasyAdmin:requestSpectate", function(playerServerId, tgtCoords
 			SetEntityCoords(playerPed, oldCoords.x, oldCoords.y, oldCoords.z, 0, 0, 0, false)
 			oldCoords=nil
 		end
-		spectatePlayer(PlayerPedId(),GetPlayerFromServerId(PlayerId()),GetPlayerName(PlayerId()))
+		spectatePlayer(localPlayerPed,GetPlayerFromServerId(PlayerId()),GetPlayerName(PlayerId()))
 		frozen = false
 		return 
 	else
 		if not oldCoords then
-			oldCoords = GetEntityCoords(PlayerPedId())
+			oldCoords = GetEntityCoords(localPlayerPed)
 		end
 	end
 	SetEntityCoords(localPlayerPed, tgtCoords.x, tgtCoords.y, tgtCoords.z - 10.0, 0, 0, 0, false)
@@ -229,7 +261,7 @@ Citizen.CreateThread(function()
 				toDelete[i] = nil
 			end
 		end
-		ShowNotification(string.format(GetLocalisedText("finishedcleaning"), GetLocalisedText(type)))
+		TriggerEvent("EasyAdmin:showNotification", string.format(GetLocalisedText("finishedcleaning"), GetLocalisedText(type)))
 	end)
 end)
 Citizen.CreateThread( function()
@@ -251,15 +283,24 @@ Citizen.CreateThread( function()
 end)
 
 
+RegisterNetEvent("EasyAdmin:TeleportPlayerBack", function(id, tgtCoords)
+	if lastLocation then
+		SetEntityCoords(PlayerPedId(), lastLocation,0,0,0, false)
+		lastLocation=nil
+	end
+end)
+
 RegisterNetEvent("EasyAdmin:TeleportRequest", function(id, tgtCoords)
 	if id then
 		if (tgtCoords.x == 0.0 and tgtCoords.y == 0.0 and tgtCoords.z == 0.0) then
 			local tgtPed = GetPlayerPed(GetPlayerFromServerId(id))
 			tgtCoords = GetEntityCoords(tgtPed)
 		end
-		SetEntityCoords(PlayerPedId(), tgtCoords.x, tgtCoords.y, tgtCoords.z,0,0,0, false)
+		lastLocation = tgtCoords
+		SetEntityCoords(PlayerPedId(), tgtCoords,0,0,0, false)
 	else
-		SetEntityCoords(PlayerPedId(), tgtCoords.x, tgtCoords.y, tgtCoords.z,0,0,0, false)
+		lastLocation = tgtCoords
+		SetEntityCoords(PlayerPedId(), tgtCoords,0,0,0, false)
 	end
 end)
 
@@ -302,16 +343,17 @@ end, false)
 
 RegisterNetEvent("EasyAdmin:FreezePlayer", function(toggle)
 	frozen = toggle
-	FreezeEntityPosition(PlayerPedId(), frozen)
-	if IsPedInAnyVehicle(PlayerPedId(), false) then
-		FreezeEntityPosition(GetVehiclePedIsIn(PlayerPedId(), false), frozen)
+	local playerPed = PlayerPedId()
+	FreezeEntityPosition(playerPed, frozen)
+	if IsPedInAnyVehicle(playerPed, false) then
+		FreezeEntityPosition(GetVehiclePedIsIn(playerPed, false), frozen)
 	end 
 end)
 
 
 RegisterNetEvent("EasyAdmin:CaptureScreenshot", function(toggle, url, field)
 	exports['screenshot-basic']:requestScreenshotUpload(GetConvar("ea_screenshoturl", 'https://wew.wtf/upload.php'), GetConvar("ea_screenshotfield", 'files[]'), function(data)
-		TriggerServerEvent("EasyAdmin:TookScreenshot", data)
+		TriggerLatentServerEvent("EasyAdmin:TookScreenshot", 100000, data)
 	end)
 end)
 
@@ -320,8 +362,8 @@ function spectatePlayer(targetPed,target,name)
 	enable = true
 	if (target == PlayerId() or target == -1) then 
 		enable = false
-		print("Target Player is ourselves, disabling spectate.")
 	end
+
 	if(enable)then
 		SetEntityVisible(playerPed, false, 0)
 		SetEntityCollision(playerPed, false, false)
@@ -337,7 +379,7 @@ function spectatePlayer(targetPed,target,name)
 		NetworkSetInSpectatorMode(true, targetPed)
 		
 		DrawPlayerInfo(target)
-		ShowNotification(string.format(GetLocalisedText("spectatingUser"), name))
+		TriggerEvent("EasyAdmin:showNotification", string.format(GetLocalisedText("spectatingUser"), name))
 	else
 		if oldCoords then
 			RequestCollisionAtCoord(oldCoords.x, oldCoords.y, oldCoords.z)
@@ -347,21 +389,48 @@ function spectatePlayer(targetPed,target,name)
 		end
 		NetworkSetInSpectatorMode(false, targetPed)
 		StopDrawPlayerInfo()
-		ShowNotification(GetLocalisedText("stoppedSpectating"))
+		TriggerEvent("EasyAdmin:showNotification", GetLocalisedText("stoppedSpectating"))
 		frozen = false
 		Citizen.Wait(200) -- to prevent staying invisible
 		SetEntityVisible(playerPed, true, 0)
 		SetEntityCollision(playerPed, true, true)
 		SetEntityInvincible(playerPed, false)
 		NetworkSetEntityInvisibleToNetwork(playerPed, false)
+		if vehicleInfo.netId and vehicleInfo.seat then
+			local vehicle = NetToVeh(vehicleInfo.netId)
+			if DoesEntityExist(vehicle) then
+				if IsVehicleSeatFree(vehicle, vehicleInfo.seat) then
+					SetPedIntoVehicle(playerPed, vehicle, vehicleInfo.seat)
+				else
+					TriggerEvent("EasyAdmin:showNotification", GetLocalisedText("spectatevehicleseatoccupied"))
+				end
+			else
+				TriggerEvent("EasyAdmin:showNotification", GetLocalisedText("spectatenovehiclefound"))
+			end
+
+			vehicleInfo.netId = nil
+			vehicleInfo.seat = nil
+		end
 	end
 end
 
 function ShowNotification(text)
 	if not RedM then
-		SetNotificationTextEntry("STRING")
-		AddTextComponentString(text)
-		DrawNotification(0,1)
+		local notificationTxd = CreateRuntimeTxd("easyadmin_notification")
+		CreateRuntimeTextureFromImage(notificationTxd, 'small_logo', 'dependencies/images/small-logo-bg.png')
+		BeginTextCommandThefeedPost("STRING")
+		AddTextComponentSubstringPlayerName(text)
+
+		local title = "~bold~EasyAdmin"
+		local subtitle = GetLocalisedText("notification")
+		local iconType = 0
+		local flash = false
+
+		EndTextCommandThefeedPostMessagetext("easyadmin_notification", "small_logo", flash, iconType, title, subtitle)
+		local showInBrief = false
+		local blink = false
+		EndTextCommandThefeedPostTicker(blink, showInBrief)
+
 	else
 		-- someone who has RedM installed please write some code for this
 		
@@ -369,9 +438,8 @@ function ShowNotification(text)
 end
 
 RegisterNetEvent("EasyAdmin:showNotification", function(text, important)
-	if not RedM then
-		BeginTextCommandThefeedPost("STRING")
-		AddTextComponentString(text)
-		EndTextCommandThefeedPostTicker(important or false,0)
+	TriggerEvent("EasyAdmin:receivedNotification")
+	if not WasEventCanceled() then
+		ShowNotification(text)
 	end
 end)

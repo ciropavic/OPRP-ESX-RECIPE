@@ -72,10 +72,87 @@ SET time_zone = "+00:00";
     -- DML
 
     INSERT INTO `items` (`name`, `label`, `weight`, `rare`, `can_remove`) VALUES
+        -- Drinks
+        ('water', 'Water', 1, 0, 1),
+        ('adios', 'Adios', 1, 0, 1),
+        ('americano', 'Americano', 1, 0, 1),
+        ('bacardi', 'Bacardi', 1, 0, 1),
+        ('beer', 'Beer', 1, 0, 1),
+        ('cappuccino', 'Cappuccino', 1, 0, 1),
+        ('champagne', 'Champagne', 1, 0, 1),
+        ('cocacola', 'Coca Cola', 1, 0, 1),
+        ('coffee', 'Coffee', 1, 0, 1),
+        ('cosmopolitan', 'Cosmopolitan', 1, 0, 1),
+        ('cubalibre', 'Cubalibre', 1, 0, 1),
+        ('drink_meloun', 'Watermelon Drink', 1, 0, 1),
+        ('drpepper', 'Dr Pepper', 1, 0, 1),
+        ('energy', 'Monster', 1, 0, 1),
+        ('espresso', 'Espresso', 1, 0, 1),
+        ('espresso_latte', 'Espresso Latte', 1, 0, 1),
+        ('frappe', 'Frappe', 1, 0, 1),
+        ('frappucino', 'Frappucino', 1, 0, 1),
+        ('golem', 'Golem', 1, 0, 1),
+        ('icetea', 'Ice Tea', 1, 0, 1),
+        ('jager', 'Jager', 1, 0, 1),
+        ('jagerbomb', 'Jager Bomb', 1, 0, 1),
+        ('jahoda_smoot', 'Jahoda Smooth', 1, 0, 1),
+        ('jus_raisin', 'Grape Juice', 1, 0, 1),
+        ('jusfruit', 'Fruit Juice', 1, 0, 1),
+        ('limonade', 'Lemonade', 1, 0, 1),
+        ('logger', 'Logger', 1, 0, 1),
+        ('longisland', 'Long Island', 1, 0, 1),
+        ('martini', 'Martini', 1, 0, 1),
+        ('manhattan', 'Manhattan', 1, 0, 1),
+        ('pinacolada', 'Pinacolada', 1, 0, 1),
+        ('pineapple_drink', 'Pineapple Drink', 1, 0, 1),
+        ('purifiedwater', 'Purified Water', 1, 0, 1),
+        ('redbull', 'RedBull', 1, 0, 1),
+        ('rhum', 'Rhum', 1, 0, 1),
+        ('vodka', 'Vodka', 1, 0, 1),
+        ('water', 'Water', 1, 0, 1),
+        ('wine', 'Wine', 1, 0, 1),
+
+        -- Food
+        ('activia' , 'Activia' , 1, 0, 1),
+        ('baconfries'  , 'Bacon & Fries'  , 1, 0, 1),
+        ('bagel'  , 'Bagel'  , 1, 0, 1),
+        ('ban_muffin'  , 'Banana Muffin'  , 1, 0, 1),
+        ('banana'  , 'Banana'  , 1, 0, 1),
+        ('bolchips'  , 'Bag Of Chips'  , 1, 0, 1),
+        ('blue_muffin'  , 'Blueberry Muffin'  , 1, 0, 1),
+        ('bread'  , 'Bread'  , 1, 0, 1),
+        ('caesar'  , 'Caesar Salad'  , 1, 0, 1),
+        ('calzone'  , 'Calzone'  , 1, 0, 1),
+        ('chocolate'  , 'Chocolate'  , 1, 0, 1),
+        ('chocolates'  , 'Box Of Chocolate'  , 1, 0, 1),
+        ('croissant'  , 'Croissant'  , 1, 0, 1),
+        ('cupcake'  , 'Cupcake'  , 1, 0, 1),
+        ('donut'  , 'Donut'  , 1, 0, 1),
+        ('fries'  , 'Fries'  , 1, 0, 1),
+        ('burger'  , 'Burger'  , 1, 0, 1),
+        ('steak'  , 'Steak'  , 1, 0, 1),
+        ('hamburger'  , 'Hamburger'  , 1, 0, 1),
+        ('klobasa'  , 'Klobasa'  , 1, 0, 1),
+        ('lasagne'  , 'Lasagne'  , 1, 0, 1),
+        ('nachos_salsa'  , 'Nachos Salsa'  , 1, 0, 1),
+        ('nachos_syr'  , 'Nachos'  , 1, 0, 1),
+        ('packaged_chicken'  , 'Packaged Chicken'  , 1, 0, 1),
+        ('pancake'  , 'Pancake'  , 1, 0, 1),
+        ('pizza'  , 'Pizza'  , 1, 0, 1),
+        ('popcorn'  , 'Popcorn'  , 1, 0, 1),
+        ('popcorn_karamel'  , 'Popcorn Karamel'  , 1, 0, 1),
+        ('pretcil'  , 'Pretcil'  , 1, 0, 1),
+        ('proteinbar'  , 'Protein Bar'  , 1, 0, 1),
+        ('sandwich'  , 'Sandwich'  , 1, 0, 1),
+        ('saucisson'  , 'Sausage'  , 1, 0, 1),
+        ('spagetie'  , 'Spagetie'  , 1, 0, 1),
+        ('tortellini'  , 'Tortellini'  , 1, 0, 1),
+        ('yogurt'  , 'Yogurt'  , 1, 0, 1),
+
+        ('packaged_chicken'   , 'Chicken fillet'     , 1, 0, 1),
         ('alive_chicken'      , 'Living chicken'     , 1, 0, 1),
         ('bandage'            , 'Bandage'            , 2, 0, 1),
         ('blowpipe'           , 'Blowtorch'          , 2, 0, 1),
-        ('bread'              , 'Bread'              , 1, 0, 1),
         ('cannabis'           , 'Cannabis'           , 3, 0, 1),
         ('carokit'            , 'Body Kit'           , 3, 0, 1),
         ('carotool'           , 'Tools'              , 2, 0, 1),
@@ -85,7 +162,6 @@ SET time_zone = "+00:00";
         ('diamond'            , 'Diamond'            , 1, 0, 1),
         ('essence'            , 'Gas'                , 1, 0, 1),
         ('fabric'             , 'Fabric'             , 1, 0, 1),
-        ('fish'               , 'Fish'               , 1, 0, 1),
         ('fixkit'             , 'Repair Kit'         , 3, 0, 1),
         ('fixtool'            , 'Repair Tools'       , 2, 0, 1),
         ('gazbottle'          , 'Gas Bottle'         , 2, 0, 1),
@@ -93,7 +169,6 @@ SET time_zone = "+00:00";
         ('iron'               , 'Iron'               , 1, 0, 1),
         ('marijuana'          , 'Marijuana'          , 2, 0, 1),
         ('medikit'            , 'Medikit'            , 2, 0, 1),
-        ('packaged_chicken'   , 'Chicken fillet'     , 1, 0, 1),
         ('packaged_plank'     , 'Packaged wood'      , 1, 0, 1),
         ('petrol'             , 'Oil'                , 1, 0, 1),
         ('petrol_raffin'      , 'Processed oil'      , 1, 0, 1),
@@ -101,17 +176,34 @@ SET time_zone = "+00:00";
         ('slaughtered_chicken', 'Slaughtered chicken', 1, 0, 1),
         ('stone'              , 'Stone'              , 1, 0, 1),
         ('washed_stone'       , 'Washed stone'       , 1, 0, 1),
-        ('water'              , 'Water'              , 1, 0, 1),
         ('wood'               , 'Wood'               , 1, 0, 1),
         ('wool'               , 'Wool'               , 1, 0, 1)
     ;
 
     INSERT INTO `jobs` (`name`, `label`, `whitelisted`) VALUES
-        ('unemployed', 'Unemployed', 0)
+        ('unemployed', 'Unemployed', 0),
+        ('police', 'LEO', 1)
     ;
     
     INSERT INTO `job_grades` (`id`, `job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES
         (1, 'unemployed', 0, 'unemployed', 'Unemployed', 85, '{}', '{}')
+    ;
+
+    INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
+        ('TPS_Constable'  ,0,'tps_constable'  ,'TPS - Constable'  ,335,'{}','{}'),
+        ('PRP_Constable'  ,0,'prp_constable'  ,'PRP - Constable'  ,335,'{}','{}'),
+        ('OPP_Constable'  ,0,'opp_constable'  ,'OPP - Constable'  ,335,'{}','{}'),
+        ('RCMP_Constable' ,0,'rcmp_constable' ,'RCMP - Constable' ,335,'{}','{}'),
+
+        ('TPS_Supervisor' ,1,'tps_supervisor' ,'TPS - Supervisor' ,620,'{}','{}'),
+        ('PRP_Supervisor' ,1,'prp_supervisor' ,'PRP - Supervisor' ,620,'{}','{}'),
+        ('OPP_Supervisor' ,1,'opp_supervisor' ,'OPP - Supervisor' ,620,'{}','{}'),
+        ('RCMP_Supervisor',1,'rcmp_supervisor','RCMP - Supervisor',620,'{}','{}'),
+
+        ('TPS_COC'        ,2,'tps_coc'        ,'TPS - COC'        ,850,'{}','{}'),
+        ('PRP_COC'        ,2,'prp_coc'        ,'PRP - COC'        ,850,'{}','{}'),
+        ('OPP_COC'        ,2,'opp_coc'        ,'OPP - COC'        ,850,'{}','{}'),
+        ('RCMP_COC'       ,2,'rcmp_coc'       ,'RCMP - COC'       ,850,'{}','{}')
     ;
 
 -- ----------------------------------------------------------------------------
@@ -1824,6 +1916,60 @@ SET time_zone = "+00:00";
     ('super', 'Super'),
     ('suvs', 'SUVs'),
     ('vans', 'Vans');
+
+-- ----------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------
+
+
+-- ----------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------
+
+--
+-- esx_police
+--
+
+
+    -- DDL
+
+    CREATE TABLE `fine_types` (
+        `id` int NOT NULL AUTO_INCREMENT,
+        `label` varchar(255) DEFAULT NULL,
+        `amount` int DEFAULT NULL,
+        `category` int DEFAULT NULL,
+
+        PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+    -- DML
+
+    INSERT INTO `fine_types` (label, amount, category) VALUES
+        ('Speeding 0-15 km/h over the limit',50,0),
+        ('Speeding 16-29 km/h over the limit',140,0),
+        ('Speeding 30-49 km/h over the limit',360,0),
+        ('Speeding 50 km/h+ over the limit',750,0),
+        ('Fleeing the scene of accident',2000,0),
+        ('Driving without a valid license',1000,0),
+        ('Negligent driving',2000,0),
+        ('Responsibility at a red light / stop sign',325,0),
+        ('Careless driving',2000,0),
+        ('Driving under the influence',600,0),
+        ('Open alcoholic container in vehicle',180,0),
+        ('Obstructing sidewalk / walkway',45,0),
+        ('Vehicle obstructing emergency vehicle',1250,0),
+        ('Distracted driving',615,0),
+        ('Overtaking vehicle on right hand side',150,0),
+        ('Racing or assisting in racing on public roads',5000,0),
+        ('Following too closely',300,0),
+        ('Illegally tinted windows',110,0),
+        ('Possession of a stolen vehicle',2000,0),
+        ('Failure to signal',110,0),
+        ('Failure to display license plate',85,0)--,
+
+        -- ('aa',0,1),
+    ;
 
 -- ----------------------------------------------------------------------------
 -- ----------------------------------------------------------------------------

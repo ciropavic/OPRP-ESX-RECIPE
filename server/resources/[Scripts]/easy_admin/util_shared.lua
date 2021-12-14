@@ -1,9 +1,11 @@
 permissions = {
 	["player.ban.temporary"] = false,
 	["player.ban.permanent"] = false,
+	["player.ban.view"] = false,
+	["player.ban.edit"] = false,
+	["player.ban.remove"] = false,
 	["player.kick"] = false,
 	["player.spectate"] = false,
-	["player.unban"] = false,
 	["player.teleport.single"] = false,
 	["player.slap"] = false,
 	["player.freeze"] = false,
@@ -12,6 +14,7 @@ permissions = {
 	["player.warn"] = false,
 	["player.teleport.everyone"] = false,
 	["player.reports.view"] = false,
+	["player.reports.claim"] = false,
 	["player.reports.process"] = false,
 	
 	["server.cleanup.cars"] = false,
@@ -60,6 +63,101 @@ if IsDuplicityVersion() then
 		enableDebugging = false
 	end
 end
+
+if not IsDuplicityVersion() then
+	RegisterNUICallback("keyboardFinished", function(data, cb)
+		keyboardResult = data.result
+		keyboardState = data.state
+		cb('ok')
+	end)
+end
+
+
+function displayKeyboardInput(title,default,maxLength)
+	if alreadyTyping then return nil end
+	keyboardResult, keyboardState = nil
+
+
+	SetNuiFocus(true, true)
+	SendNUIMessage({action= "open", title=GetLabelText(title), default=default, maxLength=maxLength, resource=GetCurrentResourceName()})
+
+	alreadyTyping = true
+
+	while not keyboardState do --While typing is not aborted and not finished, this loop waits
+		Citizen.Wait(0)
+	end
+
+	alreadyTyping = false
+	SetNuiFocus(false,false)
+	if keyboardState == 0 then
+		return keyboardResult
+	else
+		return nil
+	end
+--[[ -- default V Input
+	DisplayOnscreenKeyboard(1, title, "", default, "", "", "", maxLength)
+
+	while UpdateOnscreenKeyboard() ~= 1 and UpdateOnscreenKeyboard() ~= 2 do --While typing is not aborted and not finished, this loop waits
+		Citizen.Wait(0)
+	end
+		
+	if UpdateOnscreenKeyboard() ~= 2 then
+		local result = GetOnscreenKeyboardResult()
+		return result
+	else
+		return nil
+	end
+]]
+end
+
+function copyToClipboard(text)
+	SendNUIMessage({action= "clip", text=text})
+	TriggerEvent("EasyAdmin:showNotification", GetLocalisedText("copiedtoclipboard"))
+end
+
+function DoesPlayerHavePermission(player, object)
+	if IsDuplicityVersion() then
+		local haspermission = false
+		if (player == 0 or player == "") then
+			return true
+		end-- Console. It's assumed this will be an admin with access.
+		
+		if not string.find(object, "easyadmin.") then -- compatability with outdated plugins
+			object = "easyadmin."..object
+		end
+		
+		if IsPlayerAceAllowed(player,object) then -- check if the player has access to this permission
+			haspermission = true
+			PrintDebugMessage(getName(player, true).." has Permissions for "..object..".", 4)
+		else
+			haspermission = false
+			PrintDebugMessage(getName(player, true).." does not have Permissions for "..object..".", 4)
+		end
+		return haspermission
+	else
+		return permissions[object]
+	end
+end
+
+function DoesPlayerHavePermissionForCategory(player, object)
+	for perm in pairs(permissions) do
+		if string.startswith(perm, object) then
+			if DoesPlayerHavePermission(player, perm) then
+				return true
+			end
+		end
+	end
+	return false
+end
+
+
+function GetVersion()
+	local resourceName = GetCurrentResourceName()
+	local version = GetResourceMetadata(resourceName, 'version', 0)
+	local is_master = GetResourceMetadata(resourceName, 'is_master', 0) == "yes" or false
+	return version, is_master
+end
+
 
 function GetLocalisedText(string)
 	if not strings then return "Strings not Loaded yet!" end
@@ -114,6 +212,10 @@ function string.reverse(s)
 	return r
 end
 
+function string.startswith(string,start)
+	return string:sub(1,string.len(start))==start
+ end
+
 
 --- http://www.lua.org/pil/11.5.html
 function Set (list)
@@ -124,30 +226,7 @@ end
 
 -- Convert a lua table into a lua syntactically correct string
 function table_to_string(tbl)
-	local result = "{"
-	for k, v in pairs(tbl) do
-		-- Check the key type (ignore any numerical keys - assume its an array)
-		if type(k) == "string" then
-			result = result.."[\""..k.."\"]".."="
-		end
-		
-		-- Check the value type
-		if type(v) == "table" then
-			result = result..table_to_string(v)
-		elseif type(v) == "boolean" then
-			result = result..tostring(v)
-		elseif type(v) == "function" then
-			result = result..tostring(v)
-		else
-			result = result.."\""..v.."\""
-		end
-		result = result..","
-	end
-	-- Remove leading commas from the result
-	if result ~= "" then
-		result = result:sub(1, result:len()-1)
-	end
-	return result.."}"
+	return json.encode(tbl)
 end
 
 function mergeTables(t1, t2)

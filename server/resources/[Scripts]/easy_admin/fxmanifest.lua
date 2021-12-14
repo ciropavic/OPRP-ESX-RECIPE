@@ -2,6 +2,12 @@ fx_version "cerulean"
 
 games {"rdr3","gta5"}
 
+author 'Blumlaut <blue@furfag.de>'
+description 'EasyAdmin - Admin Menu for FiveM & RedM'
+version '6.34'
+is_master 'yes'
+
+
 lua54 'yes'
 
 rdr3_warning 'I acknowledge that this is a prerelease build of RedM, and I am aware my resources *will* become incompatible once RedM ships.'
@@ -24,20 +30,24 @@ client_scripts {
 	"plugins/**/*_client.lua"
 }
 
+ui_page "dependencies/nui/index.html"
+
 files {
 	"dependencies/images/*.png",
+    "dependencies/nui/**/*"
 }
 
 convar_category 'EasyAdmin' {
     "Configuration Options",
     {
     { "EasyAdmin language", "$ea_LanguageName", "CV_STRING", "en" },
-    { "Key to open the menu", "$ea_MenuButton", "CV_STRING", "none" },
+    { "Default key to open the menu", "$ea_defaultKey", "CV_STRING", "none" },
     { "The Minimum Amount of Identifiers", "$ea_minIdentifierMatches", "CV_INT", "2" },
+    { "Display banlist checking progress", "$ea_presentDeferral", "CV_BOOL", "true" },
     { "Moderation Actions Webhook", "$ea_moderationNotification", "CV_STRING", "false" },
     { "Report Notifications Webhook", "$ea_reportNotification", "CV_STRING", "false" },
     { "Detail Notifications Webhook", "$ea_detailNotification", "CV_STRING", "false" },
-    { "Disable Specific Webhook Alerts", "$ea_dateFormat", "CV_STRING", "%d/%m/%Y     %H:%M:%S" },
+    { "Set a custom DateTime format", "$ea_dateFormat", "CV_STRING", "%d/%m/%Y     %H:%M:%S" },
     { "Image Uploader", "$ea_screenshoturl", "CV_STRING", "https://wew.wtf/upload.php" },
     { "Screenshot Field Name", "$ea_screenshotfield", "CV_STRING", "files[]" },
     { "JSON String arguments", "$ea_screenshotOptions", "CV_STRING", "{}" },
