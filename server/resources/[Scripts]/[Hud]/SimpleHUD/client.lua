@@ -56,6 +56,21 @@ function InputText(text, scale, x, y)
     DrawText(x, y)
 end
 
+-- Text function
+function InputText2(text, scale, x, y)
+    SetTextFont(4)
+    SetTextProportional(0)
+    SetTextScale(scale, scale)
+    SetTextEdge(1, 0, 0, 0, 255)
+    SetTextDropShadow(0, 0, 0, 0,255)
+    SetTextOutline()
+	SetTextJustification(0)
+    SetTextCentre(true)
+    SetTextEntry("STRING")
+    AddTextComponentString(text)
+    DrawText(x, y)
+end
+
 -- command
 RegisterCommand("togglehud", function(source, args, rawCommand)
     if ToggleHUD == true then
@@ -137,17 +152,17 @@ Citizen.CreateThread(function()
 
             if config.voiceRange.enableVoiceRange then
                 if InputWhisper == true and isTalking == false then
-                    InputText("🔈", config.voiceRange.scale, config.voiceRange.x, config.voiceRange.y)
+                    InputText2("🔈", config.voiceRange.scale, config.voiceRange.x, config.voiceRange.y)
                 elseif InputNormal == true and isTalking == false then
-                    InputText("🔉", config.voiceRange.scale, config.voiceRange.x, config.voiceRange.y)
+                    InputText2("🔉", config.voiceRange.scale, config.voiceRange.x, config.voiceRange.y)
                 elseif InputShouting == true and isTalking == false then
-                    InputText("🔊", config.voiceRange.scale, config.voiceRange.x, config.voiceRange.y)
+                    InputText2("🔊", config.voiceRange.scale, config.voiceRange.x, config.voiceRange.y)
                 elseif InputWhisper == true and isTalking == 1 then
-                    InputText("🔈", config.voiceRange.scale * 1.2, config.voiceRange.x, config.voiceRange.y)
+                    InputText2("🔈", config.voiceRange.scale * 1.5, config.voiceRange.x, config.voiceRange.y)
                 elseif InputNormal == true and isTalking == 1 then
-                    InputText("🔉", config.voiceRange.scale * 1.2, config.voiceRange.x, config.voiceRange.y)
+                    InputText2("🔉", config.voiceRange.scale * 1.5, config.voiceRange.x, config.voiceRange.y)
                 elseif InputShouting == true and isTalking == 1 then
-                    InputText("🔊", config.voiceRange.scale * 1.2, config.voiceRange.x, config.voiceRange.y)
+                    InputText2("🔊", config.voiceRange.scale * 1.5, config.voiceRange.x, config.voiceRange.y)
                 end
                 -- config.voiceRange.scale * 1.2
                 if config.voiceRange.enableBlueCirlce and IsControlPressed(1, config.voiceRange.Keybind) then

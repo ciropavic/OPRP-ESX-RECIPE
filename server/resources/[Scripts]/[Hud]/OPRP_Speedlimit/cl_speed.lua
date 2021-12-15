@@ -455,14 +455,15 @@ Citizen.CreateThread(function()
 		end
 			
 			if speedlimitshow == true then
-            DrawTxt(0.840, 1.452, 1.0,1.03,0.45,"~r~Speedlimit: ~b~"..speedlimit.."~r~ km/h", 255,255,255,255)
+                -- DrawTxt(0.840, 1.452, 1.0,1.03,0.45,"~r~Speedlimit: ~b~"..speedlimit.."~r~ km/h", 255,255,255,255)
+                DrawTxt(0.181, 0.973, 1.0,1.03,0.40,"~r~Speedlimit: ~b~"..speedlimit.."~r~ km/h", 255,255,255,255)
 			end
 		end
     end
 end)
 
 function DrawTxt(x,y ,width,height,scale, text, r,g,b,a)
-    SetTextFont(6)
+    SetTextFont(4)
     SetTextProportional(0)
     SetTextScale(scale, scale)
     SetTextColour(r, g, b, a)
@@ -471,5 +472,6 @@ function DrawTxt(x,y ,width,height,scale, text, r,g,b,a)
     SetTextOutline()
     SetTextEntry("STRING")
     AddTextComponentString(text)
-    DrawText(x - width/1.5, y - height/2 + 0.0250)
+    -- DrawText(x - width/1.5, y - height/2 + 0.0250)
+    DrawText(x, y)
 end
