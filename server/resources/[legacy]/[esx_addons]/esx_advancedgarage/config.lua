@@ -41,8 +41,8 @@ Config.Ambulance = {
 }
 
 Config.Police = {
-	Garages = false, -- true = Allows use of Police Garages.
-	Pounds = false, -- true = Allows use of Police Pounds.
+	Garages = true, -- true = Allows use of Police Garages.
+	Pounds = true, -- true = Allows use of Police Pounds.
 	Blips = false, -- true = Use Police Blips.
 	PoundP = 80, -- How much it Costs to get Vehicles from Police Pound.
 	Markers = {

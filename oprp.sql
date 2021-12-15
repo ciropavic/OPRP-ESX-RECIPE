@@ -187,18 +187,18 @@ SET time_zone = "+00:00";
         (1, 'unemployed', 0, 'unemployed', 'Unemployed', 85, '{}', '{}'),
 
         -- Police Job
-        (2 , 'police' ,0,'tps_constable'   ,'TPS - Constable'   ,335,'{}','{}'),
-        (3 , 'police' ,0,'prp_constable'   ,'PRP - Constable'   ,335,'{}','{}'),
-        (4 , 'police' ,0,'opp_constable'   ,'OPP - Constable'   ,335,'{}','{}'),
-        (5 , 'police' ,0,'rcmp_constable'  ,'RCMP - Constable'  ,335,'{}','{}'),
-        (6 , 'police' ,1,'tps_supervisor'  ,'TPS - Supervisor'  ,620,'{}','{}'),
-        (7 , 'police' ,1,'prp_supervisor'  ,'PRP - Supervisor'  ,620,'{}','{}'),
-        (8 , 'police' ,1,'opp_supervisor'  ,'OPP - Supervisor'  ,620,'{}','{}'),
-        (9 , 'police' ,1,'rcmp_supervisor' ,'RCMP - Supervisor' ,620,'{}','{}'),
-        (10, 'police' ,2,'tps_coc'         ,'TPS - COC'         ,850,'{}','{}'),
-        (11, 'police' ,2,'prp_coc'         ,'PRP - COC'         ,850,'{}','{}'),
-        (12, 'police' ,2,'opp_coc'         ,'OPP - COC'         ,850,'{}','{}'),
-        (13, 'police' ,2,'rcmp_coc'        ,'RCMP - COC'        ,850,'{}','{}')
+        (2 , 'police' ,1,'tps_constable'   ,'TPS - Constable'   ,335,'{}','{}'),
+        (3 , 'police' ,2,'prp_constable'   ,'PRP - Constable'   ,335,'{}','{}'),
+        (4 , 'police' ,3,'opp_constable'   ,'OPP - Constable'   ,335,'{}','{}'),
+        (5 , 'police' ,4,'rcmp_constable'  ,'RCMP - Constable'  ,335,'{}','{}'),
+        (6 , 'police' ,5,'tps_supervisor'  ,'TPS - Supervisor'  ,620,'{}','{}'),
+        (7 , 'police' ,6,'prp_supervisor'  ,'PRP - Supervisor'  ,620,'{}','{}'),
+        (8 , 'police' ,7,'opp_supervisor'  ,'OPP - Supervisor'  ,620,'{}','{}'),
+        (9 , 'police' ,8,'rcmp_supervisor' ,'RCMP - Supervisor' ,620,'{}','{}'),
+        (10, 'police' ,9,'tps_coc'         ,'TPS - COC'         ,850,'{}','{}'),
+        (11, 'police' ,10,'prp_coc'         ,'PRP - COC'         ,850,'{}','{}'),
+        (12, 'police' ,11,'opp_coc'         ,'OPP - COC'         ,850,'{}','{}'),
+        (13, 'police' ,12,'rcmp_coc'        ,'RCMP - COC'        ,850,'{}','{}')
     ;
 
 -- ----------------------------------------------------------------------------

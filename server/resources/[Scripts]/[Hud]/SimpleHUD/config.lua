@@ -19,7 +19,7 @@ config = {
 
     -- Configure the voice range display.
     voiceRange = {
-        enableVoiceRange = true,
+        enableVoiceRange = false,
         
         scale = 0.30,
         x = 0.170,
