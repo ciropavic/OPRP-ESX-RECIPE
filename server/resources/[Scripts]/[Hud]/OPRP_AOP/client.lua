@@ -13,9 +13,9 @@
 local cooldown = 0
 peacetimeActive = false
 local year, month, day, hour, minute, second = GetLocalTime()
-local AOPxNew = 0.660
-local AOPyNew = 1.430
-local AOPyNew2 = 1.430
+local AOPxNew = 0.681
+local AOPyNew = 1.3955
+local AOPyNew2 = 1.3955
 
 AddEventHandler('onClientMapStart', function()
     TriggerEvent('AOP:RunConfig')
