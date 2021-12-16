@@ -2,7 +2,7 @@ var type = "normal";
 var disabled = false;
 var disabledFunction = null;
 
-window.addEventListener("message", function (event) {
+window.addEventListener("message", function(event) {
     if (event.data.action == "display") {
         type = event.data.type;
         disabled = false;
@@ -38,7 +38,7 @@ window.addEventListener("message", function (event) {
             appendTo: 'body',
             zIndex: 99999,
             revert: 'invalid',
-            start: function (event, ui) {
+            start: function(event, ui) {
                 if (disabled) {
                     $(this).stop();
                     return;
@@ -57,7 +57,7 @@ window.addEventListener("message", function (event) {
                     $("#use").addClass("disabled");
                 }
             },
-            stop: function () {
+            stop: function() {
                 itemData = $(this).data("item");
 
                 if (itemData !== undefined && itemData.name !== undefined) {
@@ -75,13 +75,13 @@ window.addEventListener("message", function (event) {
     } else if (event.data.action == "nearPlayers") {
         $("#nearPlayers").html("");
 
-        $.each(event.data.players, function (index, player) {
+        $.each(event.data.players, function(index, player) {
             $("#nearPlayers").append('<button class="nearbyPlayerButton" data-player="' + player.player + '">ID ' + player.player + '</button>');
         });
 
         $("#dialog").dialog("open");
 
-        $(".nearbyPlayerButton").click(function () {
+        $(".nearbyPlayerButton").click(function() {
             $("#dialog").dialog("close");
             player = $(this).data("player");
             $.post("http://esx_inventoryhud/GiveItem", JSON.stringify({
@@ -101,7 +101,7 @@ function closeInventory() {
 
 function inventorySetup(items) {
     $("#playerInventory").html("");
-    $.each(items, function (index, item) {
+    $.each(items, function(index, item) {
         count = setCount(item, false);
 
         var bgColor = "none";
@@ -114,7 +114,7 @@ function inventorySetup(items) {
                 bgColor = "rgba(218, 165, 32, 0.4)";
             }
         }
-
+        console.log(item.name, item.label)
         $("#playerInventory").append('<div class="slot" style="background-color: ' + bgColor + ';"><div id="item-' + index + '" class="item" style = "background-image: url(\'img/items/' + item.name + '.png\')">' +
             '<div class="item-count">' + count + '</div> <div class="item-name">' + item.label + '</div> </div ><div class="item-name-bg"></div></div>');
         $('#item-' + index).data('item', item);
@@ -124,7 +124,7 @@ function inventorySetup(items) {
 
 function secondInventorySetup(items) {
     $("#otherInventory").html("");
-    $.each(items, function (index, item) {
+    $.each(items, function(index, item) {
         count = setCount(item, true);
 
         var bgColor = "none";
@@ -146,21 +146,21 @@ function secondInventorySetup(items) {
 
 function Interval(time) {
     var timer = false;
-    this.start = function () {
+    this.start = function() {
         if (this.isRunning()) {
             clearInterval(timer);
             timer = false;
         }
 
-        timer = setInterval(function () {
+        timer = setInterval(function() {
             disabled = false;
         }, time);
     };
-    this.stop = function () {
+    this.stop = function() {
         clearInterval(timer);
         timer = false;
     };
-    this.isRunning = function () {
+    this.isRunning = function() {
         return timer !== false;
     };
 }
@@ -218,16 +218,16 @@ function formatMoney(n, c, d, t) {
     return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t);
 };
 
-$(document).ready(function () {
-    $("#count").focus(function () {
+$(document).ready(function() {
+    $("#count").focus(function() {
         $(this).val("")
-    }).blur(function () {
+    }).blur(function() {
         if ($(this).val() == "") {
             $(this).val("1")
         }
     });
 
-    $("body").on("keyup", function (key) {
+    $("body").on("keyup", function(key) {
         if (Config.closeKeys.includes(key.which)) {
             closeInventory();
         }
@@ -235,7 +235,7 @@ $(document).ready(function () {
 
     $('#use').droppable({
         hoverClass: 'hoverControl',
-        drop: function (event, ui) {
+        drop: function(event, ui) {
             itemData = ui.draggable.data("item");
 
             if (itemData == undefined || itemData.usable == undefined) {
@@ -257,7 +257,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#playerInventory').on('dblclick', '.item', function () {
+    $('#playerInventory').on('dblclick', '.item', function() {
         itemData = $(this).data("item");
 
         if (itemData == undefined || itemData.usable == undefined) {
@@ -280,7 +280,7 @@ $(document).ready(function () {
 
     $('#give').droppable({
         hoverClass: 'hoverControl',
-        drop: function (event, ui) {
+        drop: function(event, ui) {
             itemData = ui.draggable.data("item");
 
             if (itemData == undefined || itemData.canRemove == undefined) {
@@ -304,7 +304,7 @@ $(document).ready(function () {
 
     $('#drop').droppable({
         hoverClass: 'hoverControl',
-        drop: function (event, ui) {
+        drop: function(event, ui) {
             itemData = ui.draggable.data("item");
 
             if (itemData == undefined || itemData.canRemove == undefined) {
@@ -328,7 +328,7 @@ $(document).ready(function () {
     });
 
     $('#playerInventory').droppable({
-        drop: function (event, ui) {
+        drop: function(event, ui) {
             itemData = ui.draggable.data("item");
             itemInventory = ui.draggable.data("inventory");
 
@@ -367,7 +367,7 @@ $(document).ready(function () {
     });
 
     $('#otherInventory').droppable({
-        drop: function (event, ui) {
+        drop: function(event, ui) {
             itemData = ui.draggable.data("item");
             itemInventory = ui.draggable.data("inventory");
 
@@ -399,7 +399,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#count").on("keypress keyup blur", function (event) {
+    $("#count").on("keypress keyup blur", function(event) {
         $(this).val($(this).val().replace(/[^\d].+/, ""));
         if ((event.which < 48 || event.which > 57)) {
             event.preventDefault();
@@ -414,12 +414,12 @@ $.widget('ui.dialog', $.ui.dialog, {
         // Element (id or class) that triggers the dialog opening 
         clickOutsideTrigger: ''
     },
-    open: function () {
+    open: function() {
         var clickOutsideTriggerEl = $(this.options.clickOutsideTrigger),
             that = this;
         if (this.options.clickOutside) {
             // Add document wide click handler for the current dialog namespace
-            $(document).on('click.ui.dialogClickOutside' + that.eventNamespace, function (event) {
+            $(document).on('click.ui.dialogClickOutside' + that.eventNamespace, function(event) {
                 var $target = $(event.target);
                 if ($target.closest($(clickOutsideTriggerEl)).length === 0 &&
                     $target.closest($(that.uiDialog)).length === 0) {
@@ -430,7 +430,7 @@ $.widget('ui.dialog', $.ui.dialog, {
         // Invoke parent open method
         this._super();
     },
-    close: function () {
+    close: function() {
         // Remove document wide click handler for the current dialog
         $(document).off('click.ui.dialogClickOutside' + this.eventNamespace);
         // Invoke parent close method 

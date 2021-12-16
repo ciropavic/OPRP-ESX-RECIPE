@@ -27,7 +27,7 @@ local HUD = {
 local UI = { 
 
 	x =  0.000 ,	-- Base Screen Coords 	+ 	 x
-	y = -0.001 ,	-- Base Screen Coords 	+ 	-y
+	y = -0.005 ,	-- Base Screen Coords 	+ 	-y
 
 }
 

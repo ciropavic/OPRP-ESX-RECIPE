@@ -1193,7 +1193,7 @@ SET time_zone = "+00:00";
 
         (500 , 'BMX'                               , 'bmx'            , 150    , 'cycles'      , '' ),
 
-        (501 , 'Cruiser'                           , 'cruiser'        , 200    , 'cruiser'      , '' ),
+        (501 , 'Cruiser'                           , 'cruiser'        , 200    , 'other'      , '' ),
 
         (502 , 'Fixter'                            , 'fixter'         , 200    , 'other'      , '' ),
         (503 , 'Scorcher'                          , 'scorcher'       , 350    , 'other'      , '' ),
@@ -1977,6 +1977,29 @@ SET time_zone = "+00:00";
         ('Failure to signal',110,0),
         ('Failure to display license plate',85,0)
     ;
+
+-- ----------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------
+
+--
+-- esx_inventoryhud_trunk
+--
+
+
+    -- DDL
+    CREATE TABLE IF NOT EXISTS `trunk_inventory` (
+        `id` int(11) NOT NULL AUTO_INCREMENT,
+        `plate` varchar(8) NOT NULL,
+        `data` text NOT NULL,
+        `owned` int(11) NOT NULL,
+        PRIMARY KEY (`id`),
+        UNIQUE KEY `plate` (`plate`)
+    );
+
+    -- DML
+    -- N/A
+
 
 -- ----------------------------------------------------------------------------
 -- ----------------------------------------------------------------------------

@@ -65,15 +65,15 @@ tasks:
     dest: ./resources/vSync
 
   ## GCPhone stuff
-  - action: download_file
-    url: https://github.com/Re-Ignited-Development/Re-Ignited-Phone/releases/download/V1.5/resources-1.2.zip
-    path: ./tmp/gcphone.zip
-  - action: unzip
-    src: ./tmp/gcphone.zip
-    dest: ./tmp
-  - action: move_path
-    src: ./tmp/resources-1.2/gcphone
-    dest: ./resources/gcphone
+  # - action: download_file
+  #   url: https://github.com/Re-Ignited-Development/Re-Ignited-Phone/releases/download/V1.5/resources-1.2.zip
+  #   path: ./tmp/gcphone.zip
+  # - action: unzip
+  #   src: ./tmp/gcphone.zip
+  #   dest: ./tmp
+  # - action: move_path
+  #   src: ./tmp/resources-1.2/gcphone
+  #   dest: ./resources/gcphone
 
   ## Downloading & Patching configs: cosmo hud
   # - action: download_github

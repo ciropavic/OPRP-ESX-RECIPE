@@ -395,6 +395,7 @@ end
 if Config.EnableHUD then
 	Citizen.CreateThread(function()
 		while true do
+			local ped = PlayerPedId()
 			local vehicle = GetVehiclePedIsIn(ped) -- Is The Player in a vehicle?
 			local driver = GetPedInVehicleSeat(vehicle, -1) -- Is The Player in the Driver Seat?
 			local dead = IsPedDeadOrDying(ped, true) -- Is The Player dead or dying?
