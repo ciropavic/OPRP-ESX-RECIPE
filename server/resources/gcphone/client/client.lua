@@ -480,7 +480,7 @@ AddEventHandler("gcPhone:acceptCall", function(infoCall, initiator)
   if inCall == false and USE_RTC == false then
     inCall = true
     if Config.UseMumbleVoIP then
-      exports["mumble-voip"]:SetCallChannel(infoCall.id+1)
+      exports["pma-voice"]:setCallChannel(infoCall.id+1)
     elseif Config.UseTokoVoIP then
       exports.tokovoip_script:addPlayerToRadio(infoCall.id + 120)
       TokoVoipID = infoCall.id + 120
@@ -501,7 +501,7 @@ AddEventHandler("gcPhone:rejectCall", function(infoCall)
   if inCall == true then
     inCall = false
     if Config.UseMumbleVoIP then
-      exports["mumble-voip"]:SetCallChannel(0)
+      exports["pma-voice"]:setCallChannel(0)
     elseif Config.UseTokoVoIP then
       exports.tokovoip_script:removePlayerFromRadio(TokoVoipID)
       TokoVoipID = nil

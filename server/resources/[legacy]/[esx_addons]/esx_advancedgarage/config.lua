@@ -98,7 +98,7 @@ Config.Cars = {
 }
 
 Config.Pvt = {
-	Garages = false, -- Set to true if using esx_property & want Private Car Garages for Properties
+	Garages = true, -- Set to true if using esx_property & want Private Car Garages for Properties
 	Markers = {
 		Points = {Type = 1, r = 0, g = 255, b = 0, x = 1.5, y = 1.5, z = 1.0}, -- Green Color / Standard Size Circle.
 		Delete = {Type = 1, r = 255, g = 0, b = 0, x = 5.0, y = 5.0, z = 1.0} -- Red Color / Big Size Circle.

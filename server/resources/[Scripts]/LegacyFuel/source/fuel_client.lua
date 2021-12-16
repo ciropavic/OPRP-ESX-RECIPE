@@ -16,6 +16,11 @@ local currentCash = 1000
 local fuelSynced = false
 local inBlacklisted = false
 
+-- hud
+local barHeight = 0.010 -- Height of Bar Variable
+local barWidth = 0.141 -- Width of Bar Variable
+local barPos = { x = 0.0855, y = 0.8 } -- Position On Screen (Above Mini Map)
+
 function ManageFuelUsage(vehicle)
 	if not DecorExistOn(vehicle, Config.FuelDecor) then
 		SetFuel(vehicle, math.random(200, 800) / 10)
@@ -324,64 +329,91 @@ elseif Config.ShowAllGasStations then
 	end)
 end
 
+-- if Config.EnableHUD then
+-- 	local function DrawAdvancedText(x,y ,w,h,sc, text, r,g,b,a,font,jus)
+-- 		SetTextFont(font)
+-- 		SetTextProportional(0)
+-- 		SetTextScale(sc, sc)
+-- 		N_0x4e096588b13ffeca(jus)
+-- 		SetTextColour(r, g, b, a)
+-- 		SetTextDropShadow(0, 0, 0, 0,255)
+-- 		SetTextEdge(1, 0, 0, 0, 255)
+-- 		SetTextDropShadow()
+-- 		SetTextOutline()
+-- 		SetTextEntry("STRING")
+-- 		AddTextComponentString(text)
+-- 		DrawText(x - 0.1+w, y - 0.02+h)
+-- 	end
+
+-- 	local mph = 0
+-- 	local kmh = 0
+-- 	local fuel = 0
+-- 	local displayHud = false
+
+-- 	local x = 0.01135
+-- 	local y = 0.002
+
+-- 	Citizen.CreateThread(function()
+-- 		while true do
+-- 			local ped = PlayerPedId()
+
+-- 			if IsPedInAnyVehicle(ped) and not (Config.RemoveHUDForBlacklistedVehicle and inBlacklisted) then
+-- 				local vehicle = GetVehiclePedIsIn(ped)
+-- 				local speed = GetEntitySpeed(vehicle)
+
+-- 				mph = tostring(math.ceil(speed * 2.236936))
+-- 				kmh = tostring(math.ceil(speed * 3.6))
+-- 				fuel = tostring(math.ceil(GetVehicleFuelLevel(vehicle)))
+
+-- 				displayHud = true
+-- 			else
+-- 				displayHud = false
+
+-- 				Citizen.Wait(500)
+-- 			end
+
+-- 			Citizen.Wait(50)
+-- 		end
+-- 	end)
+
+-- 	Citizen.CreateThread(function()
+-- 		while true do
+-- 			if displayHud then
+-- 				DrawAdvancedText(0.130 - x, 0.77 - y, 0.005, 0.0028, 0.6, mph, 255, 255, 255, 255, 6, 1)
+-- 				DrawAdvancedText(0.174 - x, 0.77 - y, 0.005, 0.0028, 0.6, kmh, 255, 255, 255, 255, 6, 1)
+-- 				DrawAdvancedText(0.2195 - x, 0.77 - y, 0.005, 0.0028, 0.6, fuel, 255, 255, 255, 255, 6, 1)
+-- 				DrawAdvancedText(0.148 - x, 0.7765 - y, 0.005, 0.0028, 0.4, "mp/h              km/h              Fuel", 255, 255, 255, 255, 6, 1)
+-- 			else
+-- 				Citizen.Wait(750)
+-- 			end
+
+-- 			Citizen.Wait(0)
+-- 		end
+-- 	end)
+-- end
+
 if Config.EnableHUD then
-	local function DrawAdvancedText(x,y ,w,h,sc, text, r,g,b,a,font,jus)
-		SetTextFont(font)
-		SetTextProportional(0)
-		SetTextScale(sc, sc)
-		N_0x4e096588b13ffeca(jus)
-		SetTextColour(r, g, b, a)
-		SetTextDropShadow(0, 0, 0, 0,255)
-		SetTextEdge(1, 0, 0, 0, 255)
-		SetTextDropShadow()
-		SetTextOutline()
-		SetTextEntry("STRING")
-		AddTextComponentString(text)
-		DrawText(x - 0.1+w, y - 0.02+h)
-	end
-
-	local mph = 0
-	local kmh = 0
-	local fuel = 0
-	local displayHud = false
-
-	local x = 0.01135
-	local y = 0.002
-
 	Citizen.CreateThread(function()
 		while true do
-			local ped = PlayerPedId()
+			local vehicle = GetVehiclePedIsIn(ped) -- Is The Player in a vehicle?
+			local driver = GetPedInVehicleSeat(vehicle, -1) -- Is The Player in the Driver Seat?
+			local dead = IsPedDeadOrDying(ped, true) -- Is The Player dead or dying?
+			local class = GetVehicleClass(vehicle) -- What class of vehicle? Ignore bikes.
 
-			if IsPedInAnyVehicle(ped) and not (Config.RemoveHUDForBlacklistedVehicle and inBlacklisted) then
-				local vehicle = GetVehiclePedIsIn(ped)
-				local speed = GetEntitySpeed(vehicle)
+			if (vehicle ~= 0) and (class ~= 13) and not inBlacklisted then
+				-- If IN a vehicle, and NOT a bike, and vehicle engine IS running then
+				if driver and not dead then
+					-- If The Player is in the Driver Seat and IS NOT dead
+					local currentFuel = GetVehicleFuelLevel(vehicle) -- Current Fuel In Vehicle
+					local fuelWidth = (barWidth * currentFuel) / 100 -- Fuel Value x Max Bar Width Show The Level Range Within The Bar
 
-				mph = tostring(math.ceil(speed * 2.236936))
-				kmh = tostring(math.ceil(speed * 3.6))
-				fuel = tostring(math.ceil(GetVehicleFuelLevel(vehicle)))
-
-				displayHud = true
-			else
-				displayHud = false
-
-				Citizen.Wait(500)
+					DrawRect(barPos.x, barPos.y, barWidth, barHeight + 0.006, 40, 40, 40, 150)  -- Bar Background (Black)
+					DrawRect(barPos.x, barPos.y, barWidth, barHeight, 206, 145, 40, 100)  -- Bar Background (lighter yellow)
+					DrawRect(barPos.x - (barWidth - fuelWidth) / 2, barPos.y, fuelWidth, barHeight, 206, 145, 0, 255)  -- Current Fuel (Yellow)
+				else
+					Wait(500) -- Wait and don't crash
+				end
 			end
-
-			Citizen.Wait(50)
-		end
-	end)
-
-	Citizen.CreateThread(function()
-		while true do
-			if displayHud then
-				DrawAdvancedText(0.130 - x, 0.77 - y, 0.005, 0.0028, 0.6, mph, 255, 255, 255, 255, 6, 1)
-				DrawAdvancedText(0.174 - x, 0.77 - y, 0.005, 0.0028, 0.6, kmh, 255, 255, 255, 255, 6, 1)
-				DrawAdvancedText(0.2195 - x, 0.77 - y, 0.005, 0.0028, 0.6, fuel, 255, 255, 255, 255, 6, 1)
-				DrawAdvancedText(0.148 - x, 0.7765 - y, 0.005, 0.0028, 0.4, "mp/h              km/h              Fuel", 255, 255, 255, 255, 6, 1)
-			else
-				Citizen.Wait(750)
-			end
-
 			Citizen.Wait(0)
 		end
 	end)
