@@ -8,6 +8,7 @@ Config.Locale       = 'en'
 Config.EnableBlips = true
 
 Config.ATMLocations = {
+	{ ['x'] = 197.44,  ['y'] = -899.89,  ['z'] = 30.71}, -- Legion Square Shop ATM
 	{ ['x'] = -386.733,  ['y'] = 6045.953,  ['z'] = 31.501},
 	{ ['x'] = -110.753,  ['y'] = 6467.703,  ['z'] = 31.784},
 	{ ['x'] = 155.4300,  ['y'] = 6641.991,  ['z'] = 31.784},

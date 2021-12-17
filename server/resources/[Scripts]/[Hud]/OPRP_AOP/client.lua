@@ -16,6 +16,7 @@ local year, month, day, hour, minute, second = GetLocalTime()
 local AOPxNew = 0.681
 local AOPyNew = 1.3955
 local AOPyNew2 = 1.3955
+local FirstConfigRun = 0
 
 AddEventHandler('onClientMapStart', function()
     TriggerEvent('AOP:RunConfig')
@@ -117,6 +118,12 @@ end)
 
 Citizen.CreateThread(function()
     while true do
+
+        if FirstConfigRun == 0 then
+            TriggerEvent('AOP:RunConfig')
+            FirstConfigRun = 1
+        end
+
         if localTime == 1 then -- client time
             year, month, day, hour, minute, second = GetLocalTime()
             newMinute = minute
