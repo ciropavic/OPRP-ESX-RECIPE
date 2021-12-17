@@ -262,6 +262,18 @@ Config.CarGarages = {
 		Spawner = vector3(128.78, 6622.99, 30.78),
 		Deleter = vector3(126.36, 6608.41, 30.86),
 		Heading = 315.01
+	},
+	Legion_Square = {
+		Marker = vector3(216.7, -938.44, 23.2),
+		Spawner = vector3(213.48, -889.5, 17.35),
+		Deleter = vector3(200.91, -889.5, 17.35),
+		Heading = 119.37
+	},
+	West_Vinewood = {
+		Marker = vector3(-340.74, 266.85, 84.68),
+		Spawner = vector3(-329.27, 274.44, 85.67),
+		Deleter = vector3(-339.64, 273.81, 84.8),
+		Heading = 95.21
 	}
 }
 

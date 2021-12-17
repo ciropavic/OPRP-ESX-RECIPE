@@ -114,7 +114,7 @@ function inventorySetup(items) {
                 bgColor = "rgba(218, 165, 32, 0.4)";
             }
         }
-        console.log(item.name, item.label)
+
         $("#playerInventory").append('<div class="slot" style="background-color: ' + bgColor + ';"><div id="item-' + index + '" class="item" style = "background-image: url(\'img/items/' + item.name + '.png\')">' +
             '<div class="item-count">' + count + '</div> <div class="item-name">' + item.label + '</div> </div ><div class="item-name-bg"></div></div>');
         $('#item-' + index).data('item', item);
