@@ -1194,7 +1194,6 @@ SET time_zone = "+00:00";
         (500 , 'BMX'                               , 'bmx'            , 150    , 'cycles'      , '' ),
 
         (501 , 'Cruiser'                           , 'cruiser'        , 200    , 'other'      , '' ),
-
         (502 , 'Fixter'                            , 'fixter'         , 200    , 'other'      , '' ),
         (503 , 'Scorcher'                          , 'scorcher'       , 350    , 'other'      , '' ),
         (504 , 'Race bike Whippet'                 , 'tribike'        , 500    , 'other'      , '' ),

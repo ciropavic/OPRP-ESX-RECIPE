@@ -32,8 +32,16 @@ tasks:
     dest: ./resources/[legacy]
 
   - action: move_path
+    src: ./tmp/oprp_esx/server/resources/[Maps]
+    dest: ./resources/[Maps]
+
+  - action: move_path
     src: ./tmp/oprp_esx/server/resources/[Scripts]
     dest: ./resources/[Scripts]
+
+  - action: move_path
+    src: ./tmp/oprp_esx/server/resources/gcphone
+    dest: ./resources/gcphone
 
   - action: connect_database
   - action: query_database
