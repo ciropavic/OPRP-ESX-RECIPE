@@ -206,6 +206,37 @@ SET time_zone = "+00:00";
 -- ----------------------------------------------------------------------------
 
 --
+-- es_extended
+--
+
+
+    -- DDL
+    CREATE TABLE `plants` (
+        `id` int(11) NOT NULL,
+        `coords` longtext,
+        `type` varchar(100) NOT NULL,
+        `water` double NOT NULL,
+        `food` double NOT NULL,
+        `growth` double NOT NULL,
+        `rate` double NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+    CREATE TABLE `processing` (
+        `id` int(11) NOT NULL,
+        `type` varchar(100) NOT NULL,
+        `item` longtext,
+        `time` int(11) NOT NULL,
+        `coords` longtext,
+        `rot` double NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+    -- DML
+
+-- ----------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------
+
+--
 -- esx_addonaccount
 --
 
@@ -2009,6 +2040,18 @@ SET time_zone = "+00:00";
 --
 
     --
+    -- Indexes for table `plants`
+    --
+    ALTER TABLE `plants`
+    ADD PRIMARY KEY (`id`);
+
+    --
+    -- Indexes for table `processing`
+    --
+    ALTER TABLE `processing`
+    ADD PRIMARY KEY (`id`);
+
+    --
     -- Indexes for table `addon_account`
     --
     ALTER TABLE `addon_account`
@@ -2196,6 +2239,18 @@ SET time_zone = "+00:00";
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+    --
+    -- Indexes for table `plants`
+    --
+    ALTER TABLE `plants`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+
+    --
+    -- Indexes for table `processing`
+    --
+    ALTER TABLE `processing`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
     --
     -- AUTO_INCREMENT for table `addon_account_data`
