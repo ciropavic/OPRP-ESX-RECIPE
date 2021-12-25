@@ -148,10 +148,16 @@ SET time_zone = "+00:00";
         ('tortellini'  , 'Tortellini'  , 1, 0, 1),
         ('yogurt'  , 'Yogurt'  , 1, 0, 1),
 
+        -- Drugs
+        ('weed_seed'  , 'Weed Seed'  , 1, 0, 1),
+        ('weed'  , 'Weed'  , 1, 0, 1),
+        ('coca_seed'  , 'Coca Seed'  , 1, 0, 1),
+        ('cocaine'  , 'cocaine'  , 1, 0, 1),
+        ('cocaine_processing_table'  , 'Cocaine Processing Table'  , 1, 0, 1),
+
         ('alive_chicken'      , 'Living chicken'     , 1, 0, 1),
         ('bandage'            , 'Bandage'            , 2, 0, 1),
         ('blowpipe'           , 'Blowtorch'          , 2, 0, 1),
-        ('cannabis'           , 'Cannabis'           , 3, 0, 1),
         ('carokit'            , 'Body Kit'           , 3, 0, 1),
         ('carotool'           , 'Tools'              , 2, 0, 1),
         ('clothe'             , 'Cloth'              , 1, 0, 1),
@@ -165,7 +171,6 @@ SET time_zone = "+00:00";
         ('gazbottle'          , 'Gas Bottle'         , 2, 0, 1),
         ('gold'               , 'Gold'               , 1, 0, 1),
         ('iron'               , 'Iron'               , 1, 0, 1),
-        ('marijuana'          , 'Marijuana'          , 2, 0, 1),
         ('medikit'            , 'Medikit'            , 2, 0, 1),
         ('packaged_plank'     , 'Packaged wood'      , 1, 0, 1),
         ('petrol'             , 'Oil'                , 1, 0, 1),

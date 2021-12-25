@@ -1,4 +1,6 @@
 Locales['en'] = {
+  ['distress_sent'] = 'distress signal has been sent to available units!',
+  ['police_distress_message'] = 'police attention required: OFFICER IN NEED OF ASSISTANCE!',
   -- Cloakroom
   ['cloakroom'] = 'locker room',
   ['citizen_wear'] = 'civilian Outfit',

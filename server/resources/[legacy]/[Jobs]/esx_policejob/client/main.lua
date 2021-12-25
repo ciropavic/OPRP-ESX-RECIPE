@@ -1461,8 +1461,27 @@ Citizen.CreateThread(function()
 
 			currentTask.busy = false
 		end
+
+		-- U Key
+		if IsControlJustPressed(0, 303) and GetLastInputMethod(2) and PlayerData.job ~= nil and PlayerData.job.name == 'police' then
+			SendPoliceDistressSignal()
+		end
+
 	end
 end)
+
+-- Panic button
+function SendPoliceDistressSignal()
+	local playerPed = GetPlayerPed(-1)
+	local coords	= GetEntityCoords(playerPed)
+
+	ESX.ShowNotification(_U('distress_sent'))
+	TriggerServerEvent('esx_phone:send', 'police', _U('police_distress_message'), false, {
+		x = coords.x,
+		y = coords.y,
+		z = coords.z
+	})
+end
 
 -- Create blip for colleagues
 function createBlip(id)

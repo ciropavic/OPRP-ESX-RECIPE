@@ -24,19 +24,19 @@ INSERT INTO `jobs` (name, label, whitelisted) VALUES
 -- Constables get payed $850/pay, this adds up to $7,650 every 3 hours, so roughly $2.5k an hour
 INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
 	('TPS_Constable'  ,0,'tps_constable'  ,'TPS - Constable'  ,335,'{}','{}'),
-	('PRP_Constable'  ,0,'prp_constable'  ,'PRP - Constable'  ,335,'{}','{}'),
-	('OPP_Constable'  ,0,'opp_constable'  ,'OPP - Constable'  ,335,'{}','{}'),
-	('RCMP_Constable' ,0,'rcmp_constable' ,'RCMP - Constable' ,335,'{}','{}'),
+	('PRP_Constable'  ,1,'prp_constable'  ,'PRP - Constable'  ,335,'{}','{}'),
+	('OPP_Constable'  ,2,'opp_constable'  ,'OPP - Constable'  ,335,'{}','{}'),
+	('RCMP_Constable' ,3,'rcmp_constable' ,'RCMP - Constable' ,335,'{}','{}'),
 
-	('TPS_Supervisor' ,1,'tps_supervisor' ,'TPS - Supervisor' ,620,'{}','{}'),
-	('PRP_Supervisor' ,1,'prp_supervisor' ,'PRP - Supervisor' ,620,'{}','{}'),
-	('OPP_Supervisor' ,1,'opp_supervisor' ,'OPP - Supervisor' ,620,'{}','{}'),
-	('RCMP_Supervisor',1,'rcmp_supervisor','RCMP - Supervisor',620,'{}','{}'),
+	('TPS_Supervisor' ,4,'tps_supervisor' ,'TPS - Supervisor' ,620,'{}','{}'),
+	('PRP_Supervisor' ,5,'prp_supervisor' ,'PRP - Supervisor' ,620,'{}','{}'),
+	('OPP_Supervisor' ,6,'opp_supervisor' ,'OPP - Supervisor' ,620,'{}','{}'),
+	('RCMP_Supervisor',7,'rcmp_supervisor','RCMP - Supervisor',620,'{}','{}'),
 
-	('TPS_COC'        ,2,'tps_coc'        ,'TPS - COC'        ,850,'{}','{}'),
-	('PRP_COC'        ,2,'prp_coc'        ,'PRP - COC'        ,850,'{}','{}'),
-	('OPP_COC'        ,2,'opp_coc'        ,'OPP - COC'        ,850,'{}','{}'),
-	('RCMP_COC'       ,2,'rcmp_coc'       ,'RCMP - COC'       ,850,'{}','{}')
+	('TPS_COC'        ,8,'tps_coc'        ,'TPS - COC'        ,850,'{}','{}'),
+	('PRP_COC'        ,9,'prp_coc'        ,'PRP - COC'        ,850,'{}','{}'),
+	('OPP_COC'        ,10,'opp_coc'        ,'OPP - COC'        ,850,'{}','{}'),
+	('RCMP_COC'       ,11,'rcmp_coc'       ,'RCMP - COC'       ,850,'{}','{}')
 ;
 
 CREATE TABLE `fine_types` (

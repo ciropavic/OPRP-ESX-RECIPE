@@ -9,6 +9,20 @@ Config.Zones = {
 
 	LegionSquare = {
 		Items = {
+			{ name = "phone", label = "Phone", price = 875 }
+		},
+		Pos = {
+			vector3(-657.35, -857.55, 24.5)
+		},
+		Size  = 1.0,
+		Type  = 459,
+		Color = 11,
+		ShowBlip = true,
+		ShowMarker = true
+	},
+
+	LegionSquare = {
+		Items = {
 			{ name = "water", label = "Water", price = 10 },
 			{ name = "adios", label = "Adios", price = 10 },
 			{ name = "americano", label = "Americano", price = 10 },

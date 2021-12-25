@@ -175,6 +175,14 @@ Config.Car = {
 			Resell = vector3(-44.6, -1080.7, 25.6),
 			InsideH = -20.0,
 			OutsideH = 70.68
+		},
+		Route68 = {
+			Enter = vector3(-55.04, -1095.87, 25.42),
+			Inside = vector3(-47.5, -1097.2, 25.4),
+			Outside = vector3(-26.8, -1083.5, 26.6),
+			Resell = vector3(-44.6, -1080.7, 25.6),
+			InsideH = -20.0,
+			OutsideH = 70.68
 		}
 	}
 }
