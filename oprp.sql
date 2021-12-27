@@ -211,29 +211,15 @@ SET time_zone = "+00:00";
 -- ----------------------------------------------------------------------------
 
 --
--- es_extended
+-- esx_kashacters
 --
 
 
     -- DDL
-    CREATE TABLE `plants` (
-        `id` int(11) NOT NULL,
-        `coords` longtext,
-        `type` varchar(100) NOT NULL,
-        `water` double NOT NULL,
-        `food` double NOT NULL,
-        `growth` double NOT NULL,
-        `rate` double NOT NULL
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-    CREATE TABLE `processing` (
-        `id` int(11) NOT NULL,
-        `type` varchar(100) NOT NULL,
-        `item` longtext,
-        `time` int(11) NOT NULL,
-        `coords` longtext,
-        `rot` double NOT NULL
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+    CREATE TABLE `user_lastcharacter` (
+        `license` varchar(255) NOT NULL,
+        `charid` int(11) NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
     -- DML
 
