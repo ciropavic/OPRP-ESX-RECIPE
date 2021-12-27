@@ -7,7 +7,7 @@ Config.Locale = 'en'
 
 Config.Zones = {
 
-	LegionSquare = {
+	PhoneShop = {
 		Items = {
 			{ name = "phone", label = "Phone", price = 875 }
 		},
