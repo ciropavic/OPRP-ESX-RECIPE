@@ -2220,18 +2220,6 @@ SET time_zone = "+00:00";
 --
 
     --
-    -- Indexes for table `plants`
-    --
-    ALTER TABLE `plants`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
-
-    --
-    -- Indexes for table `processing`
-    --
-    ALTER TABLE `processing`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
-
-    --
     -- AUTO_INCREMENT for table `addon_account_data`
     --
     ALTER TABLE `addon_account_data`
