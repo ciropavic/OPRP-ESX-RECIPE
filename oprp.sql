@@ -246,9 +246,9 @@ SET time_zone = "+00:00";
         (37 , 'fueler'     , 1  , 'fueler_rookie'                , 'Rookie Fueler'         , 230, '{}', '{}'),
         (38 , 'fueler'     , 2  , 'fueler_senior'                , 'Senior Fueler'         , 270, '{}', '{}'),
         (39 , 'fueler'     , 3  , 'fueler_supervisor'            , 'Supervisor'            , 330, '{}', '{}'),
-        
+
         (40 , 'lumberjack' , 1  , 'lumberjack_woodchopper'       , 'Wood Chopper'          , 230, '{}', '{}'),
-        (41 , 'lumberjack' , 2  , 'lumberjack_Supervisor '       , 'Supervisor '           , 270, '{}', '{}'),
+        (41 , 'lumberjack' , 2  , 'lumberjack_Supervisor '       , 'Supervisor'            , 270, '{}', '{}'),
         (42 , 'lumberjack' , 3  , 'lumberjack_sitelead'          , 'Site Lead'             , 330, '{}', '{}')
     ;
 
