@@ -198,58 +198,58 @@ SET time_zone = "+00:00";
     ;
     
     INSERT INTO `job_grades` (`id`, `job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES
-        (1, 'unemployed', 0, 'unemployed', 'Unemployed', 85, '{}', '{}'),
+        (1  , 'unemployed' , 0  , 'unemployed'                   , 'Unemployed'            , 85 , '{}', '{}'),
 
-        (2  , 'police' ,1 ,'tps_constable'   ,'TPS - Constable'   ,335,'{}','{}'),
-        (3  , 'police' ,2 ,'prp_constable'   ,'PRP - Constable'   ,335,'{}','{}'),
-        (4  , 'police' ,3 ,'opp_constable'   ,'OPP - Constable'   ,335,'{}','{}'),
-        (5  , 'police' ,4 ,'rcmp_constable'  ,'RCMP - Constable'  ,335,'{}','{}'),
-        (6  , 'police' ,5 ,'tps_supervisor'  ,'TPS - Supervisor'  ,620,'{}','{}'),
-        (7  , 'police' ,6 ,'prp_supervisor'  ,'PRP - Supervisor'  ,620,'{}','{}'),
-        (8  , 'police' ,7 ,'opp_supervisor'  ,'OPP - Supervisor'  ,620,'{}','{}'),
-        (9  , 'police' ,8 ,'rcmp_supervisor' ,'RCMP - Supervisor' ,620,'{}','{}'),
-        (10 , 'police' ,9 ,'tps_coc'         ,'TPS - COC'         ,850,'{}','{}'),
-        (11 , 'police' ,10,'prp_coc'         ,'PRP - COC'         ,850,'{}','{}'),
-        (12 , 'police' ,11,'opp_coc'         ,'OPP - COC'         ,850,'{}','{}'),
-        (13 , 'police' ,12,'rcmp_coc'        ,'RCMP - COC'        ,850,'{}','{}')
+        (2  , 'police'     , 1  , 'tps_constable'                , 'TPS - Constable'       , 335, '{}', '{}'),
+        (3  , 'police'     , 2  , 'prp_constable'                , 'PRP - Constable'       , 335, '{}', '{}'),
+        (4  , 'police'     , 3  , 'opp_constable'                , 'OPP - Constable'       , 335, '{}', '{}'),
+        (5  , 'police'     , 4  , 'rcmp_constable'               , 'RCMP - Constable'      , 335, '{}', '{}'),
+        (6  , 'police'     , 5  , 'tps_supervisor'               , 'TPS - Supervisor'      , 620, '{}', '{}'),
+        (7  , 'police'     , 6  , 'prp_supervisor'               , 'PRP - Supervisor'      , 620, '{}', '{}'),
+        (8  , 'police'     , 7  , 'opp_supervisor'               , 'OPP - Supervisor'      , 620, '{}', '{}'),
+        (9  , 'police'     , 8  , 'rcmp_supervisor'              , 'RCMP - Supervisor'     , 620, '{}', '{}'),
+        (10 , 'police'     , 9  , 'tps_coc'                      , 'TPS - COC'             , 850, '{}', '{}'),
+        (11 , 'police'     , 10 , 'prp_coc'                      , 'PRP - COC'             , 850, '{}', '{}'),
+        (12 , 'police'     , 11 , 'opp_coc'                      , 'OPP - COC'             , 850, '{}', '{}'),
+        (13 , 'police'     , 12 , 'rcmp_coc'                     , 'RCMP - COC'            , 850, '{}', '{}'),
 
-        (14 , 'fire' ,1,'tfs_firefighter' ,'TFS - Firefighter' ,335,'{}','{}'),
-        (15 , 'fire' ,2,'tfs_supervisor'  ,'TFS - Supervisor'  ,620,'{}','{}'),
-        (16 , 'fire' ,3,'tfs_coc'         ,'TFS - COC'         ,850,'{}','{}'),
+        (14 , 'fire'       , 1  , 'tfs_firefighter'              , 'TFS - Firefighter'     , 335, '{}', '{}'),
+        (15 , 'fire'       , 2  , 'tfs_supervisor'               , 'TFS - Supervisor'      , 620, '{}', '{}'),
+        (16 , 'fire'       , 3  , 'tfs_coc'                      , 'TFS - COC'             , 850, '{}', '{}'),
 
-        (17 , 'ems' ,1,'tps_paramedic'  ,'TPS - Paramedic'  ,335,'{}','{}'),
-        (18 , 'ems' ,2,'tps_supervisor' ,'TPS - Supervisor' ,620,'{}','{}'),
-        (19 , 'ems' ,3,'tps_coc'        ,'TPS - COC'        ,850,'{}','{}'),
+        (17 , 'ems'        , 1  , 'tps_paramedic'                , 'TPS - Paramedic'       , 335, '{}', '{}'),
+        (18 , 'ems'        , 2  , 'tps_supervisor'               , 'TPS - Supervisor'      , 620, '{}', '{}'),
+        (19 , 'ems'        , 3  , 'tps_coc'                      , 'TPS - COC'             , 850, '{}', '{}'),
 
-        (20 , 'uber' ,1,'uber_1star' ,'UBER *'     ,200,'{}','{}'),
-        (21 , 'uber' ,2,'uber_2star' ,'UBER **'    ,225,'{}','{}'),
-        (22 , 'uber' ,3,'uber_3star' ,'UBER ***'   ,250,'{}','{}'),
-        (23 , 'uber' ,4,'uber_4star' ,'UBER ****'  ,275,'{}','{}'),
-        (24 , 'uber' ,5,'uber_5star' ,'UBER *****' ,300,'{}','{}'),
+        (20 , 'uber'       , 1  , 'uber_1star'                   , 'UBER *'                , 200, '{}', '{}'),
+        (21 , 'uber'       , 2  , 'uber_2star'                   , 'UBER **'               , 225, '{}', '{}'),
+        (22 , 'uber'       , 3  , 'uber_3star'                   , 'UBER ***'              , 250, '{}', '{}'),
+        (23 , 'uber'       , 4  , 'uber_4star'                   , 'UBER ****'             , 275, '{}', '{}'),
+        (24 , 'uber'       , 5  , 'uber_5star'                   , 'UBER *****'            , 300, '{}', '{}'),
 
-        (25 , 'canadapost' ,1,'canadapost_newdriver'         ,'New Driver'         ,250,'{}','{}'),
-        (26 , 'canadapost' ,2,'canadapost_experienceddriver' ,'Experienced Driver' ,295,'{}','{}'),
-        (27 , 'canadapost' ,3,'canadapost_seniordriver'      ,'Senior Driver'      ,325,'{}','{}'),
+        (25 , 'canadapost' , 1  , 'canadapost_newdriver'         , 'New Driver'            , 250, '{}', '{}'),
+        (26 , 'canadapost' , 2  , 'canadapost_experienceddriver' , 'Experienced Driver'    , 295, '{}', '{}'),
+        (27 , 'canadapost' , 3  , 'canadapost_seniordriver'      , 'Senior Driver'         , 325, '{}', '{}'),
 
-        (28 , 'wm' ,1,'wm_rookiecollector'      ,'Rookie Collector'      ,235,'{}','{}'),
-        (29 , 'wm' ,2,'wm_experiencedcollector' ,'Experienced Collector' ,280,'{}','{}'),
-        (30 , 'wm' ,3,'wm_seniorcollector'      ,'Senior Collector'      ,310,'{}','{}'),
+        (28 , 'wm'         , 1  , 'wm_rookiecollector'           , 'Rookie Collector'      , 235, '{}', '{}'),
+        (29 , 'wm'         , 2  , 'wm_experiencedcollector'      , 'Experienced Collector' , 280, '{}', '{}'),
+        (30 , 'wm'         , 3  , 'wm_seniorcollector'           , 'Senior Collector'      , 310, '{}', '{}'),
 
-        (31 , 'ctv' ,1,'ctv_fieldreporter' ,'Field Reporter' ,280,'{}','{}'),
-        (32 , 'ctv' ,2,'ctv_cameraman'     ,'Cameraman'      ,310,'{}','{}'),
-        (33 , 'ctv' ,3,'ctv_newsanchor'    ,'News Anchor'    ,340,'{}','{}'),
+        (31 , 'ctv'        , 1  , 'ctv_fieldreporter'            , 'Field Reporter'        , 280, '{}', '{}'),
+        (32 , 'ctv'        , 2  , 'ctv_cameraman'                , 'Cameraman'             , 310, '{}', '{}'),
+        (33 , 'ctv'        , 3  , 'ctv_newsanchor'               , 'News Anchor'           , 340, '{}', '{}'),
 
-        (34 , 'miner' ,1,'miner_rookie'     ,'Rookie Miner'    ,230,'{}','{}'),
-        (35 , 'miner' ,2,'miner_senior'     ,'Senior Miner'    ,270,'{}','{}'),
-        (36 , 'miner' ,3,'miner_supervisor' ,'Site Supervisor' ,330,'{}','{}'),
+        (34 , 'miner'      , 1  , 'miner_rookie'                 , 'Rookie Miner'          , 230, '{}', '{}'),
+        (35 , 'miner'      , 2  , 'miner_senior'                 , 'Senior Miner'          , 270, '{}', '{}'),
+        (36 , 'miner'      , 3  , 'miner_supervisor'             , 'Site Supervisor'       , 330, '{}', '{}'),
 
-        (37 , 'fueler' ,1,'fueler_rookie'     ,'Rookie Fueler' ,230,'{}','{}'),
-        (38 , 'fueler' ,2,'fueler_senior'     ,'Senior Fueler' ,270,'{}','{}'),
-        (39 , 'fueler' ,3,'fueler_supervisor' ,'Supervisor'    ,330,'{}','{}'),
-
-        (40 , 'lumberjack' ,1,'lumberjack_woodchopper' ,'Wood Chopper' ,230,'{}','{}'),
-        (41 , 'lumberjack' ,2,'lumberjack_Supervisor ' ,'Supervisor '  ,270,'{}','{}'),
-        (42 , 'lumberjack' ,3,'lumberjack_sitelead'    ,'Site Lead'    ,330,'{}','{}')
+        (37 , 'fueler'     , 1  , 'fueler_rookie'                , 'Rookie Fueler'         , 230, '{}', '{}'),
+        (38 , 'fueler'     , 2  , 'fueler_senior'                , 'Senior Fueler'         , 270, '{}', '{}'),
+        (39 , 'fueler'     , 3  , 'fueler_supervisor'            , 'Supervisor'            , 330, '{}', '{}'),
+        
+        (40 , 'lumberjack' , 1  , 'lumberjack_woodchopper'       , 'Wood Chopper'          , 230, '{}', '{}'),
+        (41 , 'lumberjack' , 2  , 'lumberjack_Supervisor '       , 'Supervisor '           , 270, '{}', '{}'),
+        (42 , 'lumberjack' , 3  , 'lumberjack_sitelead'          , 'Site Lead'             , 330, '{}', '{}')
     ;
 
 -- ----------------------------------------------------------------------------
