@@ -197,8 +197,6 @@ SET time_zone = "+00:00";
         ('lumberjack', 'Lumberjack', 0),
     ;
     
-    -- Pay checks get sent every 20 minutes in game.
-    -- Salaries were based on a average 3 hour patrol.
     INSERT INTO `job_grades` (`id`, `job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES
         -- Unemployment
         (1, 'unemployed', 0, 'unemployed', 'Unemployed', 85, '{}', '{}'),
