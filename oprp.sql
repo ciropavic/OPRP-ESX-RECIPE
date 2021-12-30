@@ -240,16 +240,16 @@ SET time_zone = "+00:00";
         (33 , 'ctv' ,3,'ctv_newsanchor'    ,'News Anchor'    ,340,'{}','{}'),
 
         (34 , 'miner' ,1,'miner_rookie'     ,'Rookie Miner'    ,230,'{}','{}'),
-        (35 , 'miner' ,2,'miner_senior'      'Senior Miner'    ,270,'{}','{}'),
+        (35 , 'miner' ,2,'miner_senior'     ,'Senior Miner'    ,270,'{}','{}'),
         (36 , 'miner' ,3,'miner_supervisor' ,'Site Supervisor' ,330,'{}','{}'),
 
         (37 , 'fueler' ,1,'fueler_rookie'     ,'Rookie Fueler' ,230,'{}','{}'),
-        (38 , 'fueler' ,2,'fueler_senior'      'Senior Fueler' ,270,'{}','{}'),
+        (38 , 'fueler' ,2,'fueler_senior'     ,'Senior Fueler' ,270,'{}','{}'),
         (39 , 'fueler' ,3,'fueler_supervisor' ,'Supervisor'    ,330,'{}','{}'),
 
         (40 , 'lumberjack' ,1,'lumberjack_woodchopper' ,'Wood Chopper' ,230,'{}','{}'),
-        (41 , 'lumberjack' ,2,'lumberjack_Supervisor '  'Supervisor '  ,270,'{}','{}'),
-        (42 , 'lumberjack' ,3,'lumberjack_sitelead'    ,'Site Lead'    ,330,'{}','{}'),
+        (41 , 'lumberjack' ,2,'lumberjack_Supervisor ' ,'Supervisor '  ,270,'{}','{}'),
+        (42 , 'lumberjack' ,3,'lumberjack_sitelead'    ,'Site Lead'    ,330,'{}','{}')
     ;
 
 -- ----------------------------------------------------------------------------
