@@ -185,26 +185,85 @@ SET time_zone = "+00:00";
 
     INSERT INTO `jobs` (`name`, `label`, `whitelisted`) VALUES
         ('unemployed', 'Unemployed', 0),
-        ('police', 'LEO', 1)
+        ('police', 'LEO', 1),
+        ('fire', 'FIRE', 1),
+        ('ems', 'EMS', 1),
+        ('uber', 'Uber', 0),
+        ('canadapost', 'Canada Post', 0),
+        ('wm', 'WasteManagement', 0),
+        ('ctv', 'CTV', 0),
+        ('miner', 'Miner', 0),
+        ('fueler', 'Fueler', 0),
+        ('lumberjack', 'Lumberjack', 0),
     ;
     
+--  Pay checks get sent every 20 minutes in game.
+--  Salaries were based on a average 3 hour patrol.
     INSERT INTO `job_grades` (`id`, `job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES
+        -- Unemployment
         (1, 'unemployed', 0, 'unemployed', 'Unemployed', 85, '{}', '{}'),
 
         -- Police Job
-        (2 , 'police' ,1,'tps_constable'   ,'TPS - Constable'   ,335,'{}','{}'),
-        (3 , 'police' ,2,'prp_constable'   ,'PRP - Constable'   ,335,'{}','{}'),
-        (4 , 'police' ,3,'opp_constable'   ,'OPP - Constable'   ,335,'{}','{}'),
-        (5 , 'police' ,4,'rcmp_constable'  ,'RCMP - Constable'  ,335,'{}','{}'),
-        (6 , 'police' ,5,'tps_supervisor'  ,'TPS - Supervisor'  ,620,'{}','{}'),
-        (7 , 'police' ,6,'prp_supervisor'  ,'PRP - Supervisor'  ,620,'{}','{}'),
-        (8 , 'police' ,7,'opp_supervisor'  ,'OPP - Supervisor'  ,620,'{}','{}'),
-        (9 , 'police' ,8,'rcmp_supervisor' ,'RCMP - Supervisor' ,620,'{}','{}'),
-        (10, 'police' ,9,'tps_coc'         ,'TPS - COC'         ,850,'{}','{}'),
-        (11, 'police' ,10,'prp_coc'         ,'PRP - COC'         ,850,'{}','{}'),
-        (12, 'police' ,11,'opp_coc'         ,'OPP - COC'         ,850,'{}','{}'),
-        (13, 'police' ,12,'rcmp_coc'        ,'RCMP - COC'        ,850,'{}','{}')
-    ;
+        (2  , 'police' ,1 ,'tps_constable'   ,'TPS - Constable'   ,335,'{}','{}'),
+        (3  , 'police' ,2 ,'prp_constable'   ,'PRP - Constable'   ,335,'{}','{}'),
+        (4  , 'police' ,3 ,'opp_constable'   ,'OPP - Constable'   ,335,'{}','{}'),
+        (5  , 'police' ,4 ,'rcmp_constable'  ,'RCMP - Constable'  ,335,'{}','{}'),
+        (6  , 'police' ,5 ,'tps_supervisor'  ,'TPS - Supervisor'  ,620,'{}','{}'),
+        (7  , 'police' ,6 ,'prp_supervisor'  ,'PRP - Supervisor'  ,620,'{}','{}'),
+        (8  , 'police' ,7 ,'opp_supervisor'  ,'OPP - Supervisor'  ,620,'{}','{}'),
+        (9  , 'police' ,8 ,'rcmp_supervisor' ,'RCMP - Supervisor' ,620,'{}','{}'),
+        (10 , 'police' ,9 ,'tps_coc'         ,'TPS - COC'         ,850,'{}','{}'),
+        (11 , 'police' ,10,'prp_coc'         ,'PRP - COC'         ,850,'{}','{}'),
+        (12 , 'police' ,11,'opp_coc'         ,'OPP - COC'         ,850,'{}','{}'),
+        (13 , 'police' ,12,'rcmp_coc'        ,'RCMP - COC'        ,850,'{}','{}')
+
+        -- Fire Job
+        (14 , 'fire' ,1,'tfs_firefighter' ,'TFS - Firefighter' ,335,'{}','{}'),
+        (15 , 'fire' ,2,'tfs_supervisor'  ,'TFS - Supervisor'  ,620,'{}','{}'),
+        (16 , 'fire' ,3,'tfs_coc'         ,'TFS - COC'         ,850,'{}','{}'),
+
+        -- EMS Job
+        (17 , 'ems' ,1,'tps_paramedic'  ,'TPS - Paramedic'  ,335,'{}','{}'),
+        (18 , 'ems' ,2,'tps_supervisor' ,'TPS - Supervisor' ,620,'{}','{}'),
+        (19 , 'ems' ,3,'tps_coc'        ,'TPS - COC'        ,850,'{}','{}'),
+
+        -- Uber Job
+        (20 , 'uber' ,1,'uber_1star' ,'UBER *'     ,200,'{}','{}'),
+        (21 , 'uber' ,2,'uber_2star' ,'UBER **'    ,225,'{}','{}'),
+        (22 , 'uber' ,3,'uber_3star' ,'UBER ***'   ,250,'{}','{}'),
+        (23 , 'uber' ,4,'uber_4star' ,'UBER ****'  ,275,'{}','{}'),
+        (24 , 'uber' ,5,'uber_5star' ,'UBER *****' ,300,'{}','{}'),
+
+        -- CanadaPost Job
+        (25 , 'canadapost' ,1,'canadapost_newdriver'         ,'New Driver'         ,250,'{}','{}'),
+        (26 , 'canadapost' ,2,'canadapost_experienceddriver' ,'Experienced Driver' ,295,'{}','{}'),
+        (27 , 'canadapost' ,3,'canadapost_seniordriver'      ,'Senior Driver'      ,325,'{}','{}'),
+
+        -- WasteManagement Job
+        (28 , 'wm' ,1,'wm_rookiecollector'      ,'Rookie Collector'      ,235,'{}','{}'),
+        (29 , 'wm' ,2,'wm_experiencedcollector' ,'Experienced Collector' ,280,'{}','{}'),
+        (30 , 'wm' ,3,'wm_seniorcollector'      ,'Senior Collector'      ,310,'{}','{}'),
+
+       -- CTV Job
+        (31 , 'ctv' ,1,'ctv_fieldreporter' ,'Field Reporter' ,280,'{}','{}'),
+        (32 , 'ctv' ,2,'ctv_cameraman'     ,'Cameraman'      ,310,'{}','{}'),
+        (33 , 'ctv' ,3,'ctv_newsanchor'    ,'News Anchor'    ,340,'{}','{}'),
+
+       -- Miner Job
+        (34 , 'miner' ,1,'miner_rookie'     ,'Rookie Miner'    ,230,'{}','{}'),
+        (35 , 'miner' ,2,'miner_senior'      'Senior Miner'    ,270,'{}','{}'),
+        (36 , 'miner' ,3,'miner_supervisor' ,'Site Supervisor' ,330,'{}','{}'),
+
+       -- Fueler Job
+        (37 , 'fueler' ,1,'fueler_rookie'     ,'Rookie Fueler' ,230,'{}','{}'),
+        (38 , 'fueler' ,2,'fueler_senior'      'Senior Fueler' ,270,'{}','{}'),
+        (39 , 'fueler' ,3,'fueler_supervisor' ,'Supervisor'    ,330,'{}','{}'),
+
+       -- Lumberjack Job
+        (40 , 'lumberjack' ,1,'lumberjack_woodchopper' ,'Wood Chopper' ,230,'{}','{}'),
+        (41 , 'lumberjack' ,2,'lumberjack_Supervisor '  'Supervisor '  ,270,'{}','{}'),
+        (42 , 'lumberjack' ,3,'lumberjack_sitelead'    ,'Site Lead'    ,330,'{}','{}'),
+        ;
 
 -- ----------------------------------------------------------------------------
 -- ----------------------------------------------------------------------------
@@ -702,52 +761,52 @@ SET time_zone = "+00:00";
     ;
 
     INSERT INTO `vs_cars` (id, name, model, price, category, image) VALUES
-        (1   , '2006 Impala'                       , 'impalal'        , 500    , 'chevrolet'  , '' ),
-        (2   , '2015 Camaro'                       , 'z28'            , 500    , 'chevrolet'  , '' ),
-        (3   , '2016 Challenger'                   , '16challenger'   , 500    , 'dodge'      , '' ),
-        (4   , '2016 Charger'                      , '16charger'      , 500    , 'dodge'      , '' ),
-        (5   , '2017 GTR'                          , '17r35'          , 500    , 'nissan'     , '' ),
-        (6   , '2017 RV'                           , '17jamb'         , 500    , 'ford'       , '' ),
-        (7   , '1969 Charger'                      , 'charger69'      , 500    , 'dodge'      , '' ),
-        (8   , '2019 Mustang GT'                   , 'mustang19'      , 500    , 'ford'       , '' ),
-        (9   , '2011 Retired CVPI'                 , 'crownvic'       , 500    , 'ford'       , '' ),
-        (10  , '2012 Rubicon'                      , 'jp12'           , 500    , 'jeep'       , '' ),
-        (11  , '2012 Ranger'                       , 'bcranger'       , 500    , 'ford'       , '' ),
-        (12  , '2013 i30'                          , 'bmhyundaii30'   , 500    , 'hyundai'    , '' ),
-        (13  , '2016 Suburban'                     , 'subn'           , 500    , 'chevrolet'  , '' ),
-        (14  , '2017 F-150 Hennessey Velociraptor' , 'velociraptor'   , 500    , 'ford'       , '' ),
-        (15  , '2020 Sierra Denali HD 3500'        , '20denalihd'     , 500    , 'gmc'        , '' ),
-        (16  , '2018 Camaro'                       , 'alpha6'         , 500    , 'chevrolet'  , '' ),
-        (17  , '2018 3500 Flatbed'                 , '3500flatbed'    , 500    , 'ram'        , '' ),
-        (18  , '2003 350Z'                         , 'dk350z'         , 500    , 'nissan'     , '' ),
-        (19  , '2021 5008'                         , '50082021civ'    , 500    , 'peugeot'    , '' ),
-        (20  , '1995 Bel Air'                      , 'onefifty55'     , 500    , 'chevrolet'  , '' ),
-        (21  , '1966 Nova'                         , 'nova'           , 500    , 'chevrolet'  , '' ),
-        (22  , '1969 Mustang Boss 302'             , 'boss302'        , 500    , 'ford'       , '' ),
-        (23  , '1970 Challenger'                   , 'chall70'        , 500    , 'dodge'      , '' ),
-        (24  , '1988 Monte Carlo'                  , 'montecarlo'     , 500    , 'chevrolet'  , '' ),
-        (25  , '1999 Civic'                        , 'civic'          , 500    , 'honda'      , '' ),
-        (26  , 'CAA Truck'                         , '4b'             , 500    , 'other'      , '' ),
-        (27  , '2015 Alpina B7'                    , 'b7l06'          , 500    , 'bmw'        , '' ),
-        (28  , '2008 S4'                           , 'b5s4'           , 500    , 'audi'       , '' ),
-        (29  , '2015 TTRS'                         , 'ttrs'           , 500    , 'audi'       , '' ),
-        (30  , '2019 R8'                           , 'lbr8'           , 500    , 'audi'       , '' ),
-        (31  , '2021 Bentayga'                     , 'huntley'        , 500    , 'bently'     , '' ),
-        (32  , '2010 Mulsanne'                     , 'bmm'            , 500    , 'bently'     , '' ),
-        (33  , '2022 7'                            , '750li'          , 500    , 'bmw'        , '' ),
-        (34  , '2020 M5'                           , 'm5f90'          , 500    , 'bmw'        , '' ),
-        (35  , '2018 M6'                           , 'm6f13'          , 500    , 'bmw'        , '' ),
-        (36  , '2018 X5'                           , 'x5e53'          , 500    , 'bmw'        , '' ),
-        (37  , '2018 X6M'                          , 'x6m'            , 500    , 'bmw'        , '' ),
-        (38  , '2018 M5 F90'                       , 'bmci'           , 500    , 'bmw'        , '' ),
-        (39  , '1980 Bronco'                       , 'bronco'         , 500    , 'ford'       , '' ),
-        (40  , '2013 BRZ'                          , 'brz13'          , 500    , 'subaru'     , '' ),
-        (41  , '2020 Chiron'                       , 'chiron'         , 500    , 'bugatti'    , '' ),
-        (42  , '1970 GSX'                          , 'gsxb'           , 500    , 'buick'      , '' ),
-        (43  , '1987 GNX'                          , 'bgnx'           , 500    , 'buick'      , '' ),
-        (44  , '2021 C-HR Hybrid'                  , 'chr'            , 500    , 'toyota'     , '' ),
-        (45  , '2019 Corvette'                     , 'c7'             , 500    , 'chevrolet'  , '' ),
-        (46  , '2012 Escalade GMT900'              , 'gmt900escalade' , 500    , 'cadillac'   , '' ),
+        (1   , '2006 Impala'                       , 'impalal'        , 26500    , 'chevrolet'  , '' ),
+        (2   , '2015 Camaro'                       , 'z28'            , 24500    , 'chevrolet'  , '' ),
+        (3   , '2016 Challenger'                   , '16challenger'   , 54000    , 'dodge'      , '' ),
+        (4   , '2016 Charger'                      , '16charger'      , 52000    , 'dodge'      , '' ),
+        (5   , '2017 GTR'                          , '17r35'          , 132000    , 'nissan'     , '' ),
+        (6   , '2017 RV'                           , '17jamb'         , 145000    , 'ford'       , '' ),
+        (7   , '1969 Charger'                      , 'charger69'      , 15300    , 'dodge'      , '' ),
+        (8   , '2019 Mustang GT'                   , 'mustang19'      , 42300    , 'ford'       , '' ),
+        (9   , '2011 Retired CVPI'                 , 'crownvic'       , 33000    , 'ford'       , '' ),
+        (10  , '2012 Rubicon'                      , 'jp12'           , 20250    , 'jeep'       , '' ),
+        (11  , '2012 Ranger'                       , 'bcranger'       , 19760    , 'ford'       , '' ),
+        (12  , '2013 i30'                          , 'bmhyundaii30'   , 17000    , 'hyundai'    , '' ),
+        (13  , '2016 Suburban'                     , 'subn'           , 68000    , 'chevrolet'  , '' ),
+        (14  , '2017 F-150 Hennessey Velociraptor' , 'velociraptor'   , 98000    , 'ford'       , '' ),
+        (15  , '2020 Sierra Denali HD 3500'        , '20denalihd'     , 77000    , 'gmc'        , '' ),
+        (16  , '2018 Camaro'                       , 'alpha6'         , 44000    , 'chevrolet'  , '' ),
+        (17  , '2018 3500 Flatbed'                 , '3500flatbed'    , 51000    , 'ram'        , '' ),
+        (18  , '2003 350Z'                         , 'dk350z'         , 46000    , 'nissan'     , '' ),
+        (19  , '2021 5008'                         , '50082021civ'    , 32000    , 'peugeot'    , '' ),
+        (20  , '1995 Bel Air'                      , 'onefifty55'     , 7000    , 'chevrolet'  , '' ),
+        (21  , '1966 Nova'                         , 'nova'           , 1900    , 'chevrolet'  , '' ),
+        (22  , '1969 Mustang Boss 302'             , 'boss302'        , 24000    , 'ford'       , '' ),
+        (23  , '1970 Challenger'                   , 'chall70'        , 14000    , 'dodge'      , '' ),
+        (24  , '1988 Monte Carlo'                  , 'montecarlo'     , 17000    , 'chevrolet'  , '' ),
+        (25  , '1999 Civic'                        , 'civic'          , 17000    , 'honda'      , '' ),
+        (26  , 'CAA Truck'                         , '4b'             , 26000    , 'other'      , '' ),
+        (27  , '2015 Alpina B7'                    , 'b7l06'          , 105000    , 'bmw'        , '' ),
+        (28  , '2008 S4'                           , 'b5s4'           , 15000    , 'audi'       , '' ),
+        (29  , '2015 TTRS'                         , 'ttrs'           , 67000    , 'audi'       , '' ),
+        (30  , '2019 R8'                           , 'lbr8'           , 192000    , 'audi'       , '' ),
+        (31  , '2021 Bentayga'                     , 'huntley'        , 245000    , 'bently'     , '' ),
+        (32  , '2010 Mulsanne'                     , 'bmm'            , 145000    , 'bently'     , '' ),
+        (33  , '2022 7'                            , '750li'          , 123000    , 'bmw'        , '' ),
+        (34  , '2020 M5'                           , 'm5f90'          , 115000    , 'bmw'        , '' ),
+        (35  , '2018 M6'                           , 'm6f13'          , 113000    , 'bmw'        , '' ),
+        (36  , '2018 X5'                           , 'x5e53'          , 73000    , 'bmw'        , '' ),
+        (37  , '2018 X6M'                          , 'x6m'            , 79000    , 'bmw'        , '' ),
+        (38  , '2018 M5 F90'                       , 'bmci'           , 113000    , 'bmw'        , '' ),
+        (39  , '1980 Bronco'                       , 'bronco'         , 13000    , 'ford'       , '' ),
+        (40  , '2013 BRZ'                          , 'brz13'          , 32000    , 'subaru'     , '' ),
+        (41  , '2020 Chiron'                       , 'chiron'         , 3998000    , 'bugatti'    , '' ),
+        (42  , '1970 GSX'                          , 'gsxb'           , 22000    , 'buick'      , '' ),
+        (43  , '1987 GNX'                          , 'bgnx'           , 29000    , 'buick'      , '' ),
+        (44  , '2021 C-HR Hybrid'                  , 'chr'            , 27000    , 'toyota'     , '' ),
+        (45  , '2019 Corvette C7'                     , 'c7'             , 80000    , 'chevrolet'  , '' ),
+        (46  , '2012 Escalade GMT900'              , 'gmt900escalade' , 89000    , 'cadillac'   , '' ),
         (47  , '2010 CTS Sports Wagon'             , 'ctssw10'        , 500    , 'cadillac'   , '' ),
         (48  , '2018 Camry'                        , 'camry18 '       , 500    , 'toyota'     , '' ),
         (49  , 'Canada Post Van'                   , 'boxville2'      , 500    , 'other'      , '' ),
@@ -1220,7 +1279,34 @@ SET time_zone = "+00:00";
         (503 , 'Scorcher'                          , 'scorcher'       , 350    , 'other'      , '' ),
         (504 , 'Race bike Whippet'                 , 'tribike'        , 500    , 'other'      , '' ),
         (505 , 'Race bike Endurex'                 , 'tribike2'       , 500    , 'other'      , '' ),
-        (506 , 'Race bike Tri-Cycles'              , 'tribike3'       , 500    , 'other'      , '' )
+        (506 , 'Race bike Tri-Cycles'              , 'tribike3'       , 500    , 'other'      , '' ),
+        
+        (507 , 'Coca-Cola Trailer'    , 'trailerscola'   , 500 , 'other' , '' ),
+        (508 , 'Coca-Cola Truck'      , 'phantomcola'    , 500 , 'other' , '' ),
+        (509 , 'Starbucks Truck'      , 'starbucksvan'   , 500 , 'other' , '' ),
+        (510 , 'Starbucks Mule 1'     , 'starbucksmule1' , 500 , 'other' , '' ),
+        (511 , 'Starbucks Mule 2'     , 'starbucksmule2' , 500 , 'other' , '' ),
+        (512 , 'Brute Relaxer'        , 'relaxer'        , 500 , 'other' , '' ),
+        (513 , 'Workstar Plow Salter' , 'plow'           , 500 , 'other' , '' ),
+        (514 , 'Biff Plow Salter'     , 'slowplow'       , 500 , 'other' , '' ),
+
+        (515 , '1972 Fleetwood 60 Special Brougham' , 'fleet72'       , 500 , 'cadillac'   , '' ),
+        (516 , '1978 Eldorado'                      , 'e78'           , 500 , 'cadillac'   , '' ),
+        (517 , '1966 Mustang Flastback 2+2'         , '66fastback'    , 500 , 'ford'       , '' ),
+        (518 , '1971 Mustang Mach 1'                , 'mustangmach1'  , 500 , 'ford'       , '' ),
+        (519 , 'Mustang Fastback'                   , 'fastbang'      , 500 , 'ford'       , '' ),
+        (520 , '1995 Mustang'                       , '95stang'       , 500 , 'ford'       , '' ),
+        (521 , '2003 350z'                          , '350z'          , 500 , 'nissan'     , '' ),
+        (522 , 'F350 18 Plow/Salter'                , '18f350plow'    , 500 , 'ford'       , '' ),
+        (523 , '2018 F-150 Raptor Crew Cab'         , '19raptor'      , 500 , 'ford'       , '' ),
+        (524 , 'Lancer Evo X Varis Type 2'          , 'evo10'         , 500 , 'mitsubishi' , '' ),
+        (525 , '2006 Ram SRT 10'                    , 'srt'           , 500 , 'dodge'      , '' ),
+        (526 , '2006 Seirra 1500'                   , 'polar06seirra' , 500 , 'gmc'        , '' ),
+        (527 , '2020 Land Cruiser 200 HAKAMA'       , 'sclkuz'        , 500 , 'toyota'     , '' ),
+        (528 , '2013 Malibu '                       , '13malibu'      , 500 , 'chevrolet'  , '' ),
+        (529 , 'Jurassic Jeep'                      , 'jurassicjeep'  , 500 , 'jeep'       , '' ),
+        (530 , 'Casa Casavan Microbus'              , 'casavan'       , 500 , 'chevrolet'  , '' ),
+        (531 , '1986 Accord'                        , 'accord86'      , 500 , 'honda'      , '' )
     ;
 
     INSERT INTO `vs_truck_categories` (id, name, label) VALUES
@@ -2021,6 +2107,111 @@ SET time_zone = "+00:00";
     -- DML
     -- N/A
 
+
+-- ----------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------
+
+--
+-- esx_advancedweaponshop
+--
+
+
+    -- DDL
+    CREATE TABLE `weaponshops` (
+        `id` int(11) NOT NULL AUTO_INCREMENT,
+        `zone` varchar(255) NOT NULL,
+        `item` varchar(255) NOT NULL,
+        `price` int(11) NOT NULL,
+        `category` varchar(60) NOT NULL,
+
+        PRIMARY KEY (`id`)
+    );
+
+    -- DML
+    INSERT INTO `licenses` (`type`, `label`) VALUES
+        ('weapon_melee', "Melee License"),
+        ('weapon_handgun', "Handgun License"),
+        ('weapon_smg', "SMG License"),
+        ('weapon_shotgun', "Shotgun License"),
+        ('weapon_assault', "Assault Rifle License"),
+        ('weapon_lmg', "LMG License"),
+        ('weapon_sniper', "Sniper Rifle License")
+    ;
+
+    INSERT INTO `weaponshops` (`id`, `zone`, `item`, `price`, `category`) VALUES
+        (1, 'GunShop', 'GADGET_PARACHUTE', 800, 'melee'),
+        (2, 'GunShop', 'WEAPON_FLASHLIGHT', 25, 'melee'),
+        (3, 'GunShop', 'WEAPON_MACHETE', 20, 'melee'),
+        (4, 'GunShop', 'WEAPON_BAT', 20, 'melee'),
+        (5, 'GunShop', 'WEAPON_NIGHTSTICK', 15, 'melee'),
+        (6, 'GunShop', 'WEAPON_KNIFE', 30, 'melee'),
+        (7, 'GunShop', 'WEAPON_HAMMER', 5, 'melee'),
+        (8, 'GunShop', 'WEAPON_GOLFCLUB', 40, 'melee'),
+        (9, 'GunShop', 'WEAPON_CROWBAR', 15, 'melee'),
+        (10, 'GunShop', 'WEAPON_DAGGER', 15, 'melee'),
+        (11, 'GunShop', 'WEAPON_KNUCKLE', 25, 'melee'),
+        (12, 'GunShop', 'WEAPON_HATCHET', 20, 'melee'),
+        (13, 'GunShop', 'WEAPON_SWITCHBLADE', 25, 'melee'),
+        (14, 'GunShop', 'WEAPON_POOLCUE', 10, 'melee'),
+        (15, 'GunShop', 'WEAPON_WRENCH', 40, 'melee'),
+        (16, 'GunShop', 'WEAPON_BOTTLE', 10, 'melee'),
+        (17, 'GunShop', 'WEAPON_BATTLEAXE', 125, 'melee'),
+        (18, 'GunShop', 'WEAPON_FIREEXTINGUISHER', 100, 'melee'),
+        (19, 'GunShop', 'WEAPON_BALL', 25, 'melee'),
+        (20, 'GunShop', 'WEAPON_SNOWBALL', 25, 'melee'),
+        (21, 'GunShop', 'WEAPON_BZGAS', 250, 'melee'),
+        (22, 'BlackShop', 'WEAPON_BZGAS', 500, 'melee'),
+        (23, 'GunShop', 'WEAPON_SMOKEGRENADE', 250, 'melee'),
+        (24, 'BlackShop', 'WEAPON_SMOKEGRENADE', 500, 'melee'),
+        (25, 'BlackShop', 'WEAPON_MOLOTOV', 150, 'melee'),
+        (26, 'GunShop', 'WEAPON_FLARE', 100, 'melee'),
+        (27, 'GunShop', 'WEAPON_FLAREGUN', 500, 'handgun'),
+        (28, 'GunShop', 'WEAPON_STUNGUN', 500, 'handgun'),
+        (29, 'GunShop', 'WEAPON_SNSPISTOL', 150, 'handgun'),
+        (30, 'BlackShop', 'WEAPON_SNSPISTOL', 450, 'handgun'),
+        (31, 'GunShop', 'WEAPON_VINTAGEPISTOL', 300, 'handgun'),
+        (32, 'BlackShop', 'WEAPON_VINTAGEPISTOL', 900, 'handgun'),
+        (33, 'GunShop', 'WEAPON_PISTOL', 350, 'handgun'),
+        (34, 'BlackShop', 'WEAPON_PISTOL', 1050, 'handgun'),
+        (35, 'GunShop', 'WEAPON_COMBATPISTOL', 400, 'handgun'),
+        (36, 'GunShop', 'WEAPON_PISTOL50', 1500, 'handgun'),
+        (37, 'GunShop', 'WEAPON_HEAVYPISTOL', 550, 'handgun'),
+        (38, 'GunShop', 'WEAPON_REVOLVER', 1300, 'handgun'),
+        (39, 'GunShop', 'WEAPON_APPISTOL', 2700, 'handgun'),
+        (40, 'GunShop', 'WEAPON_MICROSMG', 900, 'smg'),
+        (41, 'BlackShop', 'WEAPON_MICROSMG', 2700, 'smg'),
+        (42, 'GunShop', 'WEAPON_MINISMG', 800, 'smg'),
+        (43, 'BlackShop', 'WEAPON_MINISMG', 2400, 'smg'),
+        (44, 'GunShop', 'WEAPON_SMG', 1600, 'smg'),
+        (45, 'BlackShop', 'WEAPON_SMG', 4800, 'smg'),
+        (46, 'GunShop', 'WEAPON_MACHINEPISTOL', 1300, 'smg'),
+        (47, 'GunShop', 'WEAPON_ASSAULTSMG', 1400, 'smg'),
+        (48, 'GunShop', 'WEAPON_COMBATPDW', 1500, 'smg'),
+        (49, 'GunShop', 'WEAPON_PUMPSHOTGUN', 350, 'shotgun'),
+        (50, 'BlackShop', 'WEAPON_PUMPSHOTGUN', 1050, 'shotgun'),
+        (51, 'GunShop', 'WEAPON_SAWNOFFSHOTGUN', 500, 'shotgun'),
+        (52, 'BlackShop', 'WEAPON_SAWNOFFSHOTGUN', 1500, 'shotgun'),
+        (53, 'GunShop', 'WEAPON_DBSHOTGUN', 450, 'shotgun'),
+        (54, 'BlackShop', 'WEAPON_DBSHOTGUN', 1350, 'shotgun'),
+        (55, 'GunShop', 'WEAPON_HEAVYSHOTGUN', 1000, 'shotgun'),
+        (56, 'GunShop', 'WEAPON_ASSAULTSHOTGUN', 1100, 'shotgun'),
+        (57, 'GunShop', 'WEAPON_MUSKET', 225, 'assault'),
+        (58, 'GunShop', 'WEAPON_ASSAULTRIFLE', 1200, 'assault'),
+        (59, 'BlackShop', 'WEAPON_ASSAULTRIFLE', 3600, 'assault'),
+        (60, 'GunShop', 'WEAPON_CARBINERIFLE', 2400, 'assault'),
+        (61, 'BlackShop', 'WEAPON_CARBINERIFLE', 7200, 'assault'),
+        (62, 'GunShop', 'WEAPON_BULLPUPRIFLE', 1200, 'assault'),
+        (63, 'GunShop', 'WEAPON_SPECIALCARBINE', 5200, 'assault'),
+        (64, 'GunShop', 'WEAPON_COMPACTRIFLE', 750, 'assault'),
+        (65, 'GunShop', 'WEAPON_ADVANCEDRIFLE', 2000, 'assault'),
+        (66, 'GunShop', 'WEAPON_GUSENBERG', 4280, 'lmg'),
+        (67, 'GunShop', 'WEAPON_MG', 8250, 'lmg'),
+        (68, 'GunShop', 'WEAPON_COMBATMG', 13950, 'lmg'),
+        (69, 'GunShop', 'WEAPON_SNIPERRIFLE', 2000, 'sniper'),
+        (70, 'GunShop', 'WEAPON_MARKSMANRIFLE', 3800, 'sniper'),
+        (71, 'GunShop', 'WEAPON_HEAVYSNIPER', 9900, 'sniper')
+    ;
 
 -- ----------------------------------------------------------------------------
 -- ----------------------------------------------------------------------------

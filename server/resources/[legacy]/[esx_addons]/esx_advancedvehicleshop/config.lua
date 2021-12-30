@@ -160,7 +160,7 @@ Config.Boat = {
 Config.Car = {
 	Shop = true,
 	Blips = true,
-	Blip = {Sprite = 326, Color = 2, Display = 4, Scale = 1.0},
+	Blip = {Sprite = 326, Color = 2, Display = 6, Scale = 1.0},
 	License = true,
 	ResellPerc = 50,
 	Markers = {
@@ -177,12 +177,12 @@ Config.Car = {
 			OutsideH = 70.68
 		},
 		Route68 = {
-			Enter = vector3(-55.04, -1095.87, 25.42),
-			Inside = vector3(-47.5, -1097.2, 25.4),
-			Outside = vector3(-26.8, -1083.5, 26.6),
-			Resell = vector3(-44.6, -1080.7, 25.6),
-			InsideH = -20.0,
-			OutsideH = 70.68
+			Enter = vector3(2235.47, 2884.27, 47.06),
+			Inside = vector3(2257.63, 2922.4, 47.05),
+			Outside = vector3(2217.74, 2925.45, 47.03),
+			Resell = vector3(2244.21, 2934.12, 47.03),
+			InsideH = 90.0,
+			OutsideH = 90.0
 		}
 	}
 }

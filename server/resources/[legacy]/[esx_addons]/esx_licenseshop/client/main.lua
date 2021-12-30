@@ -63,13 +63,13 @@ function OpenLicenseShop()
 	local elements = {}
 
 	if Config.AdvancedVehicleShop then
-		if not ownedLicenses['aircraft'] then
-			table.insert(elements, {label = ('%s - <span style="color: green;">%s</span>'):format(_U('license_aircraft'), _U('shop_menu_item', ESX.Math.GroupDigits(Config.Prices.Aircraft))), value = 'buy_license_aircraft'})
-		end
+		-- if not ownedLicenses['aircraft'] then
+		-- 	table.insert(elements, {label = ('%s - <span style="color: green;">%s</span>'):format(_U('license_aircraft'), _U('shop_menu_item', ESX.Math.GroupDigits(Config.Prices.Aircraft))), value = 'buy_license_aircraft'})
+		-- end
 
-		if not ownedLicenses['boating'] then
-			table.insert(elements, {label = ('%s - <span style="color: green;">%s</span>'):format(_U('license_boating'), _U('shop_menu_item', ESX.Math.GroupDigits(Config.Prices.Boating))), value = 'buy_license_boating'})
-		end
+		-- if not ownedLicenses['boating'] then
+		-- 	table.insert(elements, {label = ('%s - <span style="color: green;">%s</span>'):format(_U('license_boating'), _U('shop_menu_item', ESX.Math.GroupDigits(Config.Prices.Boating))), value = 'buy_license_boating'})
+		-- end
 	end
 
 	if Config.AdvancedWeaponShop then
@@ -109,9 +109,9 @@ function OpenLicenseShop()
 			end
 		end
 
-		if not ownedLicenses['drive_truck'] then
-			table.insert(elements, {label = ('%s - <span style="color: green;">%s</span>'):format(_U('license_commercial'), _U('shop_menu_item', ESX.Math.GroupDigits(Config.Prices.Commercial))), value = 'buy_license_commercial'})
-		end
+		-- if not ownedLicenses['drive_truck'] then
+		-- 	table.insert(elements, {label = ('%s - <span style="color: green;">%s</span>'):format(_U('license_commercial'), _U('shop_menu_item', ESX.Math.GroupDigits(Config.Prices.Commercial))), value = 'buy_license_commercial'})
+		-- end
 
 		if not ownedLicenses['drive'] then
 			table.insert(elements, {label = ('%s - <span style="color: green;">%s</span>'):format(_U('license_drivers'), _U('shop_menu_item', ESX.Math.GroupDigits(Config.Prices.Drivers))), value = 'buy_license_drivers'})
@@ -122,11 +122,11 @@ function OpenLicenseShop()
 		end
 	end
 
-	if Config.Drugs then
-		if not ownedLicenses['weed_processing'] then
-			table.insert(elements, {label = ('%s - <span style="color: green;">%s</span>'):format(_U('license_weed'), _U('shop_menu_item', ESX.Math.GroupDigits(Config.Prices.Weed))), value = 'buy_license_weed'})
-		end
-	end
+	-- if Config.Drugs then
+	-- 	if not ownedLicenses['weed_processing'] then
+	-- 		table.insert(elements, {label = ('%s - <span style="color: green;">%s</span>'):format(_U('license_weed'), _U('shop_menu_item', ESX.Math.GroupDigits(Config.Prices.Weed))), value = 'buy_license_weed'})
+	-- 	end
+	-- end
 
 	if Config.WeaponShop then
 		if not ownedLicenses['weapon'] then
@@ -142,7 +142,7 @@ function OpenLicenseShop()
 	}, function(data, menu)
 		TriggerServerEvent('esx_licenseshop:buyLicense', data.current.value)
 		IsInMainMenu = false
-		menu.close()
+		-- menu.close()
 	end, function(data, menu)
 		IsInMainMenu = false
 		menu.close()

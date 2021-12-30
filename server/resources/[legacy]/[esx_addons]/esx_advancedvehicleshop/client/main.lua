@@ -3023,7 +3023,10 @@ function CreateBlips()
 
 	if Config.Car.Shop and Config.Car.Blips then
 		for k,v in pairs(Config.Car.Locations) do
+			print(k)
+			print(v)
 			local blip = AddBlipForCoord(v.Enter)
+			print(blip)
 
 			SetBlipSprite (blip, Config.Car.Blip.Sprite)
 			SetBlipColour (blip, Config.Car.Blip.Color)

@@ -9,7 +9,7 @@ Config.Blip = {Sprite = 408, Color = 0, Display = 2, Scale = 1.0}
 Config.UseBlips = true -- true = Use License Shop Blips
 Config.RequireDMV = false -- If true then it will require players to have Drivers Permit to buy other Licenses | false does the Opposite.
 Config.AdvancedVehicleShop = true -- Set to true if using esx_advancedvehicleshop
-Config.AdvancedWeaponShop = false -- Set to true if using esx_advancedweaponshop
+Config.AdvancedWeaponShop = true -- Set to true if using esx_advancedweaponshop
 Config.DMVSchool = true -- Set to true if using esx_dmvschool
 Config.SellDMV = true -- Set to true if Config.RequireDMV = false & you want players to be able to buy Drivers Permit
 Config.Drugs = true -- Set to true if using esx_drugs
