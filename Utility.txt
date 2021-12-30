@@ -1,0 +1,28 @@
+**KEYBINDS**
+
+F1 - Open Phone (Requires phone item in inventory)
+F2 - Open inventory
+F3 - Open Animations Menu
+F6 - Open Jobs Menu
+F7 - Open Billing Menu
+I - Open EasyAdmin (Staff only, Configurable in Settings on client side)
+Z - Cycle Voice Range
+K - Open Accessory Menu
+M - Open vMenu
+Y - Open Vehicle Trunk
+
+__When In Vehicle__
+F6 - Radar Options (When in police vehicle)
+K - Toggle Seatbelt
+
+__With Police Job__
+U - Panic Button
+
+
+**COMMANDS**
+/postal {postal} - Draw GPS route to a postal
+/po {postal} - Draw GPS route to a postal
+
+__Staff Commands__
+/openinventory <player_id> - Open a player's inventory 
+/setjob [id] [job] [jobgrade] - Set a player's job

@@ -8,10 +8,7 @@ local format = string.format
 --- [[ Nearest Postal Commands ]] ---
 ---
 
-TriggerEvent('chat:addSuggestion', '/postal', 'Set the GPS to a specific postal',
-             { { name = 'Postal Code', help = 'The postal code you would like to go to' } })
-
-RegisterCommand('postal', function(_, args)
+function ExecCmd(_, args)
     if #args < 1 then
         if pBlip then
             RemoveBlip(pBlip.hndl)
@@ -65,5 +62,15 @@ RegisterCommand('postal', function(_, args)
             }
         })
     end
-end)
+end
+
+TriggerEvent('chat:addSuggestion', '/postal', 'Set the GPS to a specific postal',
+             { { name = 'Postal Code', help = 'The postal code you would like to go to' } })
+
+TriggerEvent('chat:addSuggestion', '/po', 'Set the GPS to a specific postal',
+             { { name = 'Postal Code', help = 'The postal code you would like to go to' } })
+
+RegisterCommand('postal', ExecCmd)
+
+RegisterCommand('po', ExecCmd)
 

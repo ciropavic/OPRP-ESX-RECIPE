@@ -263,24 +263,7 @@ SET time_zone = "+00:00";
         (40 , 'lumberjack' ,1,'lumberjack_woodchopper' ,'Wood Chopper' ,230,'{}','{}'),
         (41 , 'lumberjack' ,2,'lumberjack_Supervisor '  'Supervisor '  ,270,'{}','{}'),
         (42 , 'lumberjack' ,3,'lumberjack_sitelead'    ,'Site Lead'    ,330,'{}','{}'),
-        ;
-
--- ----------------------------------------------------------------------------
--- ----------------------------------------------------------------------------
--- ----------------------------------------------------------------------------
-
---
--- esx_kashacters
---
-
-
-    -- DDL
-    CREATE TABLE `user_lastcharacter` (
-        `license` varchar(255) NOT NULL,
-        `charid` int(11) NOT NULL
-    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-    -- DML
+    ;
 
 -- ----------------------------------------------------------------------------
 -- ----------------------------------------------------------------------------

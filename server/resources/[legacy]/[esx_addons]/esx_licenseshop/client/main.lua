@@ -73,9 +73,9 @@ function OpenLicenseShop()
 	end
 
 	if Config.AdvancedWeaponShop then
-		if not ownedLicenses['weapon_melee'] then
-			table.insert(elements, {label = ('%s - <span style="color: green;">%s</span>'):format(_U('license_melee'), _U('shop_menu_item', ESX.Math.GroupDigits(Config.Prices.Melee))), value = 'buy_license_melee'})
-		end
+		-- if not ownedLicenses['weapon_melee'] then
+		-- 	table.insert(elements, {label = ('%s - <span style="color: green;">%s</span>'):format(_U('license_melee'), _U('shop_menu_item', ESX.Math.GroupDigits(Config.Prices.Melee))), value = 'buy_license_melee'})
+		-- end
 
 		if not ownedLicenses['weapon_handgun'] then
 			table.insert(elements, {label = ('%s - <span style="color: green;">%s</span>'):format(_U('license_handgun'), _U('shop_menu_item', ESX.Math.GroupDigits(Config.Prices.Handgun))), value = 'buy_license_handgun'})
