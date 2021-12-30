@@ -40,6 +40,10 @@ tasks:
     dest: ./resources/[Scripts]
 
   - action: move_path
+    src: ./tmp/oprp_esx/server/resources/[Vehicles]
+    dest: ./resources/[Vehicles]
+
+  - action: move_path
     src: ./tmp/oprp_esx/server/resources/gcphone
     dest: ./resources/gcphone
 
