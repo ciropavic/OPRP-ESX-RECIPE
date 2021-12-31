@@ -194,7 +194,7 @@ SET time_zone = "+00:00";
         ('ctv', 'CTV', 0),
         ('miner', 'Miner', 0),
         ('fueler', 'Fueler', 0),
-        ('lumberjack', 'Lumberjack', 0),
+        ('lumberjack', 'Lumberjack', 0)
     ;
     
     --  Pay checks get sent every 20 minutes in game.
