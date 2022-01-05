@@ -1,0 +1,105 @@
+OPRP_911 - Manages the 911 calls for the server (/911)
+OPRP_Mechanic - AI arrives at player and repairs vehicle (/mechanic)
+OPRP_Alarms - Commands to turn on specific alarms (/hlalarm, /udalarm, /chfalarm, /pbalarm, /fortzalarm, /prisonalarm)
+OPRP_Messages - Server Side Messages Every Few Minutes
+OPRP_Beanbag - Replaces Pump Shotgun with a less than lethal shotgun
+OPRP_BAC - Sets player's BAC level and allows others to test it (/bacset [number], /bactest [player id])
+OPRP_CalmAI - Calm AI Script
+OPRP_Camping - Commands to spawn camping objects (/tent, /deltent, /campfire, /delcampfire, /chair, /delchair, /delobject)
+OPRP_Carhud - HUD of vehicles (license plate, damage, oil etc)
+OPRP_Channelfeed - I got no clue don't touch
+OPRP_Chat - More shit idk, just don't touch
+OPRP_Clamp - Adds a menu so officers may clamp vehicles (/clamp)
+OPRP_Priority - Adds Priority cooldown (/priority, /onhold, /inprogress, /resetpcd)
+OPRP_Crouch - Allows the player to crouch instead of stand
+OPRP_Emotes - Menu with emotes
+OPRP_ResponsComamnds - Allows the player to type a command and get assistance (/discord, /cad, /website, /commands, /cars, /info, /help)
+OPRP_Legragdoll - Makes the player ragdoll when shot in the lower body
+OPRP_Dashcam - Allows all Emergency vehicles to have a realistic looking dashcam
+OPRP_Blips - Put map markers on the map
+OPRP_Delall - Allows staff to delete every vehicle in existance (/delallveh)
+OPRP_Deleteveh - Allows players to delete their own vehicles (/dv)
+OPRP_Delgun - Allows player to activate delete object gun if they need to delete multiple things quickly (/delgun on)
+OPRP_Disabledispatch - Disables AI police, fire, and EMS to respond
+OPRP_DiscordBot - Things don't touch
+OPRP_Camera - Allows player to pull out phone to take pictures or videos (/camera)
+OPRP_Fire - Allows players to start fires (/startfire, /stopfire, /stopallfires, /startsmoke,/ stopsmoke, /stopallsmoke)
+OPRP_HUK - Allows players to get on their knees for Police RP (/huk)
+OPRP_Weazel - Allows players to engane in News RP (/cam, /mic)
+OPRP_Dropgun - Allows players to drop guns (/drop)
+OPRP_Ignore - Ensures AI Ignore all players
+OPRP_VehCommands - Allows players to control more about their vehicles externally (/trunk, /hood, door[1-4])
+OPRP_AOP - Allows players to know where AOP is and able to RP there (/aop, /aopvote, /vote)
+OPRP_HideCmds - Hides failed commands
+OPRP_Firingmode - Allows player's to choose firing modes with ARs
+OPRP_Loadingscreen - Creates a loading screen for players to wait at when they launch the server
+OPRP_Pepperspray - Allows players to use pepperpsray instead of guns, melee or tasers (/pepperspray)
+OPRP_Point - Allows players to point their fingers
+OPRP_Axon - Allows players to have an Axon bodycam overlay (/rcpaxon)
+OPRP_Fuel - Adds a fuel system for vehicles
+OPRP_Grab - Allows players to use commands to realistically pull weapons (/unrack, /rack, /grab, /away, /bodycamon, /bodycamoff)
+OPRP_40mm - Swaps Grenade Launcher to be a 40mm round for police RP
+OPRP_Reticle - Removes the reticle from players' screen
+OPRP_Heli - Helicopter shit stuff don't touch
+OPRP_Hologram - Creates text at spawn for members to look at
+OPRP_Holster - Removes firearm from holster model
+OPRP_Stun - Increases the amount of time stun gun does
+OPRP_Ladder - Allows firefighters to spawn and climb working ladders (/ladder collect, /ladder store)
+OPRP_Panic - Allows police officers to use panic button (/panictune, /panic, /panicwhitelist, /panicunwhitelist)
+OPRP_Shuffle - Allows players to sit in passenger seat without jumping to next seat immediately (/shuff)
+OPRP_KTFDO - Allows members to keep door open by holding K
+OPRP_LSJailer - Allows Police to jail other players to holding cells in Mission Row PD
+OPRP_Vehcontrol - Siren shit, don't touch
+OPRP_Blacklist - Blacklists cars, weapons, etc
+OPRP_NativeUI - NativeUI bullshit just don't touch
+OPRP_Postal - Allows players to see nearest postal (/postal [postal number])
+OPRP_NW - Ensures players do not get wanted stars and have to deal with AI
+OPRP_PlayersBlips - Removes player blips from the map
+OPRP_PJailer - Allows Police to jail other players to holding cells in Paleto PD
+OPRP_Notify - Some weird bullshit idk just don't touch this either
+OPRP_Police - Adds police menu and shit
+OPRP_Backup - Allows officers to request additionals through chat (/bk [1-3, 99])
+OPRP_PostalMap - Adds postal codes to minimap
+OPRP_Speedlimit - Posts the server speed limits at the top of the screen
+OPRP_PvP - Allows shooty shoots
+OPRP_Speedgun - Adds speed gun for police
+OPRP_Animations1 - Bunch of animations. Key ones are hands up, radio, holster (not adding commands for it all there's a lot fuck off)
+OPRP_Drunk - Allows players to become drunk or sober (/drink, /sober)
+OPRP_Ragdoll - Allows players to fall over
+OPRP_AITraffic - Idk this shit don't touch
+OPRP_VehFailure - Allows vehicles to properly fail and be realistic
+OPRP_RemoveAI - Supposed to remove AI police
+OPRP_Report - Allows players to report thngs to staff and allow them to reply
+OPRP_Animations2 - More server animation bullshit
+OPRP_ChatCmds - Allows players to have commands to have realistic RP (/darkweb, /twt, /news, /ooc)
+OPRP_Animtations3 - More animations
+OPRP_Revive - Allows players to realistically die
+OPRP_Blackout - Makes people blackout when they crash really hard
+OPRP_SJailer - Allows Police to jail other players to holding cells in Sandy PD
+OPRP_Wheel - Saves the wheel position of cars
+OPRP_Saw - Allows firefighters to use a saw and take doors off of vehicles
+OPRP_SceneMen - Allows Police to play props on scene
+OPRP_Search - Allows players to set their inventory and be searched (/setpedinv, /searchpedinv, /setvehinv, /searchvehinv)
+OPRP_Seatbelt - Allows players to use a seatbelt, and if they don't they can get yeeted tf outta their cars
+OPRP_Meeting - Allows staff members to initiate a server meeting (/meeting start [seconds]), /meeting end)
+OPRP_Announce - Allows staff members to make announcements that appear at the center of users' screens
+OPRP_Shield - Allows Police to carry a working ballistic shield for breaching
+OPRP_Vape - Allows players to vape (/vape)
+OPRP_Slashtires - Allows players to slash tires
+OPRP_Sound - Sounds
+OPRP_Spikes - Allows Police to place spike strips (/setspikes [1-5])
+OPRP_Spotlight - Allows Police to use spotlight on their vehicles (/spotlight)
+OPRP_Street - Adds a street label in game so players know where they are
+OPRP_Tackle - Allows players to tackle other players
+OPRP_Tape - Allows Emergency Services to place tape
+OPRP_Teleportschool - Supposed to tp to school
+OPRP_Cruise - Allows members to use a cruise control whilst driving
+OPRP_Tutorial - Makes every member who joins go through a slideshow (/tutorial)
+OPRP_Towing - Allows players to tow cars
+OPRP_vMenu - Literally the whole thing of the server
+OPRP_Tow - Other towing thingy
+OPRP_GPS - Voice GPS if wanted it's cool
+OPRP_Watermark - Give us credit
+OPRP_Radar - Allows Police to have a good speed radar and license plate reader
+OPRP_Ride - Players may ride animals
+OPRP_Logger - Discord logs

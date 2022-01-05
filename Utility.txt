@@ -5,24 +5,116 @@ F2 - Open inventory
 F3 - Open Animations Menu
 F6 - Open Jobs Menu
 F7 - Open Billing Menu
-I - Open EasyAdmin (Staff only, Configurable in Settings on client side)
-Z - Cycle Voice Range
-K - Open Accessory Menu
+F9 - Hands Up
+F10 - Police Scene Menu
+B - Point
+C - 
+E - 
+G - Hand On Radio
+H - 
+I - Open EasyAdmin (Staff only, Configurable in Keybinds Settings on client side)
+J - 
+K - Open Accessory Menu *****
+L - 
 M - Open vMenu
-Y - Open Vehicle Trunk
+N - 
+O - 
+P - 
+R - 
+T - 
+U - 
+V - 
+X - Hands On Head
+Y - Open Vehicle Trunk Inventory
+Z - Cycle Voice Range
+, - Ragdoll
+NUMPAD+ - Hand On Holster
 
 __When In Vehicle__
 F6 - Radar Options (When in police vehicle)
 K - Toggle Seatbelt
+F (Press and Hold) - Keep door open by holding F
+
+__When In Forklift__
+F10 - Attach/Detach vehicle
+
+__When In Polcie Vehicle__
+B - Activate Dashcam
+F6 - Open Radar Remote (Can be changed in GTA Settings->Keybinds->FiveM)
+L - Radar Key Lock Key (Can be changed in GTA Settings->Keybinds->FiveM)
+NUMPAD1 - Radar lock/unlock front antenna (Can be changed in GTA Settings->Keybinds->FiveM)
+NUMPAD2 - Radar lock/unlock rear antenna (Can be changed in GTA Settings->Keybinds->FiveM)
+NUMPAD3 - ALPR lock/unlock front (Can be changed in GTA Settings->Keybinds->FiveM)
+NUMPAD4 - ALPR lock/unlock rear (Can be changed in GTA Settings->Keybinds->FiveM)
 
 __With Police Job__
 U - Panic Button
 
+__When Holding Certain Weapons
+L - Toggle Saftey
+K - Cycle Firing Mode
+
+__When Close To Certain Animals__
+E - Ride Animal (Ya I guess this is a thing we have :shrug:)
+
+__When Holding Vintage Pistol__
+Y - Toggle Radar Gun AI
+E (While Aiming At A Car) - Read Speed
 
 **COMMANDS**
-/postal {postal} - Draw GPS route to a postal
-/po {postal} - Draw GPS route to a postal
+/postal {postal} - Draw GPS route to a postal.
+/po {postal} - Draw GPS route to a postal.
+/prisonalarm - Activates/Deactivates the alarms at the prison.
+/fzalarm - Activates/Deactivates the alarms at Fort Zancudo.
+/pbbalarm - Activates/Deactivates the alarms at Paleto Bay Bank.
+/hlalarm - Activates/Deactivates the alarms at Humane Labs.
+/udalarm - Activates/Deactivates the alarms at the Union Depository.
+/cfalarm - Activates/Deactivates the alarms at Chicken Factory in Paleto.
+/kneel - Makes your character kneel.
+/k - Makes your character kneel.
+/liedown - Makes your character laydown.
+/lie - Makes your character laydown.
+/l - Makes your character laydown.
+/cpr - Makes your character perform CPR.
+/c - Makes your character perform CPR.
+/sit - Makes your character sit.
+/s - Makes your character sit.
+/rcpaxon - Enables Axon Body Cam overlay.
+/tent - Spawns a tent.
+/deltent - Removes your previous tent.
+/campfire - Spawns a campfire.
+/delcampfire - Removes your previous campfire.
+/chair - Spawns a chair.
+/delchair - Removes your previous chair.
+/carry - Carry another player, Run command again to cancel.
+/clamp - Put a clamp on a vehicle
+/crouch - Make your player crouch
+/cr - Make your player crouch
+/startfire [MAXFLAMES] [MAXRANGE] - Starts fire with specified params.
+/stopfire - Stops nearby fires.
+/stopallfires - Stops all fires.
+/startsmoke [SCALE] - Starts smoke with specified params.
+/stopsmoke - Stops nearby smoke.
+/stopallsmoke - Stops all smoke.
+/drink - Makes your character more drunk (can do this command to make the effect stronger)
+/sober - Clears the drunk mode
+/vgps - Activate voice GPS
+/hose - Use a fire hose
+/takehostage - Take someone hostage
+/th - Take someone hostage
+/huk - Get on your knees with hands up.
+/ladder [collect/store] - Use a ladder.
+/pepperspray - Use pepperspray
+/saw - Use a power saw
+/shield - Use a riot shield
+/shuff - Shuffle seat in car
+/sling 1 - Sling a AR to the front
+/sling 2 - Sling a AR to the back
+/setspikes [1-5] - Set Spike Strips
+/suicide - Commit UnAlive
 
 __Staff Commands__
 /openinventory <player_id> - Open a player's inventory 
 /setjob [id] [job] [jobgrade] - Set a player's job
+/delallveh - Delete all vehicles possible.
+/meeting [Start/Stop] - Start or stop a meeting

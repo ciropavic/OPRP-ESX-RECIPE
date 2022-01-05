@@ -28,6 +28,10 @@ tasks:
     dest: ./configs
 
   - action: move_path
+    src: ./tmp/oprp_esx/server/resources/[GUNS]
+    dest: ./resources/[GUNS]
+
+  - action: move_path
     src: ./tmp/oprp_esx/server/resources/[legacy]
     dest: ./resources/[legacy]
 
@@ -36,12 +40,40 @@ tasks:
     dest: ./resources/[Maps]
 
   - action: move_path
+    src: ./tmp/oprp_esx/server/resources/[OrgScripts]
+    dest: ./resources/[OrgScripts]
+
+  - action: move_path
+    src: ./tmp/oprp_esx/server/resources/[OtherMaps]
+    dest: ./resources/[OtherMaps]
+
+  - action: move_path
+    src: ./tmp/oprp_esx/server/resources/[PEDS]
+    dest: ./resources/[PEDS]
+
+  - action: move_path
     src: ./tmp/oprp_esx/server/resources/[Scripts]
     dest: ./resources/[Scripts]
 
   - action: move_path
-    src: ./tmp/oprp_esx/server/resources/[Vehicles]
-    dest: ./resources/[Vehicles]
+    src: ./tmp/oprp_esx/server/resources/[SeasonalMaps]
+    dest: ./resources/[SeasonalMaps]
+
+  - action: move_path
+    src: ./tmp/oprp_esx/server/resources/[Vehicles_Fire]
+    dest: ./resources/[Vehicles_Fire]
+
+  - action: move_path
+    src: ./tmp/oprp_esx/server/resources/[Vehicles_CIV]
+    dest: ./resources/[Vehicles_CIV]
+
+  - action: move_path
+    src: ./tmp/oprp_esx/server/resources/[Vehicles_LEO]
+    dest: ./resources/[Vehicles_LEO]
+
+  - action: move_path
+    src: ./tmp/oprp_esx/server/resources/[Vehicles_Staff]
+    dest: ./resources/[Vehicles_Staff]
 
   - action: move_path
     src: ./tmp/oprp_esx/server/resources/gcphone
