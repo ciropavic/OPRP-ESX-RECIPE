@@ -6,7 +6,7 @@
     <Item>
       <modelName>oppfordexplorer</modelName>
       <txdName>oppfordexplorer</txdName>
-      <handlingId>FBI2</handlingId>
+      <handlingId>JaysFordExplorerHandling</handlingId>
       <gameName>oppfordexplorer</gameName>
       <vehicleMakeName />
       <expressionDictName>null</expressionDictName>

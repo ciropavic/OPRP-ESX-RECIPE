@@ -3,10 +3,9 @@ Figure our if we still need OPRP_Cruise
 Relocate OPRP_Holograms
 See if i can find a better script for OPRP_Slashtires
 Look into new taxi script
-Check for yellowjack bathroom and garage
 Figure out what map_sandySheriff does
-Go on OPRP and check -441.52, 4743.96, 244.34 for Cabin from MapEdit
 Police 911
 Vehicle Shop
 Easyadmin stuff
 Police menu
+change hands on head key bind
