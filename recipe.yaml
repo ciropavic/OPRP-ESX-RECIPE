@@ -56,12 +56,12 @@ tasks:
     dest: ./resources/[Scripts]
 
   - action: move_path
-    src: ./tmp/oprp_esx/server/resources/[SeasonalMaps]
-    dest: ./resources/[SeasonalMaps]
+    src: ./tmp/oprp_esx/server/resources/[SesonalMaps]
+    dest: ./resources/[SesonalMaps]
 
   - action: move_path
-    src: ./tmp/oprp_esx/server/resources/[Vehicles_Fire]
-    dest: ./resources/[Vehicles_Fire]
+    src: ./tmp/oprp_esx/server/resources/[Vehicle_Fire]
+    dest: ./resources/[Vehicle_Fire]
 
   - action: move_path
     src: ./tmp/oprp_esx/server/resources/[Vehicles_CIV]
