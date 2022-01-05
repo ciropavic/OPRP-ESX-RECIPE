@@ -446,13 +446,13 @@ Citizen.CreateThread(function()
                 speedlimit = "~r~~h~Contact Development!"
             end
             			
-		if IsControlJustPressed(0, 29) then
-			if speedlimitshow == true then
-				speedlimitshow = false
-			else
-				speedlimitshow = true
-			end
-		end
+		-- if IsControlJustPressed(0, 29) then
+		-- 	if speedlimitshow == true then
+		-- 		speedlimitshow = false
+		-- 	else
+		-- 		speedlimitshow = true
+		-- 	end
+		-- end
 			
 			if speedlimitshow == true then
                 -- DrawTxt(0.840, 1.452, 1.0,1.03,0.45,"~r~Speedlimit: ~b~"..speedlimit.."~r~ km/h", 255,255,255,255)

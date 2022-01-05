@@ -2,6 +2,8 @@ local cooldown = 0
 local ispriority = false
 local ishold = false
 
+TriggerServerEvent('syncPrio')
+
 AddEventHandler('onClientMapStart', function()
     Wait(2000)
     TriggerServerEvent('syncPrio')

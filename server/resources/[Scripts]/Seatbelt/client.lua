@@ -123,8 +123,8 @@ Citizen.CreateThread(function()
     if Config.AlarmOnlySpeed and VehSpeed > Config.AlarmSpeed then
       ShowWindow = true
     else
-      ShowWindow = false
-      SendNUIMessage({displayWindow = 'false'})
+      ShowWindow = true
+      -- SendNUIMessage({displayWindow = 'false'})
     end
 
       if IsPlayerDead(PlayerId()) or IsPauseMenuActive() then

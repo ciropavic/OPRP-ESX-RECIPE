@@ -8,13 +8,13 @@ ishold = false
 
 RegisterServerEvent('syncPrio')
 AddEventHandler('syncPrio', function()
-	
-	if ispriority == true then
-		TriggerClientEvent('UpdatePriority', -1, ispriority)
-	end
 
 	if ishold == true then
 		TriggerClientEvent('UpdateHold', -1, ishold)
+	elseif ispriority == false then
+		TriggerClientEvent('UpdateCooldown', -1, cooldown)
+	elseif ispriority == true then
+		TriggerClientEvent('UpdatePriority', -1, ispriority)
 	end
 	
 end)
