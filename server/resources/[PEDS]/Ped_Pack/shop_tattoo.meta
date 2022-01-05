@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TattooShopItemArray>
+  <TattooShopItems>
+	<!-- Male Biker tattoos -->
+<Item>
+	  <id value="2900"/>
+	  <cost value="0"/>
+	  <textLabel>MP_MP_Biker_Tat_001</textLabel>
+	  <collection>mpBiker_overlays</collection>
+	  <preset>MP_MP_Biker_Tat_001_M</preset> <!-- SAME AS IN PREVIOUS FILE in row nameHash!!!  -->
+	  <zone>PDZ_TORSO</zone>
+	  <eFacing>TATTOO_FRONT</eFacing>
+	  <updateGroup>CHEST_FULL</updateGroup>
+	  <eFaction>TATTOO_MP_FM</eFaction>
+	  <lockHash />
+</Item>
+  </TattooShopItems>
+</TattooShopItemArray>

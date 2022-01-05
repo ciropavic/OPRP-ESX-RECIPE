@@ -1,0 +1,18 @@
+{
+  "FovMax": 70.0,
+  "FovMin": 1.0,
+  "ZoomSpeed": 3.0,
+  "SpeedLR": 5.0,
+  "SpeedUD": 5.0,
+  "TextY": 1.5,
+  "MaxDist": 800.0,
+  "AllowCamera": true,
+  "AllowMarkers": true,
+  "AllowPedLocking": true,
+  "AllowRappel": true,
+  "AllowSpeedCalculations": true,
+  "AllowSpotlights": true,
+  "UseRealisticFLIR": true,
+  "AircraftHashes": [ "mammatus", "dodo" ],
+  "HelicopterHashes": [ "nh90", "polmav" ]
+}

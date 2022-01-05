@@ -1,0 +1,42 @@
+[
+	{
+		"useBackgroundColour" : "false",
+		"backgroundColour" : "20,20,20",
+		"useBackgroundImage" : "true",
+		"backgroundImagePath" : "images/backgroundImg1.jpg",
+		"useTextColour" : "false",
+		"textColour" : "255,255,255",
+		"useBoldText" : "true",
+		"serverTitle" : "Welcome to Ontario Provincial Roleplay!",
+		"playAudioInBackground" : "true",
+		"YTVideoID" : "GLHAcAkdB8M",
+		"videoVolume" : "8"
+	},
+	{
+		"rule1" : "Read the full rules",
+		"rule2" : "A microphone is required",
+		"rule3" : "Do not cop bait",
+		"rule4" : "Do not use cheats",
+		"rule5" : "No racism, harassment, sexism, etc.",
+		"rule6" : "No RDM or VDM or arguing with staff",
+		"rule7" : "Use common sense"
+	},
+	{
+		"servers1" : "Forums: https://ontarioprovincialrp.mistforums.com/news",
+		"servers2" : "Teamspeak: 142.126.194.109",
+		"servers3" : "Discord: https://discord.gg/9nHU7tQR",
+		"servers4" : "",
+		"servers5" : "",
+		"servers6" : "",
+		"servers7" : ""
+	},
+	{
+		"content1" : "Character Customization",
+		"content2" : "Whitelisted Police, Fire & EMS",
+		"content3" : "Custom Vehicle Models",
+		"content4" : "Custom Weapon Models and Sounds",
+		"content5" : "Friendly Community",
+		"content6" : "RP Immersive Scripts",
+		"content7" : "Helpful Staff"
+	}
+]
