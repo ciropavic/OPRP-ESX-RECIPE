@@ -37,10 +37,10 @@ local TeleportFromTo = {
 		positionTo = { ['x'] = 136.2, ['y'] = -761.72, ['z'] = 45.74, nom = "Top Floor"},
 	},
 	
-	["Casino"] = {
-		positionFrom = { ['x'] = 924.4, ['y'] = 46.89, ['z'] = 81.19, nom = "Outside"},
-		positionTo = { ['x'] = 937.28, ['y'] = 39.07, ['z'] = 75.32, nom = "Casino"},
-	},d
+	-- ["Casino"] = {
+	-- 	positionFrom = { ['x'] = 924.4, ['y'] = 46.89, ['z'] = 81.19, nom = "Outside"},
+	-- 	positionTo = { ['x'] = 937.28, ['y'] = 39.07, ['z'] = 75.32, nom = "Casino"},
+	-- },d
 }
 
 Drawing = setmetatable({}, Drawing)
