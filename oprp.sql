@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
         `job_grade` int(11) DEFAULT 0,
         `loadout` longtext DEFAULT NULL,
         `position` varchar(255) DEFAULT '{"x":-269.4,"y":-955.3,"z":31.2,"heading":205.8}',
-        `firstname` varchar(16) DEFAULT NULL,
-        `lastname` varchar(16) DEFAULT NULL,
-        `dateofbirth` varchar(10) DEFAULT NULL,
-        `sex` varchar(1) DEFAULT NULL,
-        `height` int(11) DEFAULT NULL,
+        `firstname` varchar(50) DEFAULT '',
+        `lastname` varchar(50) DEFAULT '',
+        `dateofbirth` varchar(25) DEFAULT '',
+        `sex` varchar(10) DEFAULT '',
+        `height` int(5) DEFAULT '',
         `skin` longtext DEFAULT NULL,
         `status` longtext DEFAULT NULL,
         `is_dead` tinyint(1) DEFAULT 0,
@@ -228,41 +228,41 @@ SET time_zone = "+00:00";
         (19 , 'ems'        , 3  , 'tps_coc'                      , 'TPS - COC'             , 850, '{}', '{}'),
 
         -- Uber Job
-        (20 , 'uber'       , 1  , 'uber_1star'                   , 'UBER *'                , 200, '{}', '{}'),
-        (21 , 'uber'       , 2  , 'uber_2star'                   , 'UBER **'               , 225, '{}', '{}'),
-        (22 , 'uber'       , 3  , 'uber_3star'                   , 'UBER ***'              , 250, '{}', '{}'),
-        (23 , 'uber'       , 4  , 'uber_4star'                   , 'UBER ****'             , 275, '{}', '{}'),
-        (24 , 'uber'       , 5  , 'uber_5star'                   , 'UBER *****'            , 300, '{}', '{}'),
+        (20 , 'uber'       , 0  , 'uber_1star'                   , 'UBER *'                , 200, '{}', '{}'),
+        (21 , 'uber'       , 1  , 'uber_2star'                   , 'UBER **'               , 225, '{}', '{}'),
+        (22 , 'uber'       , 2  , 'uber_3star'                   , 'UBER ***'              , 250, '{}', '{}'),
+        (23 , 'uber'       , 3  , 'uber_4star'                   , 'UBER ****'             , 275, '{}', '{}'),
+        (24 , 'uber'       , 4  , 'uber_5star'                   , 'UBER *****'            , 300, '{}', '{}'),
 
         -- CanadaPost Job
-        (25 , 'canadapost' , 1  , 'canadapost_newdriver'         , 'New Driver'            , 250, '{}', '{}'),
-        (26 , 'canadapost' , 2  , 'canadapost_experienceddriver' , 'Experienced Driver'    , 295, '{}', '{}'),
-        (27 , 'canadapost' , 3  , 'canadapost_seniordriver'      , 'Senior Driver'         , 325, '{}', '{}'),
+        (25 , 'canadapost' , 0  , 'canadapost_newdriver'         , 'New Driver'            , 250, '{}', '{}'),
+        (26 , 'canadapost' , 1  , 'canadapost_experienceddriver' , 'Experienced Driver'    , 295, '{}', '{}'),
+        (27 , 'canadapost' , 2  , 'canadapost_seniordriver'      , 'Senior Driver'         , 325, '{}', '{}'),
 
         -- WasteManagement Job
-        (28 , 'wm'         , 1  , 'wm_rookiecollector'           , 'Rookie Collector'      , 235, '{}', '{}'),
-        (29 , 'wm'         , 2  , 'wm_experiencedcollector'      , 'Experienced Collector' , 280, '{}', '{}'),
-        (30 , 'wm'         , 3  , 'wm_seniorcollector'           , 'Senior Collector'      , 310, '{}', '{}'),
+        (28 , 'wm'         , 0  , 'wm_rookiecollector'           , 'Rookie Collector'      , 235, '{}', '{}'),
+        (29 , 'wm'         , 1  , 'wm_experiencedcollector'      , 'Experienced Collector' , 280, '{}', '{}'),
+        (30 , 'wm'         , 2  , 'wm_seniorcollector'           , 'Senior Collector'      , 310, '{}', '{}'),
 
         -- CTV Job
-        (31 , 'ctv'        , 1  , 'ctv_fieldreporter'            , 'Field Reporter'        , 280, '{}', '{}'),
-        (32 , 'ctv'        , 2  , 'ctv_cameraman'                , 'Cameraman'             , 310, '{}', '{}'),
-        (33 , 'ctv'        , 3  , 'ctv_newsanchor'               , 'News Anchor'           , 340, '{}', '{}'),
+        (31 , 'ctv'        , 0  , 'ctv_fieldreporter'            , 'Field Reporter'        , 280, '{}', '{}'),
+        (32 , 'ctv'        , 1  , 'ctv_cameraman'                , 'Cameraman'             , 310, '{}', '{}'),
+        (33 , 'ctv'        , 2  , 'ctv_newsanchor'               , 'News Anchor'           , 340, '{}', '{}'),
 
         -- Miner Job
-        (34 , 'miner'      , 1  , 'miner_rookie'                 , 'Rookie Miner'          , 230, '{}', '{}'),
-        (35 , 'miner'      , 2  , 'miner_senior'                 , 'Senior Miner'          , 270, '{}', '{}'),
-        (36 , 'miner'      , 3  , 'miner_supervisor'             , 'Site Supervisor'       , 330, '{}', '{}'),
+        (34 , 'miner'      , 0  , 'miner_rookie'                 , 'Rookie Miner'          , 230, '{}', '{}'),
+        (35 , 'miner'      , 1  , 'miner_senior'                 , 'Senior Miner'          , 270, '{}', '{}'),
+        (36 , 'miner'      , 2  , 'miner_supervisor'             , 'Site Supervisor'       , 330, '{}', '{}'),
 
         -- Fueler Job
-        (37 , 'fueler'     , 1  , 'fueler_rookie'                , 'Rookie Fueler'         , 230, '{}', '{}'),
-        (38 , 'fueler'     , 2  , 'fueler_senior'                , 'Senior Fueler'         , 270, '{}', '{}'),
-        (39 , 'fueler'     , 3  , 'fueler_supervisor'            , 'Supervisor'            , 330, '{}', '{}'),
+        (37 , 'fueler'     , 0  , 'fueler_rookie'                , 'Rookie Fueler'         , 230, '{}', '{}'),
+        (38 , 'fueler'     , 1  , 'fueler_senior'                , 'Senior Fueler'         , 270, '{}', '{}'),
+        (39 , 'fueler'     , 2  , 'fueler_supervisor'            , 'Supervisor'            , 330, '{}', '{}'),
 
         -- Lumberjack Job
-        (40 , 'lumberjack' , 1  , 'lumberjack_woodchopper'       , 'Wood Chopper'          , 230, '{}', '{}'),
-        (41 , 'lumberjack' , 2  , 'lumberjack_Supervisor '       , 'Supervisor'            , 270, '{}', '{}'),
-        (42 , 'lumberjack' , 3  , 'lumberjack_sitelead'          , 'Site Lead'             , 330, '{}', '{}')
+        (40 , 'lumberjack' , 0  , 'lumberjack_woodchopper'       , 'Wood Chopper'          , 230, '{}', '{}'),
+        (41 , 'lumberjack' , 1  , 'lumberjack_Supervisor '       , 'Supervisor'            , 270, '{}', '{}'),
+        (42 , 'lumberjack' , 2  , 'lumberjack_sitelead'          , 'Site Lead'             , 330, '{}', '{}')
     ;
 
 -- ----------------------------------------------------------------------------

@@ -1,4 +1,5 @@
 ESX = nil
+local soundOn = true
 
 Citizen.CreateThread(function()
 	while ESX == nil do
@@ -71,10 +72,15 @@ Citizen.CreateThread(function()
 
 			if data.elements[i].selected then
 				menu.setElement(i, 'selected', true)
+				if soundOn == true then
+					PlaySound(0, "Apt_Style_Purchase", "DLC_APT_Apartment_SoundSet", 0, 0, 1);
+				end
 			else
 				menu.setElement(i, 'selected', false)
+				if soundOn == true then
+					PlaySound(0, "Apt_Style_Purchase", "DLC_APT_Apartment_SoundSet", 0, 0, 1);	
+				end		
 			end
-
 		end
 
 		if menu.change ~= nil then

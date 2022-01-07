@@ -4,7 +4,10 @@ Locales['en'] = {
   -- Cloakroom
   ['cloakroom'] = 'locker room',
   ['citizen_wear'] = 'civilian Outfit',
-  ['police_wear'] = 'police Outfit',
+  ['police_wear'] = 'Standard Uniform',
+  ['police_wear_short'] = 'Short Sleeve Standard Uniform',
+  ['police_wear_long'] = 'Long Sleeve Standard Uniform',
+  ['police_wear_winter'] = 'Winter Standard Uniform',
   ['gilet_wear'] = 'orange reflective jacket',
   ['bullet_wear'] = 'bulletproof vest',
   ['no_outfit'] = 'there\'s no uniform that fits you!',

@@ -303,130 +303,324 @@ Config.CustomPeds = {
 
 -- CHECK SKINCHANGER CLIENT MAIN.LUA for matching elements
 Config.Uniforms = {
-	recruit = {
-		male = {
-			tshirt_1 = 59,  tshirt_2 = 1,
-			torso_1 = 55,   torso_2 = 0,
-			decals_1 = 0,   decals_2 = 0,
-			arms = 41,
-			pants_1 = 25,   pants_2 = 0,
-			shoes_1 = 25,   shoes_2 = 0,
-			helmet_1 = 46,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
+	-- Constable & Supervisor TPS
+	-- BEGIN
+		tps_constable_short = {
+			male = {
+				tshirt_1 = 190,  tshirt_2 = 12,
+				torso_1 = 44,   torso_2 = 0,
+				arms = 0,
+				pants_1 = 49,   pants_2 = 3,
+				shoes_1 = 25,   shoes_2 = 0,
+				helmet_1 = 10,  helmet_2 = 2,
+				chain_1 = 2,    chain_2 = 0,
+				bproof_1 = 1,  bproof_2 = 1
+			},
+			female = {
+				arms = 14,
+				pants_1 = 51,   pants_2 = 1,
+				shoes_1 = 29,   shoes_2 = 0,
+				chain_1 = 8,    chain_2 = 0,
+				tshirt_1 = 3,  tshirt_2 = 0,
+				bproof_1 = 3,  bproof_2 = 1,
+				torso_1 = 88,   torso_2 = 1,
+				helmet_1 = 10,  helmet_2 = 1
+			}
 		},
-		female = {
-			tshirt_1 = 36,  tshirt_2 = 1,
-			torso_1 = 48,   torso_2 = 0,
-			decals_1 = 0,   decals_2 = 0,
-			arms = 44,
-			pants_1 = 34,   pants_2 = 0,
-			shoes_1 = 27,   shoes_2 = 0,
-			helmet_1 = 45,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
-		}
-	},
+		tps_constable_long = {
+			male = {
+				arms = 1,
+				pants_1 = 49,   pants_2 = 3,
+				shoes_1 = 25,   shoes_2 = 0,
+				chain_1 = 2,    chain_2 = 0,
+				tshirt_1 = 44,  tshirt_2 = 0,
+				bproof_1 = 1,  bproof_2 = 1,
+				torso_1 = 200,   torso_2 = 4,
+				helmet_1 = 10,  helmet_2 = 2
+			},
+			female = {
+				arms = 7,
+				pants_1 = 51,   pants_2 = 1,
+				shoes_1 = 29,   shoes_2 = 0,
+				chain_1 = 8,    chain_2 = 0,
+				tshirt_1 = 3,  tshirt_2 = 0,
+				bproof_1 = 3,  bproof_2 = 1,
+				torso_1 = 88,   torso_2 = 1,
+				helmet_1 = 10,  helmet_2 = 1
+			}
+		},
+		tps_constable_winter = {
+			male = {
+				arms = 1,
+				pants_1 = 49,   pants_2 = 3,
+				shoes_1 = 25,   shoes_2 = 0,
+				chain_1 = 2,    chain_2 = 0,
+				tshirt_1 = 44,  tshirt_2 = 0,
+				bproof_1 = 1,  bproof_2 = 1,
+				torso_1 = 154,   torso_2 = 1,
+				helmet_1 = 120,  helmet_2 = 0
+			},
+			female = {}
+		},
+		tps_supervisor_short = {
+			male = {
+				tshirt_1 = 190,  tshirt_2 = 12,
+				torso_1 = 44,   torso_2 = 0,
+				arms = 0,
+				pants_1 = 49,   pants_2 = 3,
+				shoes_1 = 25,   shoes_2 = 0,
+				helmet_1 = 10,  helmet_2 = 2,
+				chain_1 = 2,    chain_2 = 0,
+				bproof_1 = 1,  bproof_2 = 1
+			},
+			female = {
+				arms = 14,
+				pants_1 = 51,   pants_2 = 1,
+				shoes_1 = 29,   shoes_2 = 0,
+				chain_1 = 8,    chain_2 = 0,
+				tshirt_1 = 3,  tshirt_2 = 0,
+				bproof_1 = 3,  bproof_2 = 1,
+				torso_1 = 88,   torso_2 = 1,
+				helmet_1 = 10,  helmet_2 = 1
+			}
+		},
+		tps_supervisor_long = {
+			male = {
+				arms = 1,
+				pants_1 = 49,   pants_2 = 3,
+				shoes_1 = 25,   shoes_2 = 0,
+				chain_1 = 2,    chain_2 = 0,
+				tshirt_1 = 44,  tshirt_2 = 0,
+				bproof_1 = 1,  bproof_2 = 1,
+				torso_1 = 200,   torso_2 = 4,
+				helmet_1 = 10,  helmet_2 = 2
+			},
+			female = {
+				arms = 7,
+				pants_1 = 51,   pants_2 = 1,
+				shoes_1 = 29,   shoes_2 = 0,
+				chain_1 = 8,    chain_2 = 0,
+				tshirt_1 = 3,  tshirt_2 = 0,
+				bproof_1 = 3,  bproof_2 = 1,
+				torso_1 = 88,   torso_2 = 1,
+				helmet_1 = 10,  helmet_2 = 1
+			}
+		},
+		tps_supervisor_winter = {
+			male = {
+				arms = 1,
+				pants_1 = 49,   pants_2 = 3,
+				shoes_1 = 25,   shoes_2 = 0,
+				chain_1 = 2,    chain_2 = 0,
+				tshirt_1 = 44,  tshirt_2 = 0,
+				bproof_1 = 1,  bproof_2 = 1,
+				torso_1 = 154,   torso_2 = 1,
+				helmet_1 = 120,  helmet_2 = 0
+			},
+			female = {}
+		},
+	-- Constable & Supervisor TPS
+	-- END
 
-	officer = {
-		male = {
-			tshirt_1 = 58,  tshirt_2 = 0,
-			torso_1 = 55,   torso_2 = 0,
-			decals_1 = 0,   decals_2 = 0,
-			arms = 41,
-			pants_1 = 25,   pants_2 = 0,
-			shoes_1 = 25,   shoes_2 = 0,
-			helmet_1 = -1,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
-		},
-		female = {
-			tshirt_1 = 35,  tshirt_2 = 0,
-			torso_1 = 48,   torso_2 = 0,
-			decals_1 = 0,   decals_2 = 0,
-			arms = 44,
-			pants_1 = 34,   pants_2 = 0,
-			shoes_1 = 27,   shoes_2 = 0,
-			helmet_1 = -1,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
-		}
-	},
 
-	sergeant = {
-		male = {
-			tshirt_1 = 58,  tshirt_2 = 0,
-			torso_1 = 55,   torso_2 = 0,
-			decals_1 = 8,   decals_2 = 1,
-			arms = 41,
-			pants_1 = 25,   pants_2 = 0,
-			shoes_1 = 25,   shoes_2 = 0,
-			helmet_1 = -1,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
+	-- Constable & Supervisor OPP
+	-- BEGIN
+		opp_constable_short = {
+			male = {
+				arms = 0,
+				pants_1 = 49,   pants_2 = 2,
+				shoes_1 = 25,   shoes_2 = 0,
+				chain_1 = 2,    chain_2 = 0,
+				tshirt_1 = 44,  tshirt_2 = 0,
+				bproof_1 = 16,  bproof_2 = 2,
+				torso_1 = 190,   torso_2 = 13,
+				helmet_1 = 10,  helmet_2 = 3
+			},
+			female = {}
 		},
-		female = {
-			tshirt_1 = 35,  tshirt_2 = 0,
-			torso_1 = 48,   torso_2 = 0,
-			decals_1 = 7,   decals_2 = 1,
-			arms = 44,
-			pants_1 = 34,   pants_2 = 0,
-			shoes_1 = 27,   shoes_2 = 0,
-			helmet_1 = -1,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
-		}
-	},
+		opp_constable_long = {
+			male = {
+				arms = 1,
+				pants_1 = 49,   pants_2 = 2,
+				shoes_1 = 25,   shoes_2 = 0,
+				chain_1 = 2,    chain_2 = 0,
+				tshirt_1 = 44,  tshirt_2 = 0,
+				bproof_1 = 16,  bproof_2 = 2,
+				torso_1 = 200,   torso_2 = 3,
+				helmet_1 = 10,  helmet_2 = 3
+			},
+			female = {}
+		},
+		opp_constable_winter = {
+			male = {
+				arms = 1,
+				pants_1 = 49,   pants_2 = 3,
+				shoes_1 = 25,   shoes_2 = 0,
+				chain_1 = 2,    chain_2 = 0,
+				tshirt_1 = 44,  tshirt_2 = 0,
+				bproof_1 = 16,  bproof_2 = 1,
+				torso_1 = 154,   torso_2 = 2,
+				helmet_1 = 120,  helmet_2 = 0
+			},
+			female = {}
+		},
+		opp_supervisor_short = {
+			male = {
+				arms = 0,
+				pants_1 = 49,   pants_2 = 2,
+				shoes_1 = 25,   shoes_2 = 0,
+				chain_1 = 2,    chain_2 = 0,
+				tshirt_1 = 44,  tshirt_2 = 0,
+				bproof_1 = 16,  bproof_2 = 2,
+				torso_1 = 190,   torso_2 = 13,
+				helmet_1 = 10,  helmet_2 = 3
+			},
+			female = {}
+		},
+		opp_supervisor_long = {
+			male = {
+				arms = 1,
+				pants_1 = 49,   pants_2 = 2,
+				shoes_1 = 25,   shoes_2 = 0,
+				chain_1 = 2,    chain_2 = 0,
+				tshirt_1 = 44,  tshirt_2 = 0,
+				bproof_1 = 16,  bproof_2 = 2,
+				torso_1 = 200,   torso_2 = 3,
+				helmet_1 = 10,  helmet_2 = 3
+			},
+			female = {}
+		},
+		opp_supervisor_winter = {
+			male = {
+				arms = 1,
+				pants_1 = 49,   pants_2 = 3,
+				shoes_1 = 25,   shoes_2 = 0,
+				chain_1 = 2,    chain_2 = 0,
+				tshirt_1 = 44,  tshirt_2 = 0,
+				bproof_1 = 16,  bproof_2 = 1,
+				torso_1 = 154,   torso_2 = 2,
+				helmet_1 = 120,  helmet_2 = 0
+			},
+			female = {}
+		},
+	-- Constable & Supervisor OPP
+	-- END
 
-	lieutenant = {
-		male = {
-			tshirt_1 = 58,  tshirt_2 = 0,
-			torso_1 = 55,   torso_2 = 0,
-			decals_1 = 8,   decals_2 = 2,
-			arms = 41,
-			pants_1 = 25,   pants_2 = 0,
-			shoes_1 = 25,   shoes_2 = 0,
-			helmet_1 = -1,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
-		},
-		female = {
-			tshirt_1 = 35,  tshirt_2 = 0,
-			torso_1 = 48,   torso_2 = 0,
-			decals_1 = 7,   decals_2 = 2,
-			arms = 44,
-			pants_1 = 34,   pants_2 = 0,
-			shoes_1 = 27,   shoes_2 = 0,
-			helmet_1 = -1,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
-		}
-	},
 
-	boss = {
-		male = {
-			tshirt_1 = 58,  tshirt_2 = 0,
-			torso_1 = 55,   torso_2 = 0,
-			decals_1 = 8,   decals_2 = 3,
-			arms = 41,
-			pants_1 = 25,   pants_2 = 0,
-			shoes_1 = 25,   shoes_2 = 0,
-			helmet_1 = -1,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
+	-- Constable & Supervisor RCMP
+	-- BEGIN
+		rcmp_constable_short = {
+			male = {
+				arms = 0,
+				pants_1 = 49,   pants_2 = 1,
+				shoes_1 = 25,   shoes_2 = 0,
+				chain_1 = 2,    chain_2 = 0,
+				tshirt_1 = 44,  tshirt_2 = 0,
+				bproof_1 = 16,  bproof_2 = 3,
+				torso_1 = 190,   torso_2 = 1,
+				helmet_1 = 10,  helmet_2 = 1
+			},
+			female = {}
 		},
-		female = {
-			tshirt_1 = 35,  tshirt_2 = 0,
-			torso_1 = 48,   torso_2 = 0,
-			decals_1 = 7,   decals_2 = 3,
-			arms = 44,
-			pants_1 = 34,   pants_2 = 0,
-			shoes_1 = 27,   shoes_2 = 0,
-			helmet_1 = -1,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
-		}
+		rcmp_constable_long = {
+			male = {
+				arms = 1,
+				pants_1 = 49,   pants_2 = 2,
+				shoes_1 = 25,   shoes_2 = 0,
+				chain_1 = 2,    chain_2 = 0,
+				tshirt_1 = 44,  tshirt_2 = 0,
+				bproof_1 = 16,  bproof_2 = 3,
+				torso_1 = 193,   torso_2 = 1,
+				helmet_1 = 10,  helmet_2 = 1
+			},
+			female = {}
+		},
+		rcmp_constable_winter = {
+			male = {
+				arms = 1,
+				pants_1 = 49,   pants_2 = 1,
+				shoes_1 = 25,   shoes_2 = 0,
+				chain_1 = 2,    chain_2 = 0,
+				tshirt_1 = 44,  tshirt_2 = 0,
+				bproof_1 = 16,  bproof_2 = 3,
+				torso_1 = 154,   torso_2 = 3,
+				helmet_1 = 120,  helmet_2 = 0
+			},
+			female = {}
+		},
+		rcmp_supervisor_short = {
+			male = {
+				arms = 0,
+				pants_1 = 49,   pants_2 = 1,
+				shoes_1 = 25,   shoes_2 = 0,
+				chain_1 = 2,    chain_2 = 0,
+				tshirt_1 = 44,  tshirt_2 = 0,
+				bproof_1 = 16,  bproof_2 = 3,
+				torso_1 = 190,   torso_2 = 1,
+				helmet_1 = 10,  helmet_2 = 1
+			},
+			female = {}
+		},
+		rcmp_supervisor_long = {
+			male = {
+				arms = 1,
+				pants_1 = 49,   pants_2 = 2,
+				shoes_1 = 25,   shoes_2 = 0,
+				chain_1 = 2,    chain_2 = 0,
+				tshirt_1 = 44,  tshirt_2 = 0,
+				bproof_1 = 16,  bproof_2 = 3,
+				torso_1 = 193,   torso_2 = 1,
+				helmet_1 = 10,  helmet_2 = 1
+			},
+			female = {}
+		},
+		rcmp_supervisor_winter = {
+			male = {
+				arms = 1,
+				pants_1 = 49,   pants_2 = 1,
+				shoes_1 = 25,   shoes_2 = 0,
+				chain_1 = 2,    chain_2 = 0,
+				tshirt_1 = 44,  tshirt_2 = 0,
+				bproof_1 = 16,  bproof_2 = 3,
+				torso_1 = 154,   torso_2 = 3,
+				helmet_1 = 120,  helmet_2 = 0
+			},
+			female = {}
+		},
+	-- Constable & Supervisor RCMP
+	-- END
+
+	-- COC OPP & TPS
+	-- BEGIN
+	tps_coc = {
+		male = {
+			arms = 1,
+			pants_1 = 49,   pants_2 = 3,
+			shoes_1 = 25,   shoes_2 = 0,
+			chain_1 = 2,    chain_2 = 0,
+			tshirt_1 = 44,  tshirt_2 = 0,
+			bproof_1 = 1,  bproof_2 = 1,
+			torso_1 = 200,   torso_2 = 1,
+			helmet_1 = 10,  helmet_2 = 2
+		},
+		female = {}
 	},
+	opp_coc = {
+		male = {
+			arms = 0,
+			pants_1 = 49,   pants_2 = 1,
+			shoes_1 = 25,   shoes_2 = 0,
+			chain_1 = 2,    chain_2 = 0,
+			tshirt_1 = 44,  tshirt_2 = 0,
+			bproof_1 = 16,  bproof_2 = 3,
+			torso_1 = 190,   torso_2 = 1,
+			helmet_1 = 10,  helmet_2 = 1
+		},
+		female = {}
+	},
+	-- COC OPP & TPS
+	-- END
+
 
 	bullet_wear = {
 		male = {
@@ -437,12 +631,39 @@ Config.Uniforms = {
 		}
 	},
 
-	gilet_wear = {
+	gloves_short = {
 		male = {
-			tshirt_1 = 59,  tshirt_2 = 1
+			arms = 41
 		},
 		female = {
-			tshirt_1 = 36,  tshirt_2 = 1
+			arms = 57
+		}
+	},
+
+	gloves_long = {
+		male = {
+			arms = 42
+		},
+		female = {
+			arms = 49
+		}
+	},
+
+	no_gloves_short = {
+		male = {
+			arms = 0
+		},
+		female = {
+			arms = 14
+		}
+	},
+
+	no_gloves_long = {
+		male = {
+			arms = 1
+		},
+		female = {
+			arms = 7
 		}
 	}
 }

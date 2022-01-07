@@ -49,12 +49,27 @@ function OpenCloakroomMenu()
 	local playerPed = PlayerPedId()
 	local grade = ESX.PlayerData.job.grade_name
 
-	local elements = {
-		{label = _U('citizen_wear'), value = 'citizen_wear'},
-		{label = _U('bullet_wear'), uniform = 'bullet_wear'},
-		{label = _U('gilet_wear'), uniform = 'gilet_wear'},
-		{label = _U('police_wear'), uniform = grade}
-	}
+	local elements = {}
+
+	if grade == 'tps_coc' or grade == 'opp_coc' then
+		elements = {
+			{label = _U('citizen_wear'), value = 'citizen_wear'},
+			{label = _U('police_wear'), uniform = grade},
+			{label = 'Gloves', uniform = 'gloves_long'},
+			{label = 'No Gloves', uniform = 'no_gloves_long'},
+		}
+	else 
+		elements = {
+			{label = _U('citizen_wear'), value = 'citizen_wear'},
+			{label = _U('police_wear_short'), uniform = grade .. '_short'},
+			{label = _U('police_wear_long'), uniform = grade .. '_long'},
+			{label = _U('police_wear_winter'), uniform = grade .. '_winter'},
+			{label = 'Gloves (Short Sleeve)', uniform = 'gloves_short'},
+			{label = 'No Gloves (Short Sleeve)', uniform = 'no_gloves_short'},
+			{label = 'Gloves (Long Sleeve/Winter)', uniform = 'gloves_long'},
+			{label = 'No Gloves (Long Sleeve/Winter)', uniform = 'no_gloves_long'},
+		}
+	end
 
 	if Config.EnableCustomPeds then
 		for k,v in ipairs(Config.CustomPeds.shared) do

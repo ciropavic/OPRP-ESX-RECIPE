@@ -290,7 +290,7 @@ if ESX.GetConfig().Multichar then
 		cam = nil
 		local playerPed = PlayerPedId()
 		FreezeEntityPosition(playerPed, true)
-		SetEntityCoords(playerPed, spawn.x, spawn.y, spawn.z-1.3, true, false, false, false)
+		SetEntityCoords(playerPed, spawn.x, spawn.y, spawn.z-0.3, true, false, false, false)
 		SetEntityHeading(playerPed, spawn.heading)
 		if not isNew then TriggerEvent('skinchanger:loadSkin', skin or Characters[Spawned].skin) end
 		Citizen.Wait(400)
