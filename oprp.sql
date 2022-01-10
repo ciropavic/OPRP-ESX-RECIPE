@@ -33,7 +33,7 @@ SET time_zone = "+00:00";
         `lastname` varchar(50) DEFAULT '',
         `dateofbirth` varchar(25) DEFAULT '',
         `sex` varchar(10) DEFAULT '',
-        `height` int(5) DEFAULT '',
+        `height` int DEFAULT '',
         `skin` longtext DEFAULT NULL,
         `status` longtext DEFAULT NULL,
         `is_dead` tinyint(1) DEFAULT 0,
