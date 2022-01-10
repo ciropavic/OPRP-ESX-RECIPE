@@ -5,7 +5,7 @@ servername = "Ontario Provincial Roleplay"
 
 -- The x and y offset (starting at the top left corner) --
 -- Default: 0.005, 0.001
-offset = {x = 0.700, y = 0.900}
+offset = {x = 0.700, y = 0.950}
 
 -- Text RGB Color --
 -- Default: 64, 64, 64 (gray)

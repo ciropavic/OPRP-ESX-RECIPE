@@ -1,14 +1,20 @@
-Find new activation for OPRP_Civmenu
-Figure our if we still need OPRP_Cruise
-Relocate OPRP_Holograms
-relocate watermark
-See if i can find a better script for OPRP_Slashtires
-Look into new taxi script
-Figure out what map_sandySheriff does
+**TEST**
 Police 911
 Vehicle Shop
-Easyadmin stuff
 Test Police menu
+Figure out what map_sandySheriff does
+
+**FIX**
+Find new activation for OPRP_Civmenu
+Figure our if we still need OPRP_Cruise
+Relocate OPRP_Holograms to job centre
+relocate watermark
 change hands on head key bind
+
+**TROUBLESHOOT**
 make it so you dont spawn with a shotgun (No idea what is causing this, maybe start server without beanbag gun script on?)
 test radar and see why it only works for some people
+
+**RESEARCH**
+See if i can find a better script for OPRP_Slashtires
+Look into new taxi script
