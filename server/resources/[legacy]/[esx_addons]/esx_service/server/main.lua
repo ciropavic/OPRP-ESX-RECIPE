@@ -15,6 +15,7 @@ end
 
 RegisterServerEvent('esx_service:activateService')
 AddEventHandler('esx_service:activateService', function(name, max)
+	print("Registered service: " .. name)
 	InService[name] = {}
 	MaxInService[name] = max
 end)

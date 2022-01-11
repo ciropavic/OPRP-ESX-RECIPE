@@ -7,7 +7,7 @@ Config.Volume = 0.3
 -- Min: 0.0 Max: 1.0
 
 -- Disable/enable Notifications
-Config.Notification = true
+Config.Notification = false
 Config.Strings = {seatbelt_on = 'Seatbelt: ~g~connected', seatbelt_off = 'Seatbelt: ~r~disconnected'}
 -- Change to your own translations.
 

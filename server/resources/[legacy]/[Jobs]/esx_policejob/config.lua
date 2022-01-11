@@ -18,7 +18,7 @@ Config.EnableJobBlip              = true -- Enable blips for cops on duty, requi
 Config.EnableCustomPeds           = false -- Enable custom peds in cloak room? See Config.CustomPeds below to customize peds.
 
 Config.EnableESXService           = true -- Enable esx service?
-Config.MaxInService               = -1 -- How many people can be in service at once? Set as -1 to have no limit
+Config.MaxInService               = 20 -- How many people can be in service at once? Set as -1 to have no limit
 
 Config.Locale                     = 'en'
 
@@ -212,59 +212,542 @@ Config.AuthorizedVehicles = {
 		tps_constable = {},
 		prp_constable = {},
 		opp_constable = {
-			{model = 'oppfordcrownvic', price = 7000},
-			{model = 'oppfordexplorer', price = 9000},
-			{model = 'oppdodgecharger', price = 13000},
-			{model = 'oppfordtaurus', price = 13000},
-			{model = 'oppchevytahoe', price = 15000},
-			{model = 'oppchevysilv', price = 15000}
+			{
+				label = 'OPP Crown Vic',
+				model = 'oppfordcrownvic', 
+				price = 7000,
+				props = {
+					modLivery = 0,
+					xenonColor = 0,
+					modEngine = 3,
+					modBrakes = 2,
+					modTransmission = 2,
+					modArmor = 3,
+					modTurbo = true,
+					modXenon = true,
+					extras = {
+						{ extraId = 1, enabled = true },
+						{ extraId = 2, enabled = false },
+						{ extraId = 3, enabled = true },
+						{ extraId = 4, enabled = true },
+						{ extraId = 5, enabled = true },
+						{ extraId = 6, enabled = true },
+						{ extraId = 7, enabled = true },
+						{ extraId = 8, enabled = true },
+						{ extraId = 9, enabled = false },
+						{ extraId = 10, enabled = false },
+						{ extraId = 11, enabled = false },
+						{ extraId = 12, enabled = false }
+					}
+				}
+			},
+			{
+				label = 'OPP Explorer',
+				model = 'oppfordexplorer', 
+				price = 9000,
+				props = {
+					modLivery = 0,
+					xenonColor = 0,
+					modEngine = 3,
+					modBrakes = 2,
+					modTransmission = 2,
+					modArmor = 3,
+					modTurbo = true,
+					modXenon = true,
+					extras = {
+						{ extraId = 1, enabled = true },
+						{ extraId = 2, enabled = false },
+						{ extraId = 3, enabled = false },
+						{ extraId = 4, enabled = true },
+						{ extraId = 5, enabled = true },
+						{ extraId = 6, enabled = false },
+						{ extraId = 7, enabled = true },
+						{ extraId = 8, enabled = false },
+						{ extraId = 9, enabled = true },
+						{ extraId = 10, enabled = false },
+						{ extraId = 11, enabled = false },
+						{ extraId = 12, enabled = false }
+					}
+				}
+			},
+			{
+				label = 'OPP Charger',
+				model = 'oppdodgecharger', 
+				price = 13000,
+				props = {
+					modLivery = 0,
+					xenonColor = 0,
+					modEngine = 0,
+					modBrakes = 0,
+					modTransmission = 0,
+					modArmor = 3,
+					modTurbo = true,
+					modXenon = true,
+					extras = {
+						{ extraId = 1, enabled = true },
+						{ extraId = 2, enabled = false },
+						{ extraId = 3, enabled = false },
+						{ extraId = 4, enabled = true },
+						{ extraId = 5, enabled = true },
+						{ extraId = 6, enabled = false },
+						{ extraId = 7, enabled = true },
+						{ extraId = 8, enabled = false },
+						{ extraId = 9, enabled = true },
+						{ extraId = 10, enabled = true },
+						{ extraId = 11, enabled = false },
+						{ extraId = 12, enabled = false }
+					}
+				}
+			},
+			{
+				label = 'OPP Taurus',
+				model = 'oppfordtaurus', 
+				price = 13000,
+				props = {
+					modLivery = 0,
+					xenonColor = 0,
+					modEngine = 3,
+					modBrakes = 2,
+					modTransmission = 2,
+					modArmor = 3,
+					modTurbo = true,
+					modXenon = true,
+					extras = {
+						{ extraId = 1, enabled = true },
+						{ extraId = 2, enabled = false },
+						{ extraId = 3, enabled = true },
+						{ extraId = 4, enabled = false },
+						{ extraId = 5, enabled = true },
+						{ extraId = 6, enabled = false },
+						{ extraId = 7, enabled = true },
+						{ extraId = 8, enabled = true },
+						{ extraId = 9, enabled = true },
+						{ extraId = 10, enabled = false },
+						{ extraId = 11, enabled = true },
+						{ extraId = 12, enabled = false }
+					}
+				}
+			},
+			{
+				label = 'OPP Tahoe',
+				model = 'oppchevytahoe', 
+				price = 15000,
+				props = {
+					modLivery = 0,
+					xenonColor = 0,
+					modEngine = 3,
+					modBrakes = 2,
+					modTransmission = 2,
+					modArmor = 3,
+					modTurbo = true,
+					modXenon = true,
+					extras = {
+						{ extraId = 1, enabled = true },
+						{ extraId = 2, enabled = false },
+						{ extraId = 3, enabled = false },
+						{ extraId = 4, enabled = true },
+						{ extraId = 5, enabled = true },
+						{ extraId = 6, enabled = false },
+						{ extraId = 7, enabled = true },
+						{ extraId = 8, enabled = false },
+						{ extraId = 9, enabled = true },
+						{ extraId = 10, enabled = true },
+						{ extraId = 11, enabled = true },
+						{ extraId = 12, enabled = false }
+					}
+				}
+			},
+			{
+				label = 'OPP Silverado',
+				model = 'oppchevysilv', 
+				price = 15000,
+				props = {
+					modLivery = 1,
+					xenonColor = 0,
+					modEngine = 3,
+					modBrakes = 2,
+					modTransmission = 2,
+					modArmor = 3,
+					modTurbo = true,
+					modXenon = true,
+					extras = {
+						{ extraId = 1, enabled = true },
+						{ extraId = 2, enabled = false },
+						{ extraId = 3, enabled = true },
+						{ extraId = 4, enabled = true },
+						{ extraId = 5, enabled = true },
+						{ extraId = 6, enabled = true },
+						{ extraId = 7, enabled = true },
+						{ extraId = 8, enabled = true },
+						{ extraId = 9, enabled = true },
+						{ extraId = 10, enabled = true },
+						{ extraId = 11, enabled = false },
+						{ extraId = 12, enabled = false }
+					}
+				}
+			}
 		},
-		rcmp_constable = {
-			{model = 'rcmpcrownvic', price = 7000},
-			{model = 'rcmpfordexplor', price = 9000},
-			{model = 'rcmpdodgecharger', price = 13000},
-			{model = 'rcmpfordtaurus', price = 13000},
-			{model = 'rcmpchevytahoe', price = 15000},
-			{model = 'rcmpchevysilv', price = 15000}
-		},
+		rcmp_constable = {},
 
 		tps_supervisor = {},
 		prp_supervisor = {},
 		opp_supervisor = {			
-			{model = 'oppfordcrownvic', price = 7000},
-			{model = 'oppfordexplorer', price = 9000},
-			{model = 'oppdodgecharger', price = 13000},
-			{model = 'oppfordtaurus', price = 13000},
-			{model = 'oppchevytahoe', price = 15000},
-			{model = 'oppchevysilv', price = 15000}
+			{
+				label = 'OPP Crown Vic',
+				model = 'oppfordcrownvic', 
+				price = 7000,
+				props = {
+					modLivery = 0,
+					xenonColor = 0,
+					modEngine = 3,
+					modBrakes = 2,
+					modTransmission = 2,
+					modArmor = 3,
+					modTurbo = true,
+					modXenon = true,
+					extras = {
+						{ extraId = 1, enabled = true },
+						{ extraId = 2, enabled = false },
+						{ extraId = 3, enabled = true },
+						{ extraId = 4, enabled = true },
+						{ extraId = 5, enabled = true },
+						{ extraId = 6, enabled = true },
+						{ extraId = 7, enabled = true },
+						{ extraId = 8, enabled = true },
+						{ extraId = 9, enabled = false },
+						{ extraId = 10, enabled = false },
+						{ extraId = 11, enabled = false },
+						{ extraId = 12, enabled = false }
+					}
+				}
+			},
+			{
+				label = 'OPP Explorer',
+				model = 'oppfordexplorer', 
+				price = 9000,
+				props = {
+					modLivery = 0,
+					xenonColor = 0,
+					modEngine = 3,
+					modBrakes = 2,
+					modTransmission = 2,
+					modArmor = 3,
+					modTurbo = true,
+					modXenon = true,
+					extras = {
+						{ extraId = 1, enabled = true },
+						{ extraId = 2, enabled = false },
+						{ extraId = 3, enabled = false },
+						{ extraId = 4, enabled = true },
+						{ extraId = 5, enabled = true },
+						{ extraId = 6, enabled = false },
+						{ extraId = 7, enabled = true },
+						{ extraId = 8, enabled = false },
+						{ extraId = 9, enabled = true },
+						{ extraId = 10, enabled = false },
+						{ extraId = 11, enabled = false },
+						{ extraId = 12, enabled = false }
+					}
+				}
+			},
+			{
+				label = 'OPP Charger',
+				model = 'oppdodgecharger', 
+				price = 13000,
+				props = {
+					modLivery = 0,
+					xenonColor = 0,
+					modEngine = 0,
+					modBrakes = 0,
+					modTransmission = 0,
+					modArmor = 3,
+					modTurbo = true,
+					modXenon = true,
+					extras = {
+						{ extraId = 1, enabled = true },
+						{ extraId = 2, enabled = false },
+						{ extraId = 3, enabled = false },
+						{ extraId = 4, enabled = true },
+						{ extraId = 5, enabled = true },
+						{ extraId = 6, enabled = false },
+						{ extraId = 7, enabled = true },
+						{ extraId = 8, enabled = false },
+						{ extraId = 9, enabled = true },
+						{ extraId = 10, enabled = true },
+						{ extraId = 11, enabled = false },
+						{ extraId = 12, enabled = false }
+					}
+				}
+			},
+			{
+				label = 'OPP Taurus',
+				model = 'oppfordtaurus', 
+				price = 13000,
+				props = {
+					modLivery = 0,
+					xenonColor = 0,
+					modEngine = 3,
+					modBrakes = 2,
+					modTransmission = 2,
+					modArmor = 3,
+					modTurbo = true,
+					modXenon = true,
+					extras = {
+						{ extraId = 1, enabled = true },
+						{ extraId = 2, enabled = false },
+						{ extraId = 3, enabled = true },
+						{ extraId = 4, enabled = false },
+						{ extraId = 5, enabled = true },
+						{ extraId = 6, enabled = false },
+						{ extraId = 7, enabled = true },
+						{ extraId = 8, enabled = true },
+						{ extraId = 9, enabled = true },
+						{ extraId = 10, enabled = false },
+						{ extraId = 11, enabled = true },
+						{ extraId = 12, enabled = false }
+					}
+				}
+			},
+			{
+				label = 'OPP Tahoe',
+				model = 'oppchevytahoe', 
+				price = 15000,
+				props = {
+					modLivery = 0,
+					xenonColor = 0,
+					modEngine = 3,
+					modBrakes = 2,
+					modTransmission = 2,
+					modArmor = 3,
+					modTurbo = true,
+					modXenon = true,
+					extras = {
+						{ extraId = 1, enabled = true },
+						{ extraId = 2, enabled = false },
+						{ extraId = 3, enabled = false },
+						{ extraId = 4, enabled = true },
+						{ extraId = 5, enabled = true },
+						{ extraId = 6, enabled = false },
+						{ extraId = 7, enabled = true },
+						{ extraId = 8, enabled = false },
+						{ extraId = 9, enabled = true },
+						{ extraId = 10, enabled = true },
+						{ extraId = 11, enabled = true },
+						{ extraId = 12, enabled = false }
+					}
+				}
+			},
+			{
+				label = 'OPP Silverado',
+				model = 'oppchevysilv', 
+				price = 15000,
+				props = {
+					modLivery = 1,
+					xenonColor = 0,
+					modEngine = 3,
+					modBrakes = 2,
+					modTransmission = 2,
+					modArmor = 3,
+					modTurbo = true,
+					modXenon = true,
+					extras = {
+						{ extraId = 1, enabled = true },
+						{ extraId = 2, enabled = false },
+						{ extraId = 3, enabled = true },
+						{ extraId = 4, enabled = true },
+						{ extraId = 5, enabled = true },
+						{ extraId = 6, enabled = true },
+						{ extraId = 7, enabled = true },
+						{ extraId = 8, enabled = true },
+						{ extraId = 9, enabled = true },
+						{ extraId = 10, enabled = true },
+						{ extraId = 11, enabled = false },
+						{ extraId = 12, enabled = false }
+					}
+				}
+			}
 		},
-		rcmp_supervisor = {
-			{model = 'rcmpcrownvic', price = 7000},
-			{model = 'rcmpfordexplor', price = 9000},
-			{model = 'rcmpdodgecharger', price = 13000},
-			{model = 'rcmpfordtaurus', price = 13000},
-			{model = 'rcmpchevytahoe', price = 15000},
-			{model = 'rcmpchevysilv', price = 15000}
-		},
+		rcmp_supervisor = {},
 
 		tps_coc = {},
 		prp_coc = {},
 		opp_coc = {
-			{model = 'oppfordcrownvic', price = 7000},
-			{model = 'oppfordexplorer', price = 9000},
-			{model = 'oppdodgecharger', price = 13000},
-			{model = 'oppfordtaurus', price = 13000},
-			{model = 'oppchevytahoe', price = 15000},
-			{model = 'oppchevysilv', price = 15000}
+			{
+				label = 'OPP Crown Vic',
+				model = 'oppfordcrownvic', 
+				price = 7000,
+				props = {
+					modLivery = 0,
+					xenonColor = 0,
+					modEngine = 3,
+					modBrakes = 2,
+					modTransmission = 2,
+					modArmor = 3,
+					modTurbo = true,
+					modXenon = true,
+					extras = {
+						{ extraId = 1, enabled = true },
+						{ extraId = 2, enabled = false },
+						{ extraId = 3, enabled = true },
+						{ extraId = 4, enabled = true },
+						{ extraId = 5, enabled = true },
+						{ extraId = 6, enabled = true },
+						{ extraId = 7, enabled = true },
+						{ extraId = 8, enabled = true },
+						{ extraId = 9, enabled = false },
+						{ extraId = 10, enabled = false },
+						{ extraId = 11, enabled = false },
+						{ extraId = 12, enabled = false }
+					}
+				}
+			},
+			{
+				label = 'OPP Explorer',
+				model = 'oppfordexplorer', 
+				price = 9000,
+				props = {
+					modLivery = 0,
+					xenonColor = 0,
+					modEngine = 3,
+					modBrakes = 2,
+					modTransmission = 2,
+					modArmor = 3,
+					modTurbo = true,
+					modXenon = true,
+					extras = {
+						{ extraId = 1, enabled = true },
+						{ extraId = 2, enabled = false },
+						{ extraId = 3, enabled = false },
+						{ extraId = 4, enabled = true },
+						{ extraId = 5, enabled = true },
+						{ extraId = 6, enabled = false },
+						{ extraId = 7, enabled = true },
+						{ extraId = 8, enabled = false },
+						{ extraId = 9, enabled = true },
+						{ extraId = 10, enabled = false },
+						{ extraId = 11, enabled = false },
+						{ extraId = 12, enabled = false }
+					}
+				}
+			},
+			{
+				label = 'OPP Charger',
+				model = 'oppdodgecharger', 
+				price = 13000,
+				props = {
+					modLivery = 0,
+					xenonColor = 0,
+					modEngine = 0,
+					modBrakes = 0,
+					modTransmission = 0,
+					modArmor = 3,
+					modTurbo = true,
+					modXenon = true,
+					extras = {
+						{ extraId = 1, enabled = true },
+						{ extraId = 2, enabled = false },
+						{ extraId = 3, enabled = false },
+						{ extraId = 4, enabled = true },
+						{ extraId = 5, enabled = true },
+						{ extraId = 6, enabled = false },
+						{ extraId = 7, enabled = true },
+						{ extraId = 8, enabled = false },
+						{ extraId = 9, enabled = true },
+						{ extraId = 10, enabled = true },
+						{ extraId = 11, enabled = false },
+						{ extraId = 12, enabled = false }
+					}
+				}
+			},
+			{
+				label = 'OPP Taurus',
+				model = 'oppfordtaurus', 
+				price = 13000,
+				props = {
+					modLivery = 0,
+					xenonColor = 0,
+					modEngine = 3,
+					modBrakes = 2,
+					modTransmission = 2,
+					modArmor = 3,
+					modTurbo = true,
+					modXenon = true,
+					extras = {
+						{ extraId = 1, enabled = true },
+						{ extraId = 2, enabled = false },
+						{ extraId = 3, enabled = true },
+						{ extraId = 4, enabled = false },
+						{ extraId = 5, enabled = true },
+						{ extraId = 6, enabled = false },
+						{ extraId = 7, enabled = true },
+						{ extraId = 8, enabled = true },
+						{ extraId = 9, enabled = true },
+						{ extraId = 10, enabled = false },
+						{ extraId = 11, enabled = true },
+						{ extraId = 12, enabled = false }
+					}
+				}
+			},
+			{
+				label = 'OPP Tahoe',
+				model = 'oppchevytahoe', 
+				price = 15000,
+				props = {
+					modLivery = 0,
+					xenonColor = 0,
+					modEngine = 3,
+					modBrakes = 2,
+					modTransmission = 2,
+					modArmor = 3,
+					modTurbo = true,
+					modXenon = true,
+					extras = {
+						{ extraId = 1, enabled = true },
+						{ extraId = 2, enabled = false },
+						{ extraId = 3, enabled = false },
+						{ extraId = 4, enabled = true },
+						{ extraId = 5, enabled = true },
+						{ extraId = 6, enabled = false },
+						{ extraId = 7, enabled = true },
+						{ extraId = 8, enabled = false },
+						{ extraId = 9, enabled = true },
+						{ extraId = 10, enabled = true },
+						{ extraId = 11, enabled = true },
+						{ extraId = 12, enabled = false }
+					}
+				}
+			},
+			{
+				label = 'OPP Silverado',
+				model = 'oppchevysilv', 
+				price = 15000,
+				props = {
+					modLivery = 1,
+					xenonColor = 0,
+					modEngine = 3,
+					modBrakes = 2,
+					modTransmission = 2,
+					modArmor = 3,
+					modTurbo = true,
+					modXenon = true,
+					extras = {
+						{ extraId = 1, enabled = true },
+						{ extraId = 2, enabled = false },
+						{ extraId = 3, enabled = true },
+						{ extraId = 4, enabled = true },
+						{ extraId = 5, enabled = true },
+						{ extraId = 6, enabled = true },
+						{ extraId = 7, enabled = true },
+						{ extraId = 8, enabled = true },
+						{ extraId = 9, enabled = true },
+						{ extraId = 10, enabled = true },
+						{ extraId = 11, enabled = false },
+						{ extraId = 12, enabled = false }
+					}
+				}
+			}
 		},
-		rcmp_coc = {
-			{model = 'rcmpcrownvic', price = 7000},
-			{model = 'rcmpfordexplor', price = 9000},
-			{model = 'rcmpdodgecharger', price = 13000},
-			{model = 'rcmpfordtaurus', price = 13000},
-			{model = 'rcmpchevytahoe', price = 15000},
-			{model = 'rcmpchevysilv', price = 15000}
-		}
+		rcmp_coc = {}
 	},
 
 	helicopter = {

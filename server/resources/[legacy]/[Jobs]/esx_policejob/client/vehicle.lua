@@ -25,7 +25,7 @@ function OpenVehicleSpawnerMenu(type, station, part, partNum)
 
 							table.insert(shopElements, {
 								label = ('%s - <span style="color:green;">%s</span>'):format(vehicleLabel, _U('shop_item', ESX.Math.GroupDigits(vehicle.price))),
-								name  = vehicleLabel,
+								name  = vehicle.label,
 								model = vehicle.model,
 								price = vehicle.price,
 								props = vehicle.props,

@@ -7,9 +7,12 @@ Figure out what map_sandySheriff does
 **FIX**
 Find new activation for OPRP_Civmenu
 Figure our if we still need OPRP_Cruise
-Relocate OPRP_Holograms to job centre
-relocate watermark
 change hands on head key bind
+relocate license shop 
+add city hall blip
+add garage at 378
+add court house blips
+add garage at 382/383
 
 **TROUBLESHOOT**
 make it so you dont spawn with a shotgun (No idea what is causing this, maybe start server without beanbag gun script on?)

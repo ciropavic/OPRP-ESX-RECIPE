@@ -13,9 +13,10 @@ end)
 RegisterNetEvent('esx_service:messageAllInService')
 AddEventHandler('esx_service:messageAllInService', function(message, target)
 	target = GetPlayerFromServerId(target)
+
 	if target == PlayerId() then return end
 
 	local targetPed = GetPlayerPed(target)
 
-	TriggerEvent('chat:addMessage', messageFull)
+	TriggerEvent('chat:addMessage', message)
 end)

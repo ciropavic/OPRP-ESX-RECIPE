@@ -31,32 +31,32 @@ function Holograms()
 		while true do
 			Citizen.Wait(0)		
 				-- Main Welcoming Text
-		if GetDistanceBetweenCoords( -419.50, 1166.00, 326.00, GetEntityCoords(GetPlayerPed(-1))) < 30.0 then
-			Draw3DText( -415.51, 1160.22, 329.46  -1.400, "Welcome to Ontario Provincial Roleplay!", 20, 0.1, 0.1)
-			Draw3DText( -415.51, 1160.22, 329.46  -1.700, "We are a Serious roleplaying community based in Ontario, and we hope you enjoy your stay!", 15, 0.1, 0.1)
-			Draw3DText( -415.51, 1160.22, 329.46  -2.100, "If you are a new member, please read the text on your left to help get started!", 12, 0.1, 0.1)
-			Draw3DText( -415.51, 1160.22, 329.46  -2.400, "If you are interested in the Emergency field, please read the text on your right!", 12, 0.1, 0.1)
+		if GetDistanceBetweenCoords( -265.25, -963.22, 31.23 , GetEntityCoords(GetPlayerPed(-1))) < 10.0 then
+			Draw3DText( -263.01, -968.02, 34.50  -1.400, "Welcome to Ontario Provincial Roleplay!", 20, 0.1, 0.1)
+			Draw3DText( -263.01, -968.02, 34.50   -1.700, "We are a Serious roleplaying community based in Ontario, and we hope you enjoy your stay!", 15, 0.1, 0.1)
+			Draw3DText( -263.01, -968.02, 34.50   -2.100, "If you are a new member, please read the text on your left to help get started!", 12, 0.1, 0.1)
+			Draw3DText( -263.01, -968.02, 34.50   -2.400, "If you are interested in the Emergency field, please read the text on your right!", 12, 0.1, 0.1)
 		end	
 
 				-- New Member Text
-		if GetDistanceBetweenCoords( -408.50, 1163.00, 326.00, GetEntityCoords(GetPlayerPed(-1))) < 30.0 then
-			Draw3DText( -406.60, 1167.15, 325.92  -1.000, "Welcome new member!", 4, 0.1, 0.1)
-			Draw3DText( -406.60, 1167.15, 325.92  -1.200, "Please join our discord, as everything you will need is on there!", 4, 0.1, 0.1)
-			Draw3DText( -406.60, 1167.15, 325.92  -1.400, "https://discord.gg/XT6eZUruJK", 4, 0.1, 0.1)		
-			Draw3DText( -406.60, 1167.15, 325.92  -1.600, "Car spawncodes, server keybinds/commands, frequently asked questions,", 4, 0.1, 0.1)		
-			Draw3DText( -406.60, 1167.15, 325.92  -1.800, "CAD system, support/report channels, you name it!", 4, 0.1, 0.1)		
-			Draw3DText( -406.60, 1167.15, 325.92  -2.200, "Make sure to read the server rules, and log into CAD to play on the server!", 4, 0.1, 0.1)		
-			Draw3DText( -406.60, 1167.15, 325.92  -2.400, "Finally, and most importantly, have fun! It is a game afterall!", 4, 0.1, 0.1)		
+		if GetDistanceBetweenCoords( -265.25, -963.22, 31.23, GetEntityCoords(GetPlayerPed(-1))) < 10.0 then
+			Draw3DText( -260.27, -965.07, 32.00  -1.000, "Welcome new member!", 4, 0.1, 0.1)
+			Draw3DText( -260.27, -965.07, 32.00  -1.200, "Please join our discord, as everything you will need is on there!", 4, 0.1, 0.1)
+			Draw3DText( -260.27, -965.07, 32.00  -1.400, "https://discord.gg/XT6eZUruJK", 4, 0.1, 0.1)		
+			Draw3DText( -260.27, -965.07, 32.00  -1.600, "Car spawncodes, server keybinds/commands, frequently asked questions,", 4, 0.1, 0.1)		
+			Draw3DText( -260.27, -965.07, 32.00  -1.800, "CAD system, support/report channels, you name it!", 4, 0.1, 0.1)		
+			Draw3DText( -260.27, -965.07, 32.00  -2.200, "Make sure to read the server rules, and log into CAD to play on the server!", 4, 0.1, 0.1)		
+			Draw3DText( -260.27, -965.07, 32.00  -2.400, "Finally, and most importantly, have fun! It is a game afterall!", 4, 0.1, 0.1)		
 		end		
 
 				-- Emergency Text
-		if GetDistanceBetweenCoords( -419.06, 1163.00, 326.00, GetEntityCoords(GetPlayerPed(-1))) < 30.0 then
-			Draw3DText( -419.06, 1170.88, 326.00  -1.000, "To join a department on Ontario Provincial Roleplay, there's a few things you have to do to qualify!", 4, 0.1, 0.1)
-			Draw3DText( -419.06, 1170.88, 326.00  -1.200, "Before you do anything, you must have at least 2 required playtime hours on the server.", 4, 0.1, 0.1)
-			Draw3DText( -419.06, 1170.88, 326.00  -1.400, "Next, you can join the department discord found in the available jobs channel on our main discord!", 4, 0.1, 0.1)		
-			Draw3DText( -419.06, 1170.88, 326.00  -1.600, "https://discord.gg/XT6eZUruJK", 4, 0.1, 0.1)	
-			Draw3DText( -419.06, 1170.88, 326.00  -1.800, "After you fill out an application, you'll have to go through a mandatory training session for your department!", 4, 0.1, 0.1)
-			Draw3DText( -419.06, 1170.88, 326.00  -2.000, "After successfully passing training, you will be able to go on duty as a member of that department!", 4, 0.1, 0.1)
+		if GetDistanceBetweenCoords( -265.25, -963.22, 31.23, GetEntityCoords(GetPlayerPed(-1))) < 10.0 then
+			Draw3DText( -267.10, -969.11, 32.00  -1.000, "To join a department on Ontario Provincial Roleplay, there's a few things you have to do to qualify!", 4, 0.1, 0.1)
+			Draw3DText( -267.10, -969.11, 32.00  -1.200, "Before you do anything, you must have at least 2 required playtime hours on the server.", 4, 0.1, 0.1)
+			Draw3DText( -267.10, -969.11, 32.00  -1.400, "Next, you can join the department discord found in the available jobs channel on our main discord!", 4, 0.1, 0.1)		
+			Draw3DText( -267.10, -969.11, 32.00  -1.600, "https://discord.gg/XT6eZUruJK", 4, 0.1, 0.1)	
+			Draw3DText( -267.10, -969.11, 32.00  -1.800, "After you fill out an application, you'll have to go through a mandatory training session for your department!", 4, 0.1, 0.1)
+			Draw3DText( -267.10, -969.11, 32.00  -2.000, "After successfully passing training, you will be able to go on duty as a member of that department!", 4, 0.1, 0.1)
 		end
 
 	end
