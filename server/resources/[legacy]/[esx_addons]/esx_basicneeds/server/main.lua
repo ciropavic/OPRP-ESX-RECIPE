@@ -399,6 +399,7 @@ end, true, {help = 'Heal a player, or yourself - restores thirst, hunger and hea
 		local xPlayer = ESX.GetPlayerFromId(source)
 		xPlayer.removeInventoryItem("bacardi", 1)
 
+		TriggerClientEvent('Radiant_Drunk:GetDrunk', source)
 		TriggerClientEvent('esx_status:add', source, 'thirst', 200000)
 		TriggerClientEvent('esx_basicneeds:onDrink', source)
 		xPlayer.showNotification("you have used ~y~1x~s~ ~b~bacardi~s~")
@@ -409,6 +410,7 @@ end, true, {help = 'Heal a player, or yourself - restores thirst, hunger and hea
 		local xPlayer = ESX.GetPlayerFromId(source)
 		xPlayer.removeInventoryItem("beer", 1)
 
+		TriggerClientEvent('Radiant_Drunk:GetDrunk', source)
 		TriggerClientEvent('esx_status:add', source, 'thirst', 200000)
 		TriggerClientEvent('esx_basicneeds:onDrink', source)
 		xPlayer.showNotification("you have used ~y~1x~s~ ~b~beer~s~")
@@ -429,6 +431,7 @@ end, true, {help = 'Heal a player, or yourself - restores thirst, hunger and hea
 		local xPlayer = ESX.GetPlayerFromId(source)
 		xPlayer.removeInventoryItem("champagne", 1)
 
+		TriggerClientEvent('Radiant_Drunk:GetDrunk', source)
 		TriggerClientEvent('esx_status:add', source, 'thirst', 200000)
 		TriggerClientEvent('esx_basicneeds:onDrink', source)
 		xPlayer.showNotification("you have used ~y~1x~s~ ~b~champagne~s~")
@@ -569,6 +572,7 @@ end, true, {help = 'Heal a player, or yourself - restores thirst, hunger and hea
 		local xPlayer = ESX.GetPlayerFromId(source)
 		xPlayer.removeInventoryItem("jager", 1)
 
+		TriggerClientEvent('Radiant_Drunk:GetDrunk', source)
 		TriggerClientEvent('esx_status:add', source, 'thirst', 200000)
 		TriggerClientEvent('esx_basicneeds:onDrink', source)
 		xPlayer.showNotification("you have used ~y~1x~s~ ~b~jager~s~")
@@ -579,6 +583,7 @@ end, true, {help = 'Heal a player, or yourself - restores thirst, hunger and hea
 		local xPlayer = ESX.GetPlayerFromId(source)
 		xPlayer.removeInventoryItem("jagerbomb", 1)
 
+		TriggerClientEvent('Radiant_Drunk:GetDrunk', source)
 		TriggerClientEvent('esx_status:add', source, 'thirst', 200000)
 		TriggerClientEvent('esx_basicneeds:onDrink', source)
 		xPlayer.showNotification("you have used ~y~1x~s~ ~b~jager bomb~s~")
@@ -629,6 +634,7 @@ end, true, {help = 'Heal a player, or yourself - restores thirst, hunger and hea
 		local xPlayer = ESX.GetPlayerFromId(source)
 		xPlayer.removeInventoryItem("logger", 1)
 
+		TriggerClientEvent('Radiant_Drunk:GetDrunk', source)
 		TriggerClientEvent('esx_status:add', source, 'thirst', 200000)
 		TriggerClientEvent('esx_basicneeds:onDrink', source)
 		xPlayer.showNotification("you have used ~y~1x~s~ ~b~logger~s~")
@@ -639,6 +645,7 @@ end, true, {help = 'Heal a player, or yourself - restores thirst, hunger and hea
 		local xPlayer = ESX.GetPlayerFromId(source)
 		xPlayer.removeInventoryItem("longisland", 1)
 
+		TriggerClientEvent('Radiant_Drunk:GetDrunk', source)
 		TriggerClientEvent('esx_status:add', source, 'thirst', 200000)
 		TriggerClientEvent('esx_basicneeds:onDrink', source)
 		xPlayer.showNotification("you have used ~y~1x~s~ ~b~long island~s~")
@@ -649,6 +656,7 @@ end, true, {help = 'Heal a player, or yourself - restores thirst, hunger and hea
 		local xPlayer = ESX.GetPlayerFromId(source)
 		xPlayer.removeInventoryItem("martini", 1)
 
+		TriggerClientEvent('Radiant_Drunk:GetDrunk', source)
 		TriggerClientEvent('esx_status:add', source, 'thirst', 200000)
 		TriggerClientEvent('esx_basicneeds:onDrink', source)
 		xPlayer.showNotification("you have used ~y~1x~s~ ~b~martini~s~")
@@ -659,6 +667,7 @@ end, true, {help = 'Heal a player, or yourself - restores thirst, hunger and hea
 		local xPlayer = ESX.GetPlayerFromId(source)
 		xPlayer.removeInventoryItem("manhattan", 1)
 
+		TriggerClientEvent('Radiant_Drunk:GetDrunk', source)
 		TriggerClientEvent('esx_status:add', source, 'thirst', 200000)
 		TriggerClientEvent('esx_basicneeds:onDrink', source)
 		xPlayer.showNotification("you have used ~y~1x~s~ ~b~manhattan~s~")
@@ -669,6 +678,7 @@ end, true, {help = 'Heal a player, or yourself - restores thirst, hunger and hea
 		local xPlayer = ESX.GetPlayerFromId(source)
 		xPlayer.removeInventoryItem("pinacolada", 1)
 
+		TriggerClientEvent('Radiant_Drunk:GetDrunk', source)
 		TriggerClientEvent('esx_status:add', source, 'thirst', 200000)
 		TriggerClientEvent('esx_basicneeds:onDrink', source)
 		xPlayer.showNotification("you have used ~y~1x~s~ ~b~pinacolada~s~")
@@ -709,6 +719,7 @@ end, true, {help = 'Heal a player, or yourself - restores thirst, hunger and hea
 		local xPlayer = ESX.GetPlayerFromId(source)
 		xPlayer.removeInventoryItem("rhum", 1)
 
+		TriggerClientEvent('Radiant_Drunk:GetDrunk', source)
 		TriggerClientEvent('esx_status:add', source, 'thirst', 200000)
 		TriggerClientEvent('esx_basicneeds:onDrink', source)
 		xPlayer.showNotification("you have used ~y~1x~s~ ~b~rhum~s~")
@@ -719,6 +730,7 @@ end, true, {help = 'Heal a player, or yourself - restores thirst, hunger and hea
 		local xPlayer = ESX.GetPlayerFromId(source)
 		xPlayer.removeInventoryItem("vodka", 1)
 
+		TriggerClientEvent('Radiant_Drunk:GetDrunk', source)
 		TriggerClientEvent('esx_status:add', source, 'thirst', 200000)
 		TriggerClientEvent('esx_basicneeds:onDrink', source)
 		xPlayer.showNotification("you have used ~y~1x~s~ ~b~vodka~s~")
@@ -729,6 +741,7 @@ end, true, {help = 'Heal a player, or yourself - restores thirst, hunger and hea
 		local xPlayer = ESX.GetPlayerFromId(source)
 		xPlayer.removeInventoryItem("wine", 1)
 
+		TriggerClientEvent('Radiant_Drunk:GetDrunk', source)
 		TriggerClientEvent('esx_status:add', source, 'thirst', 200000)
 		TriggerClientEvent('esx_basicneeds:onDrink', source)
 		xPlayer.showNotification("you have used ~y~1x~s~ ~b~wine~s~")
