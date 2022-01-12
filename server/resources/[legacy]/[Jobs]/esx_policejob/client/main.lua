@@ -123,6 +123,8 @@ function OpenCloakroomMenu()
 
 						TriggerServerEvent('esx_service:notifyAllInService', notification, 'police')
 
+						TriggerEvent('panic:panictune')
+
 						TriggerServerEvent('esx_service:disableService', 'police')
 						TriggerEvent('esx_policejob:updateBlip')
 						ESX.ShowNotification(_U('service_out'))
@@ -151,6 +153,8 @@ function OpenCloakroomMenu()
 									msg      = _U('service_in_announce', GetPlayerName(PlayerId())),
 									iconType = 1
 								}
+
+								TriggerEvent('panic:panictune')
 
 								TriggerServerEvent('esx_service:notifyAllInService', notification, 'police')
 								TriggerEvent('esx_policejob:updateBlip')
@@ -1477,26 +1481,9 @@ Citizen.CreateThread(function()
 			currentTask.busy = false
 		end
 
-		-- U Key
-		if IsControlJustPressed(0, 303) and GetLastInputMethod(2) and PlayerData.job ~= nil and PlayerData.job.name == 'police' then
-			SendPoliceDistressSignal()
-		end
-
 	end
 end)
 
--- Panic button
-function SendPoliceDistressSignal()
-	local playerPed = GetPlayerPed(-1)
-	local coords	= GetEntityCoords(playerPed)
-
-	ESX.ShowNotification(_U('distress_sent'))
-	TriggerServerEvent('esx_phone:send', 'police', _U('police_distress_message'), false, {
-		x = coords.x,
-		y = coords.y,
-		z = coords.z
-	})
-end
 
 -- Create blip for colleagues
 function createBlip(id)

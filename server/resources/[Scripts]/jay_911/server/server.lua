@@ -38,10 +38,15 @@ AddEventHandler('esx_jobChat:911', function(targetCoords, msg, streetName, emerg
 		}
 	end
 
-	msgs = '<div style="padding: 8px; margin: 8px; background-color: rgba(0, 38, 153); border-radius: 25px;"><i class="fas fa-bell"style="font-size:15px"></i> [EMERGENCY!] : ' .. fal .. ' | Location : ' .. streetName .. ' | ' .. msg ..'</font></i></b></div>',
+	MSG = {
+		template = '^*^4[911] : ^r^4{0} | Location : {1} | {2}',
+		color = { 255, 255, 255 },
+		multiline = true,
+		args = { fal, streetName, msg }
+	}
 	
 	TriggerClientEvent('esx_jobChat:911Marker', -1, targetCoords, emergency)
-	TriggerClientEvent('esx_jobChat:911EmergencySend', -1, msgs)
+	TriggerClientEvent('esx_jobChat:911EmergencySend', -1, MSG)
 end)
 
 -----------------------------------------------------------------------------------------------------------------------------------

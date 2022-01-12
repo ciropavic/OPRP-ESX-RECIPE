@@ -78,10 +78,11 @@ end
 
 Citizen.CreateThread(function()
     scaleform = Initialize("mp_big_message_freemode")
-while true do
-	Citizen.Wait(0)
-    if warningstring then
-		DrawScaleformMovieFullscreen(scaleform, 255, 255, 255, 255, 0)
+    while true do
+        Citizen.Wait(0)
+        if warningstring then
+            scaleform = Initialize("mp_big_message_freemode")
+            DrawScaleformMovieFullscreen(scaleform, 255, 255, 255, 255, 0)
+        end
     end
-end
 end)

@@ -13,6 +13,19 @@ RegisterCommand("setspikes", function(source, args, raw)
     end
 end)
 
+RegisterServerEvent("Spikes:SetSpikesAction")
+AddEventHandler("Spikes:SetSpikesAction", function(source, length)
+    local src = source
+
+	if(length == nil) then
+		length = 2
+	end
+        
+    if tonumber(length) <= SpikeConfig.MaxSpikes then
+        SpawnSpikestrips(src, length)
+    end
+end)
+
 function SpawnSpikestrips(src, amount)
     if SpikeConfig.IdentifierRestriction then
         local player_identifier = PlayerIdentifier(SpikeConfig.Identifier, src)

@@ -1,6 +1,4 @@
 **TEST**
-Police 911
-Test Police menu
 
 **FIX**
 Find new activation for OPRP_Civmenu
@@ -16,6 +14,8 @@ figure out noclip
 remove weapons when getting off service for cop
 figure out panic button
 finish police vehicles
+change 911 blip
+rename phone shop blip
 
 **TROUBLESHOOT**
 make it so you dont spawn with a shotgun (No idea what is causing this, maybe start server without beanbag gun script on?)

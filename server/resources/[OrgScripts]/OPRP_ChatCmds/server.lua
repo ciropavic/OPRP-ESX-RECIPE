@@ -155,6 +155,8 @@ AddEventHandler('chatMessage', function(source, name, msg)
 	end
 end)
 
+
+
 ------------------------------------/ G R A B \------------------------------------------------
 AddEventHandler('chatMessage', function(source, name, msg)
 	sm = stringsplit(msg, " ");
