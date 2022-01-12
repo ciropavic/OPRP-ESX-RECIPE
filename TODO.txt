@@ -1,9 +1,6 @@
 **TEST**
 
 **FIX**
-Find new activation for OPRP_Civmenu
-Figure our if we still need OPRP_Cruise
-change hands on head key bind
 relocate license shop [-1290.16, -570.4, 3.57]
 add city hall blip @ 637 [-1304.28, -554.71, 30.57]
 add garage at 378

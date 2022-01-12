@@ -1,6 +1,7 @@
 **KEYBINDS**
 
-F1 - Open Phone (Requires phone item in inventory)
+] - Open Phone (Requires phone item in inventory)
+F1 - CivMenu
 F2 - Open inventory
 F3 - Open Animations Menu
 F6 - Open Jobs Menu
@@ -8,22 +9,11 @@ F7 - Open Billing Menu
 F9 - Hands Up
 F10 - Police Scene Menu
 B - Point
-C - 
-E - 
 G - Hand On Radio
-H - 
-I - Open EasyAdmin (Staff only, Configurable in Keybinds Settings on client side)
-J - 
+J - Open Toolbox (Can be changed in GTA Settings->Keybinds->FiveM)
 K - Open Accessory Menu *****
-L - 
 M - Open vMenu
-N - 
-O - 
-P - 
-R - 
-T - 
-U - 
-V - 
+U - Open EasyAdmin (Staff only, Configurable in Keybinds Settings on client side)
 X - Hands On Head
 Y - Open Vehicle Trunk Inventory
 Z - Cycle Voice Range
@@ -31,6 +21,7 @@ Z - Cycle Voice Range
 NUMPAD+ - Hand On Holster
 
 __When In Vehicle__
+L - Toggle Cruise
 F6 - Radar Options (When in police vehicle)
 K - Toggle Seatbelt
 F (Press and Hold) - Keep door open by holding F
@@ -112,6 +103,8 @@ E (While Aiming At A Car) - Read Speed
 /sling 2 - Sling a AR to the back
 /setspikes [1-5] - Set Spike Strips
 /suicide - Commit UnAlive
+/handsonhead - Put your hands on your head
+/hoh - Put your hands on your head
 
 __Staff Commands__
 /openinventory <player_id> - Open a player's inventory 

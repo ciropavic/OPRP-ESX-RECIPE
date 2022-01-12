@@ -5,8 +5,12 @@ RegisterCommand("handsonhead", function()
     handonhead()
 end)
 
+RegisterCommand("hoh", function()
+    handonhead()
+end)
 
-RegisterKeyMapping("handsonhead", "Hands on head", "keyboard", "X")
+
+--RegisterKeyMapping("handsonhead", "Hands on head", "keyboard", "")
 
 function handonhead()
 	while not HasAnimDictLoaded("random@arrests@busted") do
