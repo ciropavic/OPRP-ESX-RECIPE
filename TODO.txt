@@ -13,6 +13,7 @@ figure out panic button
 finish police vehicles
 change 911 blip
 rename phone shop blip
+remove name above head
 
 **TROUBLESHOOT**
 make it so you dont spawn with a shotgun (No idea what is causing this, maybe start server without beanbag gun script on?)
