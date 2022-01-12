@@ -2,33 +2,33 @@
 
 
 -----------------------------------/ O O C \---------------------------------
-AddEventHandler('chatMessage', function(source, name, msg)
-	sm = stringsplit(msg, " ");
-	if sm[1] == "/ooc" and enable_roleplay_commands == true then
-		CancelEvent()
-		TriggerClientEvent('chatMessage', -1, "OOC | " .. GetPlayerName(source), { 128, 128, 128 }, string.sub(msg,5))
-	end
-end)
+-- AddEventHandler('chatMessage', function(source, name, msg)
+-- 	sm = stringsplit(msg, " ");
+-- 	if sm[1] == "/ooc" and enable_roleplay_commands == true then
+-- 		CancelEvent()
+-- 		TriggerClientEvent('chatMessage', -1, "OOC | " .. GetPlayerName(source), { 128, 128, 128 }, string.sub(msg,5))
+-- 	end
+-- end)
 
 
 
 -----------------------------------/ M E \---------------------------------
-AddEventHandler('chatMessage', function(source, name, msg)
-	sm = stringsplit(msg, " ");
-	if sm[1] == "/do" and enable_roleplay_commands == true then
-		CancelEvent()
-		TriggerClientEvent('chatMessage', -1, "ME | " .. GetPlayerName(source), { 255, 0, 0 }, string.sub(msg,5))
-	end
-end)
+-- AddEventHandler('chatMessage', function(source, name, msg)
+-- 	sm = stringsplit(msg, " ");
+-- 	if sm[1] == "/do" and enable_roleplay_commands == true then
+-- 		CancelEvent()
+-- 		TriggerClientEvent('chatMessage', -1, "ME | " .. GetPlayerName(source), { 255, 0, 0 }, string.sub(msg,5))
+-- 	end
+-- end)
 
 ---------------------------/ T W I T T E R \-------------------------------------------------------------------
-AddEventHandler('chatMessage', function(source, name, msg)
-	sm = stringsplit(msg, " ");
-	if sm[1] == "/tweet" and enable_roleplay_commands == true then
-		CancelEvent()
-		TriggerClientEvent('chatMessage', -1, "^0[^4Twitter] (^5@" .. GetPlayerName (source), { 255, 255, 255 }, string.sub(msg,8))
-	end
-end)
+-- AddEventHandler('chatMessage', function(source, name, msg)
+-- 	sm = stringsplit(msg, " ");
+-- 	if sm[1] == "/tweet" and enable_roleplay_commands == true then
+-- 		CancelEvent()
+-- 		TriggerClientEvent('chatMessage', -1, "^0[^4Twitter] (^5@" .. GetPlayerName (source), { 255, 255, 255 }, string.sub(msg,8))
+-- 	end
+-- end)
 
 ---------------------------------/ A N N O U N C E \-------------------------------------------------------------------
 AddEventHandler('chatMessage', function(source, name, msg)
@@ -191,72 +191,72 @@ AddEventHandler('chatMessage', function(source, name, msg)
 	end
 end)
 ---------------/ R P   N A M E \------------------------------
-AddEventHandler('chatMessage', function(source, name, msg)
-	sm = stringsplit(msg, " ");
-	if sm[1] == "/rpname" and enable_roleplay_commands == true then
-		CancelEvent()
-		if sm[2] == nil then
-			TriggerClientEvent('chatMessage', -1, "/rpname <Name_Surname/Name> <Message>", { 255, 255, 255 })
-		else
-		rpname = string.gsub(sm[2], "_", " ")
-		rpmsg = string.sub(msg, #sm[1] + 1 + #sm[2] + 2, #msg)
-		TriggerClientEvent('chatMessage', -1, "^2".. rpname .. "^7: " .. rpmsg, { 255, 255, 255 })
-		end
-	end
-end)
+-- AddEventHandler('chatMessage', function(source, name, msg)
+-- 	sm = stringsplit(msg, " ");
+-- 	if sm[1] == "/rpname" and enable_roleplay_commands == true then
+-- 		CancelEvent()
+-- 		if sm[2] == nil then
+-- 			TriggerClientEvent('chatMessage', -1, "/rpname <Name_Surname/Name> <Message>", { 255, 255, 255 })
+-- 		else
+-- 		rpname = string.gsub(sm[2], "_", " ")
+-- 		rpmsg = string.sub(msg, #sm[1] + 1 + #sm[2] + 2, #msg)
+-- 		TriggerClientEvent('chatMessage', -1, "^2".. rpname .. "^7: " .. rpmsg, { 255, 255, 255 })
+-- 		end
+-- 	end
+-- end)
 
 -------------------/ R O L L \----------------------------
-AddEventHandler('chatMessage', function(source, name, msg)
-	sm = stringsplit(msg, " ");
-	if sm[1] == "/roll" and enable_roleplay_commands == true then
-		CancelEvent()
-		if sm[2] == nil then 
-			minN = 0
-			maxN = 100
-			numbr = math.random(minN,maxN)
-			TriggerClientEvent('chatMessage', -1, name .. " rolled" .. " ^2" .. numbr .. " ^0out of^3 " .. maxN, { 255, 255, 255 })
-		elseif sm[3] == nil then
-			minN = 0
-			maxN = tonumber(sm[2])
-			if not maxN or maxN <= 0 then
-			else
-				numbr = math.random(minN,maxN)
-				TriggerClientEvent('chatMessage', -1, name .. " rolled" .. " ^2" .. numbr .. " ^0out of^3 " .. maxN, { 255, 255, 255 })
-			end
-		else
-			minN = tonumber(sm[2])
-			maxN = tonumber(sm[3])
-			if (not maxN) or (not minN) or minN > maxN then
-			else
-				numbr = math.random(minN,maxN)
-				TriggerClientEvent('chatMessage', -1, name .. " rolled" .. " ^2" .. numbr .. " ^0out of^3 " .. minN .. " - " .. maxN, { 255, 255, 255 })
-			end
-		end
-	end
-end)
+-- AddEventHandler('chatMessage', function(source, name, msg)
+-- 	sm = stringsplit(msg, " ");
+-- 	if sm[1] == "/roll" and enable_roleplay_commands == true then
+-- 		CancelEvent()
+-- 		if sm[2] == nil then 
+-- 			minN = 0
+-- 			maxN = 100
+-- 			numbr = math.random(minN,maxN)
+-- 			TriggerClientEvent('chatMessage', -1, name .. " rolled" .. " ^2" .. numbr .. " ^0out of^3 " .. maxN, { 255, 255, 255 })
+-- 		elseif sm[3] == nil then
+-- 			minN = 0
+-- 			maxN = tonumber(sm[2])
+-- 			if not maxN or maxN <= 0 then
+-- 			else
+-- 				numbr = math.random(minN,maxN)
+-- 				TriggerClientEvent('chatMessage', -1, name .. " rolled" .. " ^2" .. numbr .. " ^0out of^3 " .. maxN, { 255, 255, 255 })
+-- 			end
+-- 		else
+-- 			minN = tonumber(sm[2])
+-- 			maxN = tonumber(sm[3])
+-- 			if (not maxN) or (not minN) or minN > maxN then
+-- 			else
+-- 				numbr = math.random(minN,maxN)
+-- 				TriggerClientEvent('chatMessage', -1, name .. " rolled" .. " ^2" .. numbr .. " ^0out of^3 " .. minN .. " - " .. maxN, { 255, 255, 255 })
+-- 			end
+-- 		end
+-- 	end
+-- end)
 
 
 -----------------------------------/ I D \---------------------------------
- AddEventHandler('chatMessage', function(source, name, msg)
-sm = stringsplit(msg, " ");
-if sm[1] == "/id" and enable_police_commands == true then
-	CancelEvent()
-	if sm[2] == nil then 
-		TriggerClientEvent('chatMessage', -1, "/id <First Name> <Surname>", {255,255,255})
-	elseif sm[3] == nil then 
-		TriggerClientEvent('chatMessage', -1, "/id <First Name> <Surname>", {255,255,255})
-	elseif sm[4] == nil then 
-		fname = sm[2]
-		sname = sm[3]
-			TriggerClientEvent('chatMessage', -1, "^2ID ^7|^2 First Name:^7 " .. fname .. " ^2Surname:^7 " .. sname, {255,255,255})
-	else
-		fname = sm[2]
-		sname = sm[3]
-		dob = sm[4]
-			TriggerClientEvent('chatMessage', -1, "^2ID ^7|^2 First Name:^7 " .. fname .. " ^2Surname:^7 " .. sname .. " ^2DOB:^7 " .. dob, {255,255,255})
-	end
-end
-end)
+--  AddEventHandler('chatMessage', function(source, name, msg)
+-- sm = stringsplit(msg, " ");
+-- if sm[1] == "/id" and enable_police_commands == true then
+-- 	CancelEvent()
+-- 	if sm[2] == nil then 
+-- 		TriggerClientEvent('chatMessage', -1, "/id <First Name> <Surname>", {255,255,255})
+-- 	elseif sm[3] == nil then 
+-- 		TriggerClientEvent('chatMessage', -1, "/id <First Name> <Surname>", {255,255,255})
+-- 	elseif sm[4] == nil then 
+-- 		fname = sm[2]
+-- 		sname = sm[3]
+-- 			TriggerClientEvent('chatMessage', -1, "^2ID ^7|^2 First Name:^7 " .. fname .. " ^2Surname:^7 " .. sname, {255,255,255})
+-- 	else
+-- 		fname = sm[2]
+-- 		sname = sm[3]
+-- 		dob = sm[4]
+-- 			TriggerClientEvent('chatMessage', -1, "^2ID ^7|^2 First Name:^7 " .. fname .. " ^2Surname:^7 " .. sname .. " ^2DOB:^7 " .. dob, {255,255,255})
+-- 	end
+-- end
+-- end)
 
 RegisterServerEvent('chatEvent')
 AddEventHandler('chatEvent', function(string)

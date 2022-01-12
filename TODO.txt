@@ -1,18 +1,21 @@
 **TEST**
 Police 911
-Vehicle Shop
 Test Police menu
-Figure out what map_sandySheriff does
 
 **FIX**
 Find new activation for OPRP_Civmenu
 Figure our if we still need OPRP_Cruise
 change hands on head key bind
-relocate license shop 
-add city hall blip
+relocate license shop [-1290.16, -570.4, 3.57]
+add city hall blip @ 637 [-1304.28, -554.71, 30.57]
 add garage at 378
-add court house blips
 add garage at 382/383
+add garage at 638
+add court house blips
+figure out noclip
+remove weapons when getting off service for cop
+figure out panic button
+finish police vehicles
 
 **TROUBLESHOOT**
 make it so you dont spawn with a shotgun (No idea what is causing this, maybe start server without beanbag gun script on?)
@@ -21,3 +24,4 @@ test radar and see why it only works for some people
 **RESEARCH**
 See if i can find a better script for OPRP_Slashtires
 Look into new taxi script
+Figure out what map_sandySheriff does

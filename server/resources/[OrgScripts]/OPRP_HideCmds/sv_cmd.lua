@@ -7,7 +7,7 @@ AddEventHandler('chatMessage', function(Source, Name, Msg)
         local cmd = args[1]
         table.remove(args, 1)
 	else
-		TriggerClientEvent('chatMessage', -1, Name, { 255, 255, 255 }, Msg)
+		--TriggerClientEvent('chatMessage', -1, Name, { 255, 255, 255 }, Msg)
 	end
 end)
 
