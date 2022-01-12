@@ -1,19 +1,18 @@
 **TEST**
+test name above head
+test phone shop blip
+test noclip
+test relocate license shop [-1290.16, -570.4, 3.57]
+add city hall blip @ 637 [-1304.28, -554.71, 30.57]
+test 911 blip
 
 **FIX**
-relocate license shop [-1290.16, -570.4, 3.57]
-add city hall blip @ 637 [-1304.28, -554.71, 30.57]
 add garage at 378
 add garage at 382/383
 add garage at 638
-add court house blips
-figure out noclip
+configure cords for court house blips
 remove weapons when getting off service for cop
-figure out panic button
-finish police vehicles
-change 911 blip
-rename phone shop blip
-remove name above head
+finish police vehicles in esx_policejob
 
 **TROUBLESHOOT**
 make it so you dont spawn with a shotgun (No idea what is causing this, maybe start server without beanbag gun script on?)

@@ -17,7 +17,7 @@ Config.Zones = {
 		Size  = 1.0,
 		Type  = 459,
 		Color = 11,
-		ShowBlip = true,
+		ShowBlip = false,
 		ShowMarker = true
 	},
 

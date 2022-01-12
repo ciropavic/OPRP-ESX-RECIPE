@@ -19,6 +19,7 @@ Y - Open Vehicle Trunk Inventory
 Z - Cycle Voice Range
 , - Ragdoll
 NUMPAD+ - Hand On Holster
+DELETE (INPUT_CELLPHONE_OPTION) - No Clip
 
 __When In Vehicle__
 L - Toggle Cruise

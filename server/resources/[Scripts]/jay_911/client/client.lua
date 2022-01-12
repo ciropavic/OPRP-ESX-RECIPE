@@ -34,9 +34,8 @@ end)
 
 msg = nil
 RegisterCommand('911', function(source, args, rawCommand)
-	print("0")
 	TriggerEvent("chatMessage"," [911] " , {26, 83, 255},   "A notice with your GPS has been sent to the Authorities" )
-	print("1")
+
 	msg = table.concat(args, " ")
 	
 	PedPosition		= GetEntityCoords(GetPlayerPed(-1))
@@ -51,7 +50,6 @@ RegisterCommand('911', function(source, args, rawCommand)
         y = ESX.Math.Round(playerCoords.y, 1),
         z = ESX.Math.Round(playerCoords.z, 1)
     }, msg, streetName, emergency)
-	print("2")
 end, false)
 
 -----------------------------------------------------------------------------------------------------------------------------------
@@ -88,25 +86,19 @@ end)
 
 RegisterNetEvent('esx_jobChat:911Marker')
 AddEventHandler('esx_jobChat:911Marker', function(targetCoords, type)
-	print("10")
 	PlayerData = ESX.GetPlayerData()
-	print("11")
 	if PlayerData.job.name == 'police' then
-		print("12")
-        local alpha = 250
+        local alpha = 500
+		local colour = 1
         local call = AddBlipForCoord(targetCoords.x, targetCoords.y, targetCoords.z)
-		print("13")
-		SetBlipSprite (call, 480)
+		SetBlipSprite (call, 817)
 		SetBlipDisplay(call, 4)
-		SetBlipScale  (call, 1.6)
+		SetBlipScale  (call, 1)
         SetBlipAsShortRange(call, true)
         SetBlipAlpha(call, alpha)
-		print("14")
         SetBlipHighDetail(call, true)
 		SetBlipAsShortRange(call, true)
-		print("15")
 		if type == '911' then
-			print("16")
 			SetBlipColour (call, 38)
 			BeginTextCommandSetBlipName('STRING')
 			AddTextComponentString('911')
@@ -114,9 +106,15 @@ AddEventHandler('esx_jobChat:911Marker', function(targetCoords, type)
 		end
 
 		while alpha ~= 0 do
-			Citizen.Wait(100 * 4)
+			Citizen.Wait(200)
 			alpha = alpha - 1
 			SetBlipAlpha(call, alpha)
+
+			if colour == 1 then
+				SetBlipColour(call, 38)
+			elseif colour == 38 then
+				SetBlipColour(call, 1)
+			end
 
 			if alpha == 0 then
 				RemoveBlip(call)

@@ -36,7 +36,7 @@ Config.Prices = {
 Config.Zones = {
 	LicenseShops = {
 		Coords = {
-			vector3(241.0, -1378.9, 32.7)
+			vector3(-1290.16, -570.4, 3.57)
 		}
 	}
 }

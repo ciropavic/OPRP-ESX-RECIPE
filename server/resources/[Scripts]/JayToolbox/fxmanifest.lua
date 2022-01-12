@@ -20,7 +20,7 @@ shared_scripts{
 
 client_scripts {
     '@es_extended/locale.lua',
-    '@esx_policejob/client/main.lua'
+    '@esx_policejob/client/main.lua',
     "client.lua"
 } 
 
